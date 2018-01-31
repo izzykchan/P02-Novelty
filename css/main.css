@@ -1,0 +1,372 @@
+/*
+  GENERAL WEBSITE STYLING
+*/
+
+body {
+  padding: 2rem;
+  font-family: 'Merriweather', serif;
+}
+
+section:not([id]) {
+  margin: 1em 0;
+  padding: 1em 1em;
+  border: 0.05em dotted #3D3027;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: #3D3027;
+  font-weight: 800;
+}
+
+section h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #3D3027;
+  font-weight: 600;
+}
+
+section h3 {
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  color: #3D3027;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+section p {
+  margin-top: 0;
+  color: #3D3027;
+}
+
+nav a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-align: CENTER;
+  font-size: 0.8em;
+  display: block;
+  margin: 1em 0;
+  padding: 1em 1em;
+  color: white;
+  background-color: #3C2C25;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+@media (min-width: 32em) {
+  nav a{
+    display: inline-block;
+    margin-right: 0.5em;
+    width: 40%;
+  }
+}
+
+@media (min-width: 50em) {
+  nav a{
+    display: inline-block;
+    margin-right: 0.5em;
+    width: 25%;
+  }
+}
+
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+  background-color: #564540;
+}
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+/* STYLING FOR SKETCHES PAGE SPECIFICALLY */
+
+.sketch {
+  width: 100%;
+  margin: 2em 1em 0em 1em;
+}
+
+figcaption {
+  font-family: 'Merriweather', serif;
+  font-size: 0.8em;
+}
+
+
+/*
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling for the navigation button */
+.button-nav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-align: CENTER;
+  display: block;
+  padding: 1em 1em;
+  margin: 1em 1em;
+  color: #FFF;
+  background-color: #9F5E36;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: #C18156;
+}
+
+/* Styling for the in-text link */
+
+.in-text-link {
+  font-family: 'Merriweather', serif;
+  color: #526D54;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.in-text-link:hover, .in-text-link:focus {
+  /*I'm making this colour lighter than the hover for the button since it doesn't show up as much in thin text verses a block of colour*/
+  color: #8B9E8C;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+/* Styling for submit and reset buttons */
+
+.submit-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 1em 0;
+  color: #FFF;
+  background-color: #526D54;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.submit-button:hover, .submit-button:focus {
+  background-color: #6F8970;
+}
+
+.reset-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 1em 0;
+  color: #FFF;
+  background-color: #9B9B9B;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+/* turns red on hover to indicate a final and potentially dangerous action */
+.reset-button:hover, .reset-button:focus {
+  background-color: #962A18;
+}
+
+/* Styling for text field */
+
+.comment-field {
+  width: 100%;
+  height: 5rem;
+}
+
+/*
+  TEXT ELEMENTS -------------------
+*/
+
+/* Styling for headings */
+
+ .top-heading {
+   font-family: 'Open Sans', sans-serif;
+   color: #3D3027;
+   font-weight: 800;
+   letter-spacing: 0.075em;
+   text-transform: lowercase;
+ }
+
+ .second-heading {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 600;
+   color: #3D3027;
+   letter-spacing: 0.09em;
+   text-transform: uppercase;
+ }
+
+ .lowest-heading {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   color: #3D3027;
+   letter-spacing: 0.1em;
+   text-transform: lowercase;
+ }
+
+ /* Styling for paragraphs */
+
+ .para {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+  /* Styling for bullet lists */
+
+ .bullet-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+ /* Styling for numbered lists-- exactly the same as prior two... */
+
+ .numbered-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+
+/*
+  COMBINED ELEMENTS -------------------
+*/
+
+/* Styling for the main navigation */
+
+.main-nav {
+  background-color: #EFE6D2;
+  padding: 4em 2em;
+  margin: 2em;
+}
+
+@media (min-width: 35em) {
+  .main-nav {
+      width: 33%;
+      padding: 3em;
+  }
+}
+
+@media (min-width: 60em) {
+  .main-nav {
+      width: 20%;
+      padding: 3em;
+  }
+}
+
+/* Styling for product listing */
+/* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
+
+.product-listing {
+  /* margin: 0.5em 0; */
+  padding: 1em 1em;
+  display: inline-block;
+}
+
+.genre-icon {
+  width: 15%;
+  margin: 0em 0.5em;
+  display: inline;
+  vertical-align: middle;
+}
+
+.listing-heading {
+  display: inline;
+  padding: 1em 0;
+  vertical-align: middle;
+}
+
+.arrow {
+  display: inline;
+  padding: 1em 0;
+  vertical-align: middle;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #3D3027;
+  letter-spacing: 0.1em;
+  margin-left: 1em;
+  text-decoration: none;
+}
+
+/* media queries for product listing grid (using the horizontal space to get more listings on screen wherever possible, without crowding) */
+@media (min-width: 36em) {
+  .product-listing {
+    width: 40%
+  }
+}
+
+@media (min-width: 65em) {
+  .product-listing {
+    width: 20%;
+  }
+}
+
+/* Styling for colour palette */
+
+.palette {
+  border: 0.2em solid #3C2E28;
+  /* padding: 1em 1em; */
+}
+
+.swatch {
+  font-family: 'Merriweather', serif;
+  color: white;
+  margin: 1em;
+  padding: 2em 1.65em;
+  display: block;
+}
+
+@media (min-width: 40em) {
+  .swatch {
+    margin-left:1em;
+    margin-right: 0;
+    display: inline-block;
+  }
+}
+
+.brown {
+  background-color: #3C2E28;
+}
+
+.red {
+  background-color: #6C200F;
+}
+
+.orange {
+  background-color: #9F5D36;
+}
+
+.light-orange {
+  background-color: #CFA77D;
+}
+
+.cream {
+  background-color: #EEE4D1;
+}
+
+.light-green {
+  background-color: #536D55;
+}
+
+.dark-green {
+  background-color: #1E3322;
+}
+
+.grey {
+  background-color: #9B9B9B;
+}
