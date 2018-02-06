@@ -106,8 +106,8 @@ figcaption {
   letter-spacing: 0.15em;
   text-align: CENTER;
   display: block;
-  padding: 1em 1em;
-  margin: 1em 1em;
+  padding: 1em 2em;
+  margin: 1em 0em;
   color: #FFF;
   background-color: #9F5E36;
   text-decoration: none;
@@ -249,25 +249,12 @@ figcaption {
 
 /* Styling for the main navigation */
 
-.main-nav {
-  background-color: #EFE6D2;
-  padding: 4em 2em;
-  margin: 2em;
-}
-
-@media (min-width: 35em) {
-  .main-nav {
-      width: 33%;
-      padding: 3em;
+@media (min-width: 475px) {
+  .button-nav {
+    display: inline-block;
   }
 }
 
-@media (min-width: 60em) {
-  .main-nav {
-      width: 20%;
-      padding: 3em;
-  }
-}
 
 /* Styling for product listing */
 /* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
