@@ -129,7 +129,6 @@ figcaption {
 }
 
 .in-text-link:hover, .in-text-link:focus {
-  /*I'm making this colour lighter than the hover for the button since it doesn't show up as much in thin text verses a block of colour*/
   color: #8B9E8C;
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
@@ -265,7 +264,7 @@ figcaption {
   display: inline-block;
 }
 
-.genre-icon {
+.listing-icon {
   width: 15%;
   margin: 0em 0.5em;
   display: inline;
@@ -356,4 +355,16 @@ figcaption {
 
 .grey {
   background-color: #9B9B9B;
+}
+
+/* styling for author page */
+
+.author-photo {
+  /* display: inline;  */
+  margin-right: 2em;
+  width: 33.333%;
+}
+
+.author-bio {
+  /* display: inline; */
 }
