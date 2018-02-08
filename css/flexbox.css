@@ -91,14 +91,3 @@
 /*
 	We can use media queries to apply different styles at specific sizes. In this case, we are specifying when the browser window's width is greater than 50.25em, we should apply the styling within the brackets.
 */
-@media (min-width: 50.25em) {
-	/*
-		The flexbox 'order' property lets us re-order items	as they are flowed. Smaller values position items closer to the top, or to the left, higher values place them near the end, or to the right. Depending on the orientation of the flexbox flow.
-	*/
-	.box-item-image {
-		-webkit-order: 2;
-		-ms-order: 2;
-		order: 2;
-	}
-
-}

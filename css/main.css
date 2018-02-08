@@ -169,7 +169,6 @@ figcaption {
 }
 
 .in-text-link:hover, .in-text-link:focus {
-  /*I'm making this colour lighter than the hover for the button since it doesn't show up as much in thin text verses a block of colour*/
   color: #8B9E8C;
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
@@ -244,6 +243,7 @@ figcaption {
    color: #3D3027;
    letter-spacing: 0.09em;
    text-transform: uppercase;
+   display: block;
  }
 
  .lowest-heading {
@@ -262,6 +262,7 @@ figcaption {
    line-height: 1.3rem;
    color: #3D3027;
    letter-spacing: 0.055em;
+   display: block;
  }
 
   /* Styling for bullet lists */
@@ -302,14 +303,13 @@ figcaption {
 /* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
 
 .product-listing {
-  /* margin: 0.5em 0; */
-  padding: 1em 1em;
+  margin: 1rem 4rem 1rem 0;
   display: inline-block;
 }
 
-.genre-icon {
-  width: 15%;
-  margin: 0em 0.5em;
+.listing-icon {
+  width: 2rem;
+  margin-right: 0.5rem;
   display: inline;
   vertical-align: middle;
 }
@@ -333,7 +333,7 @@ figcaption {
 }
 
 /* media queries for product listing grid (using the horizontal space to get more listings on screen wherever possible, without crowding) */
-@media (min-width: 36em) {
+/* @media (min-width: 36em) {
   .product-listing {
     width: 40%
   }
@@ -343,7 +343,7 @@ figcaption {
   .product-listing {
     width: 20%;
   }
-}
+} */
 
 /* Styling for colour palette */
 
@@ -398,4 +398,18 @@ figcaption {
 
 .grey {
   background-color: #9B9B9B;
+}
+
+/* styling for author page */
+
+.author-photo {
+  width:30em;
+  height:100%;
+  display: inline;
+  margin-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+.author-bio {
+  display: inline;
 }
