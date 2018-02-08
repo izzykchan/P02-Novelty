@@ -10,7 +10,7 @@ body {
   margin: 2rem;
 }
 
-/* section:not([id]) {
+/* :not([id]) {
   margin: 1em 0;
   padding: 1em 1em;
   border: 0.05em dotted #3D3027;
@@ -28,12 +28,31 @@ section h2 {
   font-weight: 600;
 }
 
-section h3 {
+/* section h3 {
   margin-bottom: 0.5em;
   margin-top: 1.5em;
   color: #3D3027;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+} */
+
+h4 {
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  color: #3C2E28;
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  color: #9F5D36;
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  display: inline;
 }
 
 section p {
@@ -154,6 +173,35 @@ figcaption {
   color: #CFA77D;
 }
 
+.active {
+  color: #CFA77D;
+}
+
+/* Styling for the sub-navigation button */
+.button-sub-nav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.11rem;
+  text-align: CENTER;
+  display: inline;
+  padding: 0em 0em;
+  margin-right: 1rem;
+  color: #9F5D36;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  /* font-size: 0.85rem; */
+}
+
+.button-sub-nav:hover, .button-sub-nav:focus {
+  color: #CFA77D;
+}
+
+#sub-nav {
+  position: absolute;
+  right: 4.5rem;
+}
+
 #header {
   background-color: #F7EFE4;
   padding: 3rem 0.5rem 0rem 0.5rem;
@@ -252,6 +300,8 @@ figcaption {
    color: #3D3027;
    letter-spacing: 0.1em;
    text-transform: lowercase;
+   margin-top:0;
+   margin-bottom:1rem;
  }
 
  /* Styling for paragraphs */
@@ -318,6 +368,10 @@ figcaption {
   display: inline;
   padding: 1em 0;
   vertical-align: middle;
+}
+
+.listing-heading:hover, .listing-heading:focus, .arrow:hover, .arrow:focus {
+  color: #CFA77D;
 }
 
 .arrow {
@@ -410,8 +464,114 @@ figcaption {
   margin-bottom: 1rem;
 }
 
+.author-photo-thumbnail {
+  width:10em;
+  height:100%;
+  display: inline;
+}
+
 .author-bio {
   display: inline;
+}
+
+.icon-genre {
+    width: 15%;
+    margin: 0em 0.5em;
+    display: inline;
+    vertical-align: middle;
+}
+
+.figure-choices {
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.icon-steps {
+  width: 25%;
+}
+
+.customizations {
+  padding: 1em 1em;
+  border: 0.05em dotted #3D3027;
+  display: inline-block;
+  margin: 0.15rem 0;
+}
+
+.customizations h3 {
+  margin-top: 0.5rem;
+}
+
+.customize-options {
+  margin-left: 0.75rem;
+}
+
+.figure-customize {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.customize-slider {
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  vertical-align: middle;
+}
+
+.page-input {
+  display: inline;
+}
+
+/* submit button stand alone (so it's not inline-block) */
+.continue {
+  display: block;
+  width: 9.35rem;
+}
+
+.checkout {
+  display: block;
+  width: 17rem;
+}
+
+.text-preview {
+  font-style: italic;
+  color: #9B9B9B;
+  width: 75%;
+}
+
+a.choose-author {
+  text-decoration: none;
+}
+
+a.choose-author:hover .box, a.choose-author:focus .box {
+  opacity: 0.75;
+}
+
+div.choose-author {
+  margin-top: 1.5rem;
+}
+
+.nav-button-home {
+  display: inline;
+
+}
+
+.nav-home {
+  display: block;
+}
+
+.img-home {
+  width: 33%;
+  position: relative;
+}
+
+.overlay {
+  width: 33%;
+  position: absolute;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+.overlay:hover, .overlay:focus {
+  opacity: 0.75;
 }
 
 /*styling for review page*/
@@ -425,5 +585,24 @@ figcaption {
 
 .text-field {
   width: 50%;
+  margin-top: 2rem;
+}
+
+/* company page styling */
+
+.ceo-photo {
+  width:8em;
+  height:100%;
+  display: inline;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ceo-bio {
+  display:inline;
+  margin-bottom: 1rem;
+}
+
+.ceo-section {
   margin-top: 2rem;
 }
