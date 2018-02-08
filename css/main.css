@@ -154,6 +154,31 @@ figcaption {
   color: #CFA77D;
 }
 
+/* Styling for the sub-navigation button */
+.button-sub-nav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.11rem;
+  text-align: CENTER;
+  display: inline;
+  padding: 0em 0em;
+  margin-right: 1rem;
+  color: #9F5D36;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  /* font-size: 0.85rem; */
+}
+
+.button-sub-nav:hover, .button-sub-nav:focus {
+  color: #CFA77D;
+}
+
+#sub-nav {
+  position: absolute;
+  right: 4.5rem;
+}
+
 #header {
   background-color: #F7EFE4;
   padding: 3rem 0.5rem 0rem 0.5rem;
