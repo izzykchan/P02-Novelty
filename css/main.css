@@ -7,11 +7,11 @@ body {
   font-family: 'Merriweather', serif;
 }
 
-section:not([id]) {
+/* section:not([id]) {
   margin: 1em 0;
   padding: 1em 1em;
   border: 0.05em dotted #3D3027;
-}
+} */
 
 h1 {
   font-family: 'Open Sans', sans-serif;
@@ -201,6 +201,7 @@ figcaption {
    color: #3D3027;
    letter-spacing: 0.09em;
    text-transform: uppercase;
+   display: block;
  }
 
  .lowest-heading {
@@ -219,6 +220,7 @@ figcaption {
    line-height: 1.3rem;
    color: #3D3027;
    letter-spacing: 0.055em;
+   display: block;
  }
 
   /* Styling for bullet lists */
@@ -259,14 +261,13 @@ figcaption {
 /* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
 
 .product-listing {
-  /* margin: 0.5em 0; */
-  padding: 1em 1em;
+  margin: 1rem 4rem 1rem 0;
   display: inline-block;
 }
 
 .listing-icon {
-  width: 15%;
-  margin: 0em 0.5em;
+  width: 2rem;
+  margin-right: 0.5rem;
   display: inline;
   vertical-align: middle;
 }
@@ -290,7 +291,7 @@ figcaption {
 }
 
 /* media queries for product listing grid (using the horizontal space to get more listings on screen wherever possible, without crowding) */
-@media (min-width: 36em) {
+/* @media (min-width: 36em) {
   .product-listing {
     width: 40%
   }
@@ -300,7 +301,7 @@ figcaption {
   .product-listing {
     width: 20%;
   }
-}
+} */
 
 /* Styling for colour palette */
 
@@ -360,11 +361,13 @@ figcaption {
 /* styling for author page */
 
 .author-photo {
-  /* display: inline;  */
-  margin-right: 2em;
-  width: 33.333%;
+  width:30em;
+  height:100%;
+  display: inline;
+  margin-right: 4rem;
+  margin-bottom: 1rem;
 }
 
 .author-bio {
-  /* display: inline; */
+  display: inline;
 }
