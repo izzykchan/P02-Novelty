@@ -47,7 +47,7 @@ nav a {
   letter-spacing: 0.15em;
   text-align: CENTER;
   font-size: 0.8em;
-  display: block;
+  display: inline;
   margin: 1em 0;
   padding: 1em 1em;
   color: white;
@@ -403,7 +403,7 @@ figcaption {
 /* styling for author page */
 
 .author-photo {
-  width:30em;
+  width:20em;
   height:100%;
   display: inline;
   margin-right: 4rem;
@@ -412,4 +412,18 @@ figcaption {
 
 .author-bio {
   display: inline;
+}
+
+/*styling for review page*/
+
+.temporary-star-stying {
+  width:10em;
+  height:100%;
+  display: inline;
+  margin: 1rem 0rem;
+}
+
+.text-field {
+  width: 50%;
+  margin-top: 2rem;
 }
