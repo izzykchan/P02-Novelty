@@ -76,6 +76,10 @@ nav a {
   transition: background-color 0.2s ease-out;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main-nav {
   margin-left: 25%;
   display: inline-block;
@@ -483,6 +487,7 @@ figcaption {
 
 .figure-choices {
   display: inline-block;
+  width: 22rem;
   margin: 2rem 0;
 }
 
@@ -551,7 +556,6 @@ div.choose-author {
 
 .nav-button-home {
   display: inline;
-
 }
 
 .nav-home {
