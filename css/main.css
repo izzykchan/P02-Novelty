@@ -542,6 +542,11 @@ h3 {
   width: 75%;
 }
 
+.choose-option {
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
 a.choose-option {
   text-decoration: none;
 }
