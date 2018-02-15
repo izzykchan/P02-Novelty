@@ -374,9 +374,9 @@ h3 {
   vertical-align: middle;
 }
 
-.listing-heading:hover, .listing-heading:focus, .arrow:hover, .arrow:focus {
+/* .listing-name:hover, .listing-name:focus, .arrow:hover, .arrow:focus {
   color: #CFA77D;
-}
+} */
 
 .arrow {
   display: inline;
@@ -542,15 +542,15 @@ h3 {
   width: 75%;
 }
 
-a.choose-author {
+a.choose-option {
   text-decoration: none;
 }
 
-a.choose-author:hover .box, a.choose-author:focus .box {
+a.choose-option:hover .box, a.choose-option:focus .box {
   opacity: 0.75;
 }
 
-div.choose-author {
+section.choose-option {
   margin-top: 1.5rem;
 }
 
