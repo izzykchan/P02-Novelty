@@ -42,7 +42,7 @@ body {
 
 h4 {
   margin-bottom: 0.5em;
-  margin-top: 1.5em;
+  margin-top: 2rem;
   color: #3C2E28;
   font-family: 'Merriweather', serif;
   font-weight: 600;
@@ -59,8 +59,12 @@ h5 {
   display: inline;
 }
 
-.customer-name h5 {
+.checkout-form h5 {
   margin-left: 1rem;
+}
+
+.order-summary {
+  margin-top: 2rem;
 }
 
 .order-summary p {
@@ -70,6 +74,28 @@ h5 {
 .order-summary-info {
   display: block;
   margin-top: 0.5rem;
+}
+
+.checkout-form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.customer-address {
+  margin-top: 2rem;
+}
+
+.checkout-input {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.slash {
+  margin-right: 1rem;
+}
+
+.exp-date {
+  width: 3rem;
 }
 
 section p {
@@ -546,7 +572,9 @@ h3 {
 }
 
 .icon-steps {
-  width: 25%;
+  width: 18rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .customizations {
