@@ -81,8 +81,8 @@ a {
 }
 
 .main-nav {
-  margin-left: 25%;
-  display: inline-block;
+  display: block;
+  text-align: CENTER;
   /* box-sizing: border-box; */
 }
 
@@ -94,21 +94,21 @@ a {
 
 @media (min-width: 61.5rem) {
   .main-nav {
-    margin-left: 35%;
+    text-align: CENTER;
   }
 }
 
 @media (min-width: 74rem) {
   .main-nav {
-    margin-left: 45%;
+    text-align: CENTER;
   }
 }
 
 
 .img-logo {
-  width: 4rem;
-  display: inline;
-  margin-left: 2rem;
+  width: 10rem;
+  display: block;
+  margin: auto;
 }
 
 
@@ -173,7 +173,7 @@ figcaption {
   transition: color 0.2s ease-out;
 }
 
-.button-nav:hover, .button-nav:focus {
+.button-nav:hover, .button-nav:focus, .button-nav:active {
   color: #CFA77D;
 }
 
@@ -208,7 +208,33 @@ figcaption {
 
 #header {
   background-color: #F7EFE4;
-  padding: 3rem 0.5rem 0rem 0.5rem;
+  padding: 1.5rem 0.5rem 0rem 0.5rem;
+}
+
+.nav-icons {
+  position: absolute;
+  right: 1rem;
+  z-index: 10;
+  display: inline-block;
+}
+
+.nav-icons img {
+  width: 2rem;
+  margin-top: 1.25rem;
+  margin-left: 0.75rem;
+}
+
+.icon-nav {
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
+  opacity: 0;
+}
+
+a.icon-nav-hover:hover, a.icon-nav-hover:focus, a.icon-nav-hover:active {
+  opacity: 1;
 }
 
 /* Styling for the in-text link */
@@ -575,13 +601,22 @@ section.choose-option {
 .overlay {
   width: 33%;
   position: absolute;
-  z-index: 10;
-  opacity: 0.5;
+  z-index: 5;
+  opacity: 0.8;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .overlay:hover, .overlay:focus {
-  opacity: 0.75;
+  opacity: 1;
 }
+
+/* .overlay-h1 {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  margin-left: 6%;
+} */
 
 /*styling for review page*/
 
