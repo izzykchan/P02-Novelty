@@ -10,6 +10,10 @@ body {
   margin: 2rem;
 }
 
+.centered {
+  text-align: center;
+}
+
 /* :not([id]) {
   margin: 1em 0;
   padding: 1em 1em;
@@ -53,6 +57,19 @@ h5 {
   font-weight: 600;
   text-transform: lowercase;
   display: inline;
+}
+
+.customer-name h5 {
+  margin-left: 1rem;
+}
+
+.order-summary p {
+  display: inline;
+}
+
+.order-summary-info {
+  display: block;
+  margin-top: 0.5rem;
 }
 
 section p {
@@ -305,14 +322,14 @@ a.icon-nav-hover:hover, a.icon-nav-hover:focus, a.icon-nav-hover:active {
 
 /* Styling for headings */
 
-   font-family: 'Open Sans', sans-serif;
+   /* font-family: 'Open Sans', sans-serif;
    color: #3D3027;
    font-weight: 800;
    letter-spacing: 0.075em;
    text-transform: lowercase;
    display: inline;
    margin-left: 0.25rem;
- }
+ } */
 
 h2 {
    font-family: 'Open Sans', sans-serif;
@@ -329,7 +346,7 @@ h3 {
    color: #3D3027;
    letter-spacing: 0.1em;
    text-transform: lowercase;
-   margin-top:0;
+   margin-top: 3rem;
    margin-bottom:1rem;
  }
 
@@ -485,6 +502,10 @@ h3 {
 
 /* styling for author page */
 
+.author-page-body {
+  margin: 2rem 6rem;
+}
+
 .author-photo {
   width:20em;
   height:100%;
@@ -552,13 +573,26 @@ h3 {
 
 /* submit button stand alone (so it's not inline-block) */
 .continue {
-  display: block;
+  display: inline-block;
   width: 9.35rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.back {
+  display: inline-block;
+  width: 9.35rem;
+  padding: 1rem 3.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  background-color: #6C200F;
 }
 
 .checkout {
-  display: block;
-  width: 17rem;
+  display: inline-block;
+  width: 9.35rem;
 }
 
 .text-preview {
@@ -588,8 +622,14 @@ section.choose-option {
   display: inline;
 }
 
-.nav-home {
+.nav-home-overlays {
   display: block;
+  position: absolute;
+}
+
+.nav-home-imgs {
+  display: block;
+  position: absolute;
 }
 
 .img-home {
@@ -599,11 +639,49 @@ section.choose-option {
 
 .overlay {
   width: 33%;
-  position: absolute;
+  position: relative;
   z-index: 5;
   opacity: 0.8;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
+}
+
+
+
+@media (max-width: 760px) {
+
+  .img-home {
+    width: 32.9%;
+  }
+
+  .overlay {
+    width: 32.9%;
+  }
+
+}
+
+@media (max-width: 585px) {
+
+  .img-home {
+    width: 32.8%;
+  }
+
+  .overlay {
+    width: 32.8%;
+  }
+
+}
+
+@media (max-width: 473px) {
+
+  .img-home {
+    width: 100%;
+  }
+
+  .overlay {
+    width: 100%;
+  }
+
 }
 
 .overlay:hover, .overlay:focus {
@@ -619,7 +697,7 @@ section.choose-option {
 
 /*styling for review page*/
 
-.temporary-star-stying {
+.temporary-star-styling {
   width:10em;
   height:100%;
   display: inline;
