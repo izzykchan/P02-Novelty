@@ -350,6 +350,21 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   height: 5rem;
 }
 
+.comments {
+  margin-top: 1rem;
+  display: block;
+}
+
+.comments .text-field {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.comments h3 {
+  margin-top: 2rem;
+  color: #9F5D36;
+}
+
 /*
   TEXT ELEMENTS -------------------
 */
@@ -558,6 +573,36 @@ h3 {
   display: inline;
 }
 
+.author-bio h3 {
+  margin-top: 0;
+}
+
+.blog-post {
+  border: 0.05em dotted #3D3027;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+/* .blog-post:hover, .blog-post:focus {
+  background-color: #DDD;
+} */
+
+.full-post {
+  border: 0.05em dotted #3D3027;
+}
+
+.full-post h3 {
+  margin-top: 2rem;
+  color: #9F5D36;
+}
+
+.full-post img {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
 .icon-genre {
     width: 15%;
     margin: 0em 0.5em;
@@ -589,13 +634,15 @@ h3 {
 }
 
 .customize-options {
-  margin-left: 0.75rem;
+  margin-left: 0.25rem;
+  margin-right: 1rem;
 }
 
 .figure-customize {
   margin-top: 0.5rem;
   display: inline-block;
 }
+
 
 .customize-slider {
   margin-left: 0.5rem;
