@@ -365,6 +365,8 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   color: #9F5D36;
 }
 
+
+
 /*
   TEXT ELEMENTS -------------------
 */
@@ -581,6 +583,11 @@ h3 {
   border: 0.05em dotted #3D3027;
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
+}
+
+h3.contact {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* .blog-post:hover, .blog-post:focus {
