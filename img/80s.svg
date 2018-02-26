@@ -55,11 +55,12 @@
 	C-227.698,250.941-227.693,250.941-227.693,250.947z"/>
 <g id="pAoIAU_1_">
 	
-		<image overflow="visible" enable-background="new    " width="401" height="401" id="pAoIAU_3_" xlink:href="../E5534426D3ADB010.jpg"  transform="matrix(1 0 0 1 -8086.5 -7996.5)">
+		<image overflow="visible" width="400" height="400" id="pAoIAU_3_" xlink:href="881405B02D412F1A.jpg"  transform="matrix(1 0 0 1 362.2523 -67.4614)">
 	</image>
 </g>
-<image overflow="visible" width="401" height="401" xlink:href="../E5534426D3ADB010.jpg"  transform="matrix(1 0 0 1 657 -80)">
-</image>
-<circle fill="#CEA67F" cx="144" cy="144" r="144"/>
-<path fill="#9F5D36" d="M41.899,246.216c56.267,55.84,147.144,55.714,203.247-0.39s56.23-146.98,0.39-203.247L41.899,246.216z"/>
+<path fill="#2C4C31" d="M288,276c0,6.627-5.373,12-12,12H12c-6.627,0-12-5.373-12-12V12C0,5.373,5.373,0,12,0h264
+	c6.627,0,12,5.373,12,12V276z"/>
+<text transform="matrix(1 0 0 1 22.2213 205.8761)" fill="#EFE4D0" font-family="'Impact'" font-size="158">80s</text>
+<polygon fill="#EFE4D0" points="226.939,74.825 212.325,79.447 207.848,94.106 198.936,81.636 183.611,81.908 192.717,69.578 
+	187.723,55.087 202.263,59.938 214.501,50.71 214.381,66.037 "/>
 </svg>
