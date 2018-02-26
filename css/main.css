@@ -246,6 +246,10 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   transition: background-color 0.2s ease-out;
 }
 
+.display-block {
+  display: block;
+}
+
 .submit-button:hover, .submit-button:focus {
   background-color: #6F8970;
 }
@@ -298,6 +302,7 @@ h2 {
    letter-spacing: 0.09em;
    text-transform: uppercase;
    display: block;
+   margin-bottom: 3rem;
  }
 
 h3 {
@@ -355,24 +360,25 @@ h3 {
 
 
 .premise-heading-icon {
-  width:7rem;
+  width:5rem;
   height:100%;
   display: inline;
-  margin:auto;
+  margin: 0 0.5rem 2rem 0;
 }
 
-
-.premise-h2 {
-  margin-bottom: 0.25rem;
-}
-
-.premise-h4 {
-  margin-top: 0;
+.premise-title {
+  margin:1rem 0 1rem 0;
 }
 
 .product-listing {
-  margin: 1rem 4rem 1rem 0;
+  margin: 1rem 1rem 1rem 1rem;
   display: inline-block;
+}
+
+@media (min-width: 42.31rem) {
+  .product-listing {
+    margin: 1rem 4rem 1rem 0;
+  }
 }
 
 .listing-icon {
@@ -479,27 +485,67 @@ h3 {
 }
 
 .author-photo {
-  width:20em;
-  height:100%;
+  width:100%;
+  /* height:100%; */
   display: inline;
-  margin-right: 4rem;
-  margin-bottom: 1rem;
+  /* margin:auto; */
+  margin-top:-20%;
+}
+
+.crop-vertically {
+  max-height: 25rem;
+  overflow: hidden;
+}
+
+@media (min-width: 50rem) {
+  .author-photo {
+    width:20em;
+    margin-top:auto;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .author-photo-thumbnail {
-  width:10em;
-  height:100%;
+  width:100%;
   display: inline;
+}
+
+@media (min-width: 37.19rem) {
+  .author-photo-thumbnail {
+    width:10em;
+    height:100%;
+  }
+  .text-preview {
+    margin-left: 3rem;
+    font-style: italic;
+    width: 75%;
+  }
+  .listing-author-name {
+    margin-left: 3rem;
+  }
 }
 
 .author-bio {
   display: inline;
-  margin-right:6rem;
+  margin: 1.5rem 0 2.5rem 0;
 }
 
-@media (min-){
+@media (min-width: 37.19rem) {
   .author-bio {
+    margin: 0 3rem 0 2rem;
+  }
+}
 
+@media (min-width: 62.5rem){
+  .author-bio {
+    margin: 0 6rem 0 2rem;
+  }
+}
+
+@media (min-width: 70rem){
+  .author-bio {
+    margin:0 10rem 0 2rem;
   }
 }
 
@@ -535,21 +581,21 @@ h3.contact {
 }
 
 .icon-genre {
-    width: 15%;
-    margin: 0em 0.5em;
-    display: inline;
-    vertical-align: middle;
+  width: 15%;
+  margin: 0em 0.5em;
+  display: inline;
+  vertical-align: middle;
 }
 
 .figure-choices {
   display: inline-block;
   width: 22rem;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 .icon-steps {
   width: 18rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-top: 1rem;
 }
 
@@ -610,9 +656,16 @@ h3.contact {
 }
 
 .text-preview {
-  font-style: italic;
+  margin: 1rem 0 1rem 0;
   color: #9B9B9B;
-  width: 75%;
+}
+
+.listing-author-name {
+  margin:auto;
+}
+
+.full-width {
+  width:100%;
 }
 
 .choose-option {
