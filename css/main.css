@@ -14,6 +14,10 @@ body {
   text-align: center;
 }
 
+.centered-premise-title {
+  margin: auto;
+}
+
 /* :not([id]) {
   margin: 1em 0;
   padding: 1em 1em;
@@ -449,6 +453,23 @@ h3 {
 /* Styling for product listing */
 /* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
 
+
+.premise-heading-icon {
+  width:7rem;
+  height:100%;
+  display: inline;
+  margin:auto;
+}
+
+
+.premise-h2 {
+  margin-bottom: 0.25rem;
+}
+
+.premise-h4 {
+  margin-top: 0;
+}
+
 .product-listing {
   margin: 1rem 4rem 1rem 0;
   display: inline-block;
@@ -573,6 +594,13 @@ h3 {
 
 .author-bio {
   display: inline;
+  margin-right:6rem;
+}
+
+@media (min-){
+  .author-bio {
+    
+  }
 }
 
 .author-bio h3 {
