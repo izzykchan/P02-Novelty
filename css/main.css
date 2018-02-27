@@ -282,7 +282,16 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 
 .comments {
   margin-top: 1rem;
+  padding: 1rem;
   display: block;
+  background-color: #F7EFE4;
+}
+
+/* for some reason this media query is only working if i spell out each side of the padding */
+@media (min-width: 23.44rem) {
+  .comments {
+    padding: 3rem 3rem 3rem 3rem;
+  }
 }
 
 .comments .text-field {
@@ -291,8 +300,7 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 }
 
 .comments h3 {
-  margin-top: 2rem;
-  color: #9F5D36;
+  margin: 0;
 }
 
 h2 {
@@ -356,7 +364,6 @@ h3 {
 
 
 /* Styling for product listing */
-/* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
 
 
 .premise-heading-icon {
@@ -478,7 +485,19 @@ h3 {
   background-color: #9B9B9B;
 }
 
-/* styling for author page */
+/* styling for author page -- big focus on responsiveness!!!*/
+
+
+.author-listing {
+  display: block;
+}
+
+@media (min-width: 48.13rem) {
+  .author-listing {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+}
 
 .author-page-body {
   margin: 2rem 6rem;
@@ -497,61 +516,109 @@ h3 {
   overflow: hidden;
 }
 
-@media (min-width: 50rem) {
-  .author-photo {
-    width:20em;
-    margin-top:auto;
-    margin-right: 4rem;
-    margin-bottom: 1rem;
-  }
-}
-
 .author-photo-thumbnail {
   width:100%;
   display: inline;
 }
 
-@media (min-width: 37.19rem) {
+@media (min-width: 31.69rem) {
+  .author-photo-thumbnail {
+    width:7rem;
+  }
+}
+
+@media (min-width: 48rem) {
   .author-photo-thumbnail {
     width:10em;
-    height:100%;
-  }
-  .text-preview {
-    margin-left: 3rem;
-    font-style: italic;
-    width: 75%;
   }
   .listing-author-name {
     margin-left: 3rem;
   }
 }
 
-.author-bio {
+/* needed separate styling for author-bio-preview vs author bio since it has different break-points */
+
+.author-bio-preview {
   display: inline;
   margin: 1.5rem 0 2.5rem 0;
 }
 
+/* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
+
+@media (min-width: 31.69rem) {
+  .author-bio-preview {
+    margin: 0 1rem 0 2rem;
+  }
+}
 @media (min-width: 37.19rem) {
-  .author-bio {
+  .author-bio-preview {
     margin: 0 3rem 0 2rem;
   }
 }
 
-@media (min-width: 62.5rem){
-  .author-bio {
-    margin: 0 6rem 0 2rem;
+@media (min-width: 46.38rem) {
+  .author-bio-preview {
+    max-width: 465px;
+    margin-right: auto;
   }
 }
 
-@media (min-width: 70rem){
+.author-bio {
+  display: inline;
+  margin: 1.5rem 0 0 0;
+}
+
+@media(min-width: 37.5rem) {
   .author-bio {
-    margin:0 10rem 0 2rem;
+    margin: 1.5rem 8rem 0 0;
+  }
+}
+
+.award {
+  margin: 2.5rem 4rem 1rem 0;
+}
+
+@media (min-width: 51rem) {
+  .author-bio {
+    margin: 0 3rem 0 2rem;
+  }
+  .author-photo {
+    width:20em;
+    margin-top:auto;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  }
+  .comments .text-field {
+    width: 66.666%;
+  }
+}
+
+/* keeps the line length to ~66 characters */
+@media (min-width: 62rem) {
+  .author-bio {
+    max-width: 500px;
+    margin-right: auto;
+  }
+  .comments {
+    width: 915px;
   }
 }
 
 .author-bio h3 {
   margin-top: 0;
 }
+
+/*review/comment styling*/
+
+.review {
+
+}
+
+.review-heading {
+  margin: 1.5rem 0 0 0;
+}
+
+/* styling for blog section */
 
 .blog-post {
   border: 0.05em dotted #3D3027;
@@ -656,12 +723,14 @@ h3.contact {
 }
 
 .text-preview {
-  margin: 1rem 0 1rem 0;
+  /* margin: 1rem 0 1rem 0; */
   color: #9B9B9B;
+  font-style: italic;
 }
 
 .listing-author-name {
   margin:auto;
+  margin-bottom: 1rem;
 }
 
 .full-width {
