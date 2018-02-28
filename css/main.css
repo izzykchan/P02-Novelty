@@ -417,19 +417,6 @@ h3 {
   text-decoration: none;
 }
 
-/* media queries for product listing grid (using the horizontal space to get more listings on screen wherever possible, without crowding) */
-/* @media (min-width: 36em) {
-  .product-listing {
-    width: 40%
-  }
-}
-
-@media (min-width: 65em) {
-  .product-listing {
-    width: 20%;
-  }
-} */
-
 /* Styling for colour palette */
 
 .palette {
@@ -522,48 +509,57 @@ h3 {
   overflow: hidden;
 }
 
-.author-photo-thumbnail {
+.photo-thumbnail {
   width:100%;
   display: inline;
 }
 
-@media (min-width: 31.69rem) {
-  .author-photo-thumbnail {
+@media (min-width: 32rem) {
+  .photo-thumbnail {
     width:7rem;
   }
 }
 
 @media (min-width: 48rem) {
-  .author-photo-thumbnail {
+  .photo-thumbnail {
     width:10em;
   }
-  .listing-author-name {
+  .listing-title {
     margin-left: 3rem;
   }
 }
 
-/* needed separate styling for author-bio-preview vs author bio since it has different break-points */
+/* needed separate styling for small-blurb vs author bio since it has different break-points */
 
-.author-bio-preview {
+.small-blurb {
   display: inline;
   margin: 1.5rem 0 2.5rem 0;
 }
 
+.about-blurb {
+  display: inline;
+  margin: 0;
+}
+
 /* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
 
-@media (min-width: 31.69rem) {
-  .author-bio-preview {
+@media (min-width: 32rem) {
+  .small-blurb {
     margin: 0 1rem 0 2rem;
   }
 }
 @media (min-width: 37.19rem) {
-  .author-bio-preview {
+  .small-blurb {
     margin: 0 3rem 0 2rem;
   }
 }
 
 @media (min-width: 46.38rem) {
-  .author-bio-preview {
+  .small-blurb {
+    max-width: 465px;
+    margin-right: auto;
+  }
+  .about-blurb {
     max-width: 465px;
     margin-right: auto;
   }
@@ -736,7 +732,7 @@ h3.contact {
   font-style: italic;
 }
 
-.listing-author-name {
+.listing-title {
   margin: 0 1rem 1rem 0;
   display: inline-block;
 }
@@ -846,21 +842,23 @@ section.choose-option {
   margin-top: 2rem;
 }
 
-/* company page styling */
-
-.ceo-photo {
-  width:8em;
-  height:100%;
+.contact-comments {
   display: inline;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
 }
 
-.ceo-bio {
-  display:inline;
-  margin-bottom: 1rem;
+.contact-comments .text-field {
+  width: 100%;
 }
 
-.ceo-section {
-  margin-top: 2rem;
+@media (min-width: 46.69rem) {
+  .contact-comments {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 50.75rem) {
+  .contact-comments {
+    max-width: 445px;
+    margin-right: 2rem;
+  }
 }
