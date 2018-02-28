@@ -492,15 +492,15 @@ h3 {
   display: block;
 }
 
+.select-author {
+  display: inline;
+}
+
 @media (min-width: 48.13rem) {
   .author-listing {
     display: inline-block;
     margin-right: 1.5rem;
   }
-}
-
-.author-page-body {
-  margin: 2rem 6rem;
 }
 
 .author-photo {
@@ -513,6 +513,12 @@ h3 {
 
 .crop-vertically {
   max-height: 25rem;
+  overflow: hidden;
+}
+
+/* slightly larger max height to account for circular shape-- doing this instead of all new css for the choose author page, since this is the only part that breaks slightly */
+.choose-author-crop {
+  max-height: 28rem;
   overflow: hidden;
 }
 
@@ -608,10 +614,12 @@ h3 {
   margin-top: 0;
 }
 
-/*review/comment styling*/
-
-.review {
-
+.selection {
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .review-heading {
@@ -729,8 +737,8 @@ h3.contact {
 }
 
 .listing-author-name {
-  margin:auto;
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
 }
 
 .full-width {
