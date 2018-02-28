@@ -34,6 +34,10 @@ body {
   height: 7rem;
 }
 
+.centered-premise-title {
+  margin: auto;
+}
+
 h4 {
   margin-bottom: 0.5em;
   margin-top: 2rem;
@@ -696,6 +700,10 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   transition: background-color 0.2s ease-out;
 }
 
+.display-block {
+  display: block;
+}
+
 .submit-button:hover, .submit-button:focus {
   background-color: #6F8970;
 }
@@ -728,7 +736,16 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 
 .comments {
   margin-top: 1rem;
+  padding: 1rem;
   display: block;
+  background-color: #F7EFE4;
+}
+
+/* for some reason this media query is only working if i spell out each side of the padding */
+@media (min-width: 23.44rem) {
+  .comments {
+    padding: 3rem 3rem 3rem 3rem;
+  }
 }
 
 .comments .text-field {
@@ -737,8 +754,7 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 }
 
 .comments h3 {
-  margin-top: 2rem;
-  color: #9F5D36;
+  margin: 0;
 }
 
 h2 {
@@ -748,6 +764,7 @@ h2 {
    letter-spacing: 0.09em;
    text-transform: uppercase;
    display: block;
+   margin-bottom: 3rem;
  }
 
 h3 {
@@ -801,11 +818,28 @@ h3 {
 
 
 /* Styling for product listing */
-/* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
+
+
+.premise-heading-icon {
+  width:5rem;
+  height:100%;
+  display: inline;
+  margin: 0 0.5rem 2rem 0;
+}
+
+.premise-title {
+  margin:1rem 0 1rem 0;
+}
 
 .product-listing {
-  margin: 1rem 4rem 1rem 0;
+  margin: 1rem 1rem 1rem 1rem;
   display: inline-block;
+}
+
+@media (min-width: 42.31rem) {
+  .product-listing {
+    margin: 1rem 4rem 1rem 0;
+  }
 }
 
 .listing-icon {
@@ -836,19 +870,6 @@ h3 {
   margin-left: 1em;
   text-decoration: none;
 }
-
-/* media queries for product listing grid (using the horizontal space to get more listings on screen wherever possible, without crowding) */
-/* @media (min-width: 36em) {
-  .product-listing {
-    width: 40%
-  }
-}
-
-@media (min-width: 65em) {
-  .product-listing {
-    width: 20%;
-  }
-} */
 
 /* Styling for colour palette */
 
@@ -905,33 +926,157 @@ h3 {
   background-color: #9B9B9B;
 }
 
-/* styling for author page */
+/* styling for author page -- big focus on responsiveness!!!*/
 
-.author-page-body {
-  margin: 2rem 6rem;
+
+.author-listing {
+  display: block;
+}
+
+.select-author {
+  display: inline;
+}
+
+@media (min-width: 48.13rem) {
+  .author-listing {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
 }
 
 .author-photo {
-  width:20em;
-  height:100%;
+  width:100%;
+  /* height:100%; */
   display: inline;
-  margin-right: 4rem;
-  margin-bottom: 1rem;
+  /* margin:auto; */
+  margin-top:-20%;
 }
 
-.author-photo-thumbnail {
-  width:10em;
-  height:100%;
+.crop-vertically {
+  max-height: 25rem;
+  overflow: hidden;
+}
+
+/* slightly larger max height to account for circular shape-- doing this instead of all new css for the choose author page, since this is the only part that breaks slightly */
+.choose-author-crop {
+  max-height: 28rem;
+  overflow: hidden;
+}
+
+.photo-thumbnail {
+  width:100%;
   display: inline;
+}
+
+@media (min-width: 32rem) {
+  .photo-thumbnail {
+    width:7rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .photo-thumbnail {
+    width:10em;
+  }
+  .listing-title {
+    margin-left: 3rem;
+  }
+}
+
+/* needed separate styling for small-blurb vs author bio since it has different break-points */
+
+.small-blurb {
+  display: inline;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.about-blurb {
+  display: inline;
+  margin: 0;
+}
+
+/* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
+
+@media (min-width: 32rem) {
+  .small-blurb {
+    margin: 0 1rem 0 2rem;
+  }
+}
+@media (min-width: 37.19rem) {
+  .small-blurb {
+    margin: 0 3rem 0 2rem;
+  }
+}
+
+@media (min-width: 46.38rem) {
+  .small-blurb {
+    max-width: 465px;
+    margin-right: auto;
+  }
+  .about-blurb {
+    max-width: 465px;
+    margin-right: auto;
+  }
 }
 
 .author-bio {
   display: inline;
+  margin: 1.5rem 0 0 0;
+}
+
+@media(min-width: 37.5rem) {
+  .author-bio {
+    margin: 1.5rem 8rem 0 0;
+  }
+}
+
+.award {
+  margin: 2.5rem 4rem 1rem 0;
+}
+
+@media (min-width: 51rem) {
+  .author-bio {
+    margin: 0 3rem 0 2rem;
+  }
+  .author-photo {
+    width:20em;
+    margin-top:auto;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  }
+  .comments .text-field {
+    width: 66.666%;
+  }
+}
+
+/* keeps the line length to ~66 characters */
+@media (min-width: 62rem) {
+  .author-bio {
+    max-width: 500px;
+    margin-right: auto;
+  }
+  .comments {
+    width: 915px;
+  }
 }
 
 .author-bio h3 {
   margin-top: 0;
 }
+
+.selection {
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.review-heading {
+  margin: 1.5rem 0 0 0;
+}
+
+/* styling for blog section */
 
 .blog-post {
   border: 0.05em dotted #3D3027;
@@ -961,21 +1106,21 @@ h3.contact {
 }
 
 .icon-genre {
-    width: 15%;
-    margin: 0em 0.5em;
-    display: inline;
-    vertical-align: middle;
+  width: 15%;
+  margin: 0em 0.5em;
+  display: inline;
+  vertical-align: middle;
 }
 
 .figure-choices {
   display: inline-block;
   width: 22rem;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 .icon-steps {
   width: 18rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-top: 1rem;
 }
 
@@ -1036,9 +1181,18 @@ h3.contact {
 }
 
 .text-preview {
-  font-style: italic;
+  /* margin: 1rem 0 1rem 0; */
   color: #9B9B9B;
-  width: 75%;
+  font-style: italic;
+}
+
+.listing-title {
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
+}
+
+.full-width {
+  width:100%;
 }
 
 .choose-option {
@@ -1072,21 +1226,23 @@ section.choose-option {
   margin-top: 2rem;
 }
 
-/* company page styling */
-
-.ceo-photo {
-  width:8em;
-  height:100%;
+.contact-comments {
   display: inline;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
 }
 
-.ceo-bio {
-  display:inline;
-  margin-bottom: 1rem;
+.contact-comments .text-field {
+  width: 100%;
 }
 
-.ceo-section {
-  margin-top: 2rem;
+@media (min-width: 46.69rem) {
+  .contact-comments {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 50.75rem) {
+  .contact-comments {
+    max-width: 445px;
+    margin-right: 2rem;
+  }
 }
