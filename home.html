@@ -4,7 +4,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>choose-author</title>
+    <title>homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/flexbox.css" rel="stylesheet">
@@ -15,56 +15,82 @@
 
   <body>
 
-    <section id="header" class="box-item-nav">
+    <header class="box-item-nav header">
       <a href="home.html"><img src="img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
-      <section id="main-nav" class="main-nav">
-        <a href="choose-genre.html" class="button-nav">build your book</a>
-        <a href="listing-authors.html" class="button-nav">authors</a>
-        <a href="company-page.html" class="button-nav">about</a>
 
-        <!-- <div class="nav-icons">
-          <a href="#" class="icon-nav-hover"><img src="img/icon-search-hover.svg" alt="a line drawing of a magnifying glass"></a>
-          <a href="#" class="icon-nav-hover"><img src="img/icon-cart-hover.svg" alt="a line drawing of a shopping cart"></a>
-        </div> -->
+      <nav id="nav-reg" role="regular-navigation">
+          <a href="choose-genre.html" class="button-nav">build your book</a>
+          <a href="authors-list.html" class="button-nav">authors</a>
+          <a href="company-page.html" class="button-nav">about</a>
 
-        <div class="nav-icons">
-          <a href="#" class="icon-nav"><img src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></a>
-          <!-- <a href="#" class="icon-nav"><img src="img/icon-cart.svg" alt="a line drawing of a shopping cart"></a> -->
+          <div class="search-toggle">
+            <input type="checkbox" class="search-checkbox" />
+            <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
+            <input type="text" name="search" class="search-input" placeholder="search">
+            <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+          </div>
         </div>
-      </section>
+      </nav>
+
+      <nav id="nav-ham" role="hamburger-navigation">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+            <a href="choose-genre.html" class="button-nav"><li>build your book</li></a>
+            <a href="authors-list.html" class="button-nav"><li>authors</li></a>
+            <a href="company-page.html" class="button-nav"><li>about</li></a>
+
+            <div class="search-toggle">
+              <input type="checkbox" class="search-checkbox" />
+              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" placeholder="search">
+              <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+            </div>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="home-quote">
+      <div class="col-2of3">
+        <h1 class="quote">- this is a blurb or quote describing novelty or the values of the site or something poetic idk.</h1>
+      </div>
     </section>
 
-<div class="crop-landscape">
-      <div class="nav-home-overlays">
-
+    <section class="nav-home-imgs">
+      <div class="build">
         <a href="choose-genre.html">
-          <section class="nav-button-home">
-            <img src="img/overlay-build.png" class="img-home overlay">
-          </section>
-        </a>
-
-        <a href="listing-authors.html">
-          <section class="nav-button-home">
-            <img src="img/overlay-authors.png" class="img-home overlay">
-          </section>
-        </a>
-
-        <a href="company-page.html">
-          <section class="nav-button-home">
-            <img src="img/overlay-about.png" class="img-home overlay">
-          </section>
-        </a>
-      </div>
-
-      <div class="nav-home-imgs">
         <img src="img/home-img-books.png" alt="a tunnel of bookshelves" class="img-home">
-        <img src="img/home-img-chair.png" alt="a vintage armchair in a pile of books" class="img-home">
-        <img src="img/home-img-quill.png" alt="a feather quill, ink jar and parchment on a desk" class="img-home">
+        <div class="img-label-text">
+          <h2 class="img-label">build</h2>
+        </div>
+      </a>
       </div>
-    </div>
+      <div class="authors">
+        <a href="listing-authors.html">
+        <img src="img/home-img-chair.png" alt="a vintage armchair in a pile of books" class="img-home">
+        <div class="img-label-text">
+          <h2 class="img-label">authors</h2>
+        </div>
+        </a>
+      </div>
+      <div class="about">
+        <a href="company-page.html">
+        <img src="img/home-img-quill.png" alt="a feather quill, ink jar and parchment on a desk" class="img-home">
+        <div class="img-label-text">
+          <h2 class="img-label">about</h2>
+        </div>
+        </a>
+      </div>
+    </section>
 
-
-
+    <footer id="footer">
+      <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102</p>
+    </footer>
 
   </body>
 </html>

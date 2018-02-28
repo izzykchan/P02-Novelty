@@ -10,6 +10,30 @@ body {
   text-align: center;
 }
 
+#footer {
+  background-color: #16110f;
+  padding: 1rem 2rem;
+  text-align: center;
+  height: 8rem;
+}
+
+.footer-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #EEE4D1;
+  line-height: 1.5rem;
+  padding-top: 1rem;
+}
+
+.header {
+  background-color: #9F5D36;
+  padding: 1.5rem 0.5rem 5rem 0.5rem;
+  text-align: right;
+  height: 7rem;
+}
+
 h4 {
   margin-bottom: 0.5em;
   margin-top: 2rem;
@@ -73,71 +97,67 @@ section p {
   color: #3D3027;
 }
 
-nav a {
+/* basic styling for the nav */
+nav#nav-reg a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
   letter-spacing: 0.15em;
   text-align: CENTER;
-  font-size: 0.8em;
-  display: inline;
-  margin: 1em 0;
+  margin-top: 2rem;
   padding: 1em 1em;
-  color: white;
-  background-color: #3C2C25;
   text-decoration: none;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+nav#nav-ham a {
+  text-align: left;
 }
 
 a {
   text-decoration: none;
 }
 
-.main-nav {
-  display: block;
-  text-align: CENTER;
-}
-
-@media (min-width: 841px) {
-  .main-nav {
-    /* HAMBURGER IT!! */
-  }
-}
-
-@media (min-width: 61.5rem) {
-  .main-nav {
-    text-align: CENTER;
-  }
-}
-
-@media (min-width: 74rem) {
-  .main-nav {
-    text-align: CENTER;
-  }
-}
-
-
 .img-logo {
-  width: 10rem;
-  display: block;
-  margin: auto;
+  width: 7rem;
+  display: inline-block;
+  margin-left: 1rem;
+  float: left;
+}
+
+/* Styling for home page elements -- the large photos */
+.build {
+  width: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.authors {
+  width: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.about {
+  width: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
 nav a:hover, nav a:focus {
   text-decoration: none;
-  background-color: #564540;
 }
 
-/* Styling for the navigation button */
+/* Styling for the navigation "buttons" */
 .button-nav {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.11rem;
-  text-align: CENTER;
-  display: block;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  display: inline-block;
   padding: 1em 1em;
-  margin: 1em 0em;
-  color: #3C2E28;
+  color: #EEE4D1;
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
@@ -147,8 +167,446 @@ nav a:hover, nav a:focus {
   color: #CFA77D;
 }
 
+/* styling for animated search bar in the regular main nav*/
+
+#nav-reg .search-toggle {
+  display: inline-block;
+  /* z-index: ; */
+  margin-right: 1rem;
+  margin-left: -1rem;
+}
+
+#nav-reg .search-toggle input.search-checkbox {
+  display: block;
+  position: absolute;
+  right: 1.85rem;
+  margin-top: 0.25rem;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#nav-reg .search-input {
+  margin-left: -8rem;
+  margin-top: -1.25rem;
+  display: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  background-color: none;
+  border: none;
+}
+
+#nav-reg img.close {
+  width: 1.25rem;
+  position: absolute;
+  margin-left: -1.5rem;
+  margin-top: -1.25rem;
+  z-index: 1;
+  opacity: 0;
+}
+
+#nav-reg .icon-search {
+  z-index: 2;
+  margin-left: 1rem;
+
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.icon-search:active, .icon-search:hover, .icon-search:focus {
+  opacity: 0.4;
+}
+
+#nav-reg .search-toggle input.search-checkbox:checked ~ input.search-input {
+  display: inline-block;
+  margin-left: 0.15rem;
+}
+
+#nav-reg .search-toggle input.search-checkbox:checked ~ img.close {
+  opacity: 1;
+}
+
+/* styling for animated search bar in the hamburger main nav*/
+
+#nav-ham .search-toggle input.search-checkbox {
+  display: block;
+  position: absolute;
+  left: -83.5%;
+  margin-top: 0rem;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 3; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#nav-ham .search-input {
+  margin-left: 3rem;
+  margin-top: -1.75rem;
+  opacity: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  padding: 0rem 0rem 0rem 0.5rem;
+  border: none;
+  z-index: 2;
+  width: 15rem;
+}
+
+#nav-ham img.close {
+  width: 1.25rem;
+  position: absolute;
+  margin-left: -13.75rem;
+  margin-top: -1.5rem;
+  z-index: 1;
+  opacity: 0;
+}
+
+#nav-ham .search-toggle input.search-checkbox:checked ~ input.search-input {
+  opacity: 0.75;
+}
+
+#nav-ham .search-toggle input.search-checkbox:checked ~ a.icon-nav {
+  opacity: 0;
+}
+
+/* CSS only hamburger menu found at https://codepen.io/erikterwan/pen/EVzeRP
+because the js one we learned in class required refreshing the page & we were
+hoping to do one that does not require that */
+
+nav#nav-ham {
+  display: none;
+  margin-top: 2.5rem;
+}
+
+nav#nav-ham span {
+  margin-left: 90%;
+  background: #EEE4D1
+}
+
+nav#nav-ham input {
+  margin-left: 90%;
+}
+
+
+#menu-toggle {
+  display: block;
+  position: relative;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menu-toggle input {
+  display: block;
+  width: 2rem;
+  height:2rem;
+  position: absolute;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/* the three lines of the menu icon/symbol */
+#menu-toggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #3C2E28;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: rotate(45deg);
+
+  transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.22s ease;
+}
+
+
+#menu-toggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the lines of hamburger into an x */
+/* transform the top line */
+#menu-toggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(4px, 9px);
+  background: #232323;
+}
+
+/* hide the middle line */
+#menu-toggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* transform bottom line */
+#menu-toggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(1px, 4px);
+}
+
+/* Make this absolute positioned at the top left of the screen */
+#menu {
+  position: absolute;
+  width: 106%;
+  /* margin-top: 1.5rem; */
+  margin-left: -1rem;
+  padding: 1.25rem 1.25rem;
+  height: 0;
+  opacity: 0;
+
+  background: #9F5D36;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  /* transition found at: https://css-tricks.com/using-css-transitions-auto-dimensions/ */
+  transition: height 0.2s ease-out;
+}
+
+/* when hamburger icon clicked, make menu visible */
+#menu-toggle input:checked ~ ul {
+  height: 16rem;
+  opacity: 0.95;
+}
+
+/* styling for the menu when it's dropped down */
+#menu li {
+  padding: 0.25rem 0;
+  font-weight: 600;
+}
+
+#menu .icon-search {
+  margin-left: -28rem;
+  opacity: 1;
+  z-index: 4;
+
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+/* styling for the home page specific elements */
+/* styling for the home images as buttons */
 .active {
   color: #CFA77D;
+}
+
+.img-home {
+  width: 100%;
+  position: relative;
+}
+
+h2.img-label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #FFF;
+  letter-spacing: 0.09em;
+  text-transform: lowercase;
+  display: inline-table;
+  line-height: 100%;
+  vertical-align: middle;
+  margin-top: 60%;
+}
+
+.img-label-text {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  line-height: 200%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.build .img-label-text:hover {
+  background-color: rgba(35, 10, 5, 0.75);
+}
+
+.authors .img-label-text:hover {
+  background-color: rgba(10, 35, 20, 0.75);
+}
+
+.about .img-label-text:hover {
+  background-color: rgba(30, 16, 10, 0.75);
+}
+
+/* styling for the quote/text on the home page */
+
+.col-2of3 {
+  width: 66.7%;
+}
+
+h1.quote {
+  font-family: Merriweather, serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #3C2E28;
+  margin-left: 10%;
+  margin-top: 25%;
+  margin-bottom: 6rem;
+  line-height: 3.25rem;
+  opacity: 0.85;
+}
+
+/* media queries for homepage specifically */
+
+@media (max-width: 56rem) {
+  .build {
+    width: 100%;
+    display: inline-block;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  .authors {
+    width: 100%;
+    display: inline-block;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  .about {
+    width: 100%;
+    display: inline-block;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  .nav-home-imgs img {
+    margin-top: -35%;
+  }
+
+  h2.img-label {
+    margin-top: 22.5%;
+  }
+}
+
+@media (max-width: 53rem) {
+  h2.img-label {
+    margin-top: 24%;
+  }
+}
+
+@media (max-width: 51rem) {
+  h2.img-label {
+    margin-top: 26%;
+  }
+}
+
+@media (max-width: 47rem) {
+  h2.img-label {
+    margin-top: 28%;
+  }
+}
+
+@media (max-width: 43rem) {
+  h2.img-label {
+    margin-top: 32%;
+  }
+
+  h1.quote {
+    margin-top: 30%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  h2.img-label {
+    margin-top: 36%;
+  }
+
+  h1.quote {
+    font-size: 2.25rem;
+    line-height: 3rem;
+    margin-top: 30%;
+    margin-bottom: 4rem;
+  }
+
+  .header {
+    text-align: CENTER;
+  }
+
+  .button-nav {
+    display: block;
+    width: 100%;
+  }
+
+  nav a {
+    margin: auto;
+    /* display: block; */
+  }
+
+  nav#nav-reg {
+    display: none;
+    /* margin: 4rem 0 0 0;
+    background-color: #9F5D36; */
+  }
+
+  nav#nav-ham {
+    display: block;
+  }
+}
+
+@media (max-width: 33rem) {
+  h2.img-label {
+    margin-top: 40%;
+  }
+
+  h1.quote {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    margin-top: 35%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 29rem) {
+  h2.img-label {
+    margin-top: 44%;
+  }
+
+  h1.quote {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin-top: 40%;
+    margin-bottom: 4rem;
+  }
+
+  nav#nav-ham span {
+    margin-left: 88%;
+  }
+
+  nav#nav-ham input {
+    margin-left: 88%;
+  }
 }
 
 /* Styling for the sub-navigation button */
@@ -166,7 +624,7 @@ nav a:hover, nav a:focus {
   transition: color 0.2s ease-out;
 }
 
-.button-sub-nav:hover, .button-sub-nav:focus {
+.button-sub-nav:hover, .button-sub-nav:focus, .button-sub-nav:active {
   color: #CFA77D;
 }
 
@@ -175,14 +633,7 @@ nav a:hover, nav a:focus {
   right: 4.5rem;
 }
 
-#header {
-  background-color: #F7EFE4;
-  padding: 1.5rem 0.5rem 0rem 0.5rem;
-}
-
 .nav-icons {
-  /* position: absolute;
-  right: 1rem; */
   z-index: 10;
   display: inline-block;
   margin: 0.5rem;
@@ -199,11 +650,14 @@ nav a:hover, nav a:focus {
   width: 2rem;
   margin-top: 1.25rem;
   margin-left: 0.75rem;
+
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .icon-nav {
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+  width: 1.5rem;
+  margin-bottom: -0.3rem;
 }
 
 a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
@@ -602,76 +1056,6 @@ a.choose-option:hover .box, a.choose-option:focus .box {
 
 section.choose-option {
   margin-top: 1.5rem;
-}
-
-.nav-button-home {
-  display: inline;
-}
-
-.nav-home-overlays {
-  display: block;
-  position: absolute;
-}
-
-.nav-home-imgs {
-  display: block;
-  position: absolute;
-}
-
-.img-home {
-  width: 33%;
-  position: relative;
-}
-
-.overlay {
-  width: 33%;
-  position: relative;
-  z-index: 5;
-  opacity: 0.8;
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-}
-
-
-
-@media (max-width: 760px) {
-
-  .img-home {
-    width: 32.9%;
-  }
-
-  .overlay {
-    width: 32.9%;
-  }
-
-}
-
-@media (max-width: 585px) {
-
-  .img-home {
-    width: 32.8%;
-  }
-
-  .overlay {
-    width: 32.8%;
-  }
-
-}
-
-@media (max-width: 473px) {
-
-  .img-home {
-    width: 100%;
-  }
-
-  .overlay {
-    width: 100%;
-  }
-
-}
-
-.overlay:hover, .overlay:focus {
-  opacity: 1;
 }
 
 /*styling for review page*/
