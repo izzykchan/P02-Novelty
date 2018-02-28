@@ -15,141 +15,163 @@
 
   <body>
 
-    <section id="header" class="box-item-nav">
+    <header class="box-item-nav header">
       <a href="home.html"><img src="img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
-      <section id="main-nav" class="main-nav">
-        <a href="choose-genre.html" class="button-nav">build your book</a>
-        <a href="authors-list.html" class="button-nav">authors</a>
-        <a href="company-page.html" class="button-nav">about</a>
 
-        <!-- <div class="nav-icons">
-          <a href="#" class="icon-nav-hover"><img src="img/icon-search-hover.svg" alt="a line drawing of a magnifying glass"></a>
-          <a href="#" class="icon-nav-hover"><img src="img/icon-cart-hover.svg" alt="a line drawing of a shopping cart"></a>
-        </div> -->
+      <nav id="nav-reg" role="regular-navigation">
+          <a href="choose-genre.html" class="button-nav active">build your book</a>
+          <a href="listing-authors.html" class="button-nav">authors</a>
+          <a href="company-page.html" class="button-nav">about</a>
 
-        <div class="nav-icons">
-          <a href="#" class="icon-nav"><img src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></a>
-          <!-- <a href="#" class="icon-nav"><img src="img/icon-cart.svg" alt="a line drawing of a shopping cart"></a> -->
+          <div class="search-toggle">
+            <input type="checkbox" class="search-checkbox" />
+            <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
+            <input type="text" name="search" class="search-input" placeholder="search">
+            <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+          </div>
         </div>
-      </section>
-    </section>
+      </nav>
+
+      <nav id="nav-ham" role="hamburger-navigation">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+            <a href="choose-genre.html" class="button-nav active"><li>build your book</li></a>
+            <a href="listing-authors.html" class="button-nav"><li>authors</li></a>
+            <a href="company-page.html" class="button-nav"><li>about</li></a>
+
+            <div class="search-toggle">
+              <input type="checkbox" class="search-checkbox" />
+              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" placeholder="search">
+              <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+            </div>
+            </ul>
+        </div>
+      </nav>
+    </header>
 
   <section id="page-content">
 
     <section class="centered">
 
-    <img src="img/build-your-book-steps5.png" class="icon-steps">
-    <h2>5. checkout</h2>
+      <img src="img/build-your-book-steps5.png" class="icon-steps">
+      <h2>5. checkout</h2>
 
-    <section class="order-summary">
+      <section class="order-summary">
 
-      <h4>your order:</h4>
-      <div class="order-summary-info">
-        <h5>genre: <h5>
-        <p>action</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>premise: <h5>
-        <p>apocolypse</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>main character: <h5>
-        <p>male, timid</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>side kick: <h5>
-        <p>female, bubbly</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>love interest: <h5>
-        <p>male, angsty</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>villain: <h5>
-        <p>male, boisterous</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>plot twists: <h5>
-        <p>often, very intense</p>
-      </div>
-      <div class="order-summary-info">
-        <h5>length: <h5>
-        <p>400-600 pages</p>
-      </div>
+        <h4>your order:</h4>
+        <div class="order-summary-info">
+          <h5>genre: <h5>
+          <p>action</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>premise: <h5>
+          <p>apocolypse</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>main character: <h5>
+          <p>male, timid</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>side kick: <h5>
+          <p>female, bubbly</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>love interest: <h5>
+          <p>male, angsty</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>villain: <h5>
+          <p>male, boisterous</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>plot twists: <h5>
+          <p>often, very intense</p>
+        </div>
+        <div class="order-summary-info">
+          <h5>length: <h5>
+          <p>400-600 pages</p>
+        </div>
+
+      </section>
+
+      <section class="checkout-form">
+
+        <h4>your info:</h4>
+
+        <section class="customer-name">
+          <div class="checkout-input">
+            <h5>first name</h5>
+            <form class="page-input">
+              <input type="text" name="first-name">
+          </div>
+
+          <div class="checkout-input">
+            <h5>last name</h5>
+            <form class="page-input">
+              <input type="text" name="last-name">
+          </div>
+        </section>
+
+        <section class="customer-address">
+          <div class="checkout-input">
+            <h5>address</h5>
+            <form class="page-input">
+              <input type="text" name="address">
+          </div>
+
+          <div class="checkout-input">
+            <h5>country</h5>
+              <form class="page-input">
+                <input type="text" name="country">
+          </div>
+
+          <div class="checkout-input">
+            <h5>postal code</h5>
+            <form class="page-input">
+              <input type="text" name="postal-code">
+          </div>
+        </section>
+
+        <h4>payment info</h4>
+
+        <section class="payment-info">
+          <div class="checkout-input">
+            <h5>card number</h5>
+            <form class="page-input">
+              <input type="text" name="card-num">
+          </div>
+
+          <div class="checkout-input">
+            <h5>cvc</h5>
+            <form class="page-input">
+              <input type="text" name="cvc-num">
+          </div>
+
+          <div class="checkout-input">
+            <h5>expiry date</h5>
+              <form class="page-input">
+                <input type="text" class="exp-date" name="exp-month">
+              <h5 class="slash">/</h5>
+              <form class="page-input">
+                <input type="text" class="exp-date" name="exp-year">
+          </div>
+        </section>
+
+      </section>
+
+      <section>
+        <a href="choose-author.html" class="reset-button back">back</a>
+        <a href="order-confirmation.html" class="submit-button checkout">finish</a>
+      </section>
 
     </section>
 
-    <section class="checkout-form">
-
-      <h4>your info:</h4>
-
-      <section class="customer-name">
-        <div class="checkout-input">
-          <h5>first name</h5>
-          <form class="page-input">
-            <input type="text" name="first-name">
-        </div>
-
-        <div class="checkout-input">
-          <h5>last name</h5>
-          <form class="page-input">
-            <input type="text" name="last-name">
-        </div>
-      </section>
-
-      <section class="customer-address">
-        <div class="checkout-input">
-          <h5>address</h5>
-          <form class="page-input">
-            <input type="text" name="address">
-        </div>
-
-        <div class="checkout-input">
-          <h5>country</h5>
-            <form class="page-input">
-              <input type="text" name="country">
-        </div>
-
-        <div class="checkout-input">
-          <h5>postal code</h5>
-          <form class="page-input">
-            <input type="text" name="postal-code">
-        </div>
-      </section>
-
-      <h4>payment info</h4>
-
-      <section class="payment-info">
-        <div class="checkout-input">
-          <h5>card number</h5>
-          <form class="page-input">
-            <input type="text" name="card-num">
-        </div>
-
-        <div class="checkout-input">
-          <h5>cvc</h5>
-          <form class="page-input">
-            <input type="text" name="cvc-num">
-        </div>
-
-        <div class="checkout-input">
-          <h5>expiry date</h5>
-            <form class="page-input">
-              <input type="text" class="exp-date" name="exp-month">
-            <h5 class="slash">/</h5>
-            <form class="page-input">
-              <input type="text" class="exp-date" name="exp-year">
-        </div>
-      </section>
-
-    </section>
-
-    <section>
-      <a href="choose-author.html" class="reset-button back">back</a>
-      <a href="order-confirmation.html" class="submit-button checkout">finish</a>
-    </section>
-
-  </section>
   </section>
 
   </body>

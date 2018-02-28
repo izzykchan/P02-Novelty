@@ -55,11 +55,11 @@
 	C-227.698,250.941-227.693,250.941-227.693,250.947z"/>
 <g id="pAoIAU_1_">
 	
-		<image overflow="visible" width="400" height="400" id="pAoIAU_3_" xlink:href="C1CFCCEC2970C93B.jpg"  transform="matrix(1 0 0 1 362.2523 -67.4614)">
+		<image overflow="visible" enable-background="new    " width="401" height="401" id="pAoIAU_3_" xlink:href="../E5534426D3ADB010.jpg"  transform="matrix(1 0 0 1 -8086.5 -7996.5)">
 	</image>
 </g>
-<g>
-	<path fill="#CEA67F" d="M207.323,138.374L88.026,78.145c-4.899-2.465-11.023,0.643-11.023,5.573v120.564
-		c0,4.93,6.124,8.038,11.023,5.573l119.298-60.228C212.223,147.053,212.223,140.839,207.323,138.374z"/>
-</g>
+<image overflow="visible" width="401" height="401" xlink:href="../E5534426D3ADB010.jpg"  transform="matrix(1 0 0 1 657 -80)">
+</image>
+<circle fill="#CEA67F" cx="144" cy="144" r="144"/>
+<path fill="#9F5D36" d="M41.899,246.216c56.267,55.84,147.144,55.714,203.247-0.39s56.23-146.98,0.39-203.247L41.899,246.216z"/>
 </svg>

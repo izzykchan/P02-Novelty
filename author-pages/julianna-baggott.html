@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>author bio & reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/flexbox.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i%7COpen+Sans:400,600,600i,700,800" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <header class="box-item-nav header">
+      <a href="../home.html"><img src="../img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
+
+      <nav id="nav-reg" role="regular-navigation">
+          <a href="../choose-genre.html" class="button-nav">build your book</a>
+          <a href="../listing-authors.html" class="button-nav active">authors</a>
+          <a href="../company-page.html" class="button-nav">about</a>
+
+          <div class="search-toggle">
+            <input type="checkbox" class="search-checkbox" />
+            <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
+            <input type="text" name="search" class="search-input" placeholder="search">
+            <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
+          </div>
+        </div>
+      </nav>
+
+      <nav id="nav-ham" role="hamburger-navigation">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+            <a href="../choose-genre.html" class="button-nav"><li>build your book</li></a>
+            <a href="../listing-authors.html" class="button-nav active"><li>authors</li></a>
+            <a href="../company-page.html" class="button-nav"><li>about</li></a>
+
+            <div class="search-toggle">
+              <input type="checkbox" class="search-checkbox" />
+              <li><img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" placeholder="search">
+              <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
+            </div>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="page-content">
+
+      <div class="box">
+        <div class="crop-vertically">
+          <img src="../img/julianna-baggott.jpg" alt="an orange-tinted photo of author Julianna Baggot; she has a kind smile." class="author-photo">
+        </div>
+        <div class="author-bio box-item-text">
+          <h2>Julianna Baggott</h2>
+          <p class="para">Baggott began publishing short stories when she was twenty-two and sold her first novel while still in her twenties. After receiving her M.F.A. from the University of North Carolina at Greensboro, she published her first novel, the national bestseller Girl Talk. It was quickly followed by The Boston Globe bestseller, The Miss America Family, and then The Boston Herald Book Club selection, The Madam, an historical novel based on the life of her grandmother. She co-wrote Which Brings Me to You with Steve Almond, A Best Book of 2006 (Kirkus Reveiws); it’s optioned by Anonymous Content with a screenplay penned by playwright Keith Bunin.</p>
+        </div>
+      </div>
+
+      <section class="product-listing award">
+        <img src="../img/award.svg" alt="an icon of an award ribbon" class="listing-icon">
+        <h3 class="listing-name">Delaware Division of Arts</h3>
+      </section>
+      <section class="product-listing award">
+        <img src="../img/award.svg" alt="an icon of an award ribbon" class="listing-icon">
+        <h3 class="listing-name">Virginia Center for the Creative Arts</h3>
+      </section>
+      <section class="product-listing award">
+        <img src="../img/award.svg" alt="an icon of an award ribbon" class="listing-icon">
+        <h3 class="listing-name">Ragdale Foundation</h3>
+      </section>
+
+      <section class="comments">
+        <h3 class="review-heading">rate your author:</h3>
+        <img src="../img/stars.svg" alt="an image showing four out of five stars" class="temporary-star-styling">
+        <h3>write a review:</h3>
+        <form method="post" action="#" class="text-field">
+          <textarea class="comment-field" placeholder="leave some nice words for your author!"></textarea>
+        </form>
+
+        <a href="#" class="submit-button">submit</a>
+      </section>
+
+  </section>
+
+  </body>
+
+</html>

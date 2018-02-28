@@ -1,7 +1,3 @@
-/*
-  GENERAL WEBSITE STYLING
-*/
-
 body {
   font-family: 'Merriweather', serif;
 }
@@ -14,31 +10,33 @@ body {
   text-align: center;
 }
 
-/* :not([id]) {
-  margin: 1em 0;
-  padding: 1em 1em;
-  border: 0.05em dotted #3D3027;
-} */
+#footer {
+  background-color: #16110f;
+  padding: 1rem 2rem;
+  text-align: center;
+  height: 8rem;
+}
 
-/* h1 {
+.footer-text {
   font-family: 'Open Sans', sans-serif;
-  color: #3D3027;
-  font-weight: 800;
-} */
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #EEE4D1;
+  line-height: 1.5rem;
+  padding-top: 1rem;
+}
 
-/* section h2 {
-  font-family: 'Open Sans', sans-serif;
-  color: #3D3027;
-  font-weight: 600;
-} */
+.header {
+  background-color: #9F5D36;
+  padding: 1.5rem 0.5rem 5rem 0.5rem;
+  text-align: right;
+  height: 7rem;
+}
 
-/* section h3 {
-  margin-bottom: 0.5em;
-  margin-top: 1.5em;
-  color: #3D3027;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-} */
+.centered-premise-title {
+  margin: auto;
+}
 
 h4 {
   margin-bottom: 0.5em;
@@ -103,114 +101,67 @@ section p {
   color: #3D3027;
 }
 
-nav a {
+/* basic styling for the nav */
+nav#nav-reg a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
   letter-spacing: 0.15em;
   text-align: CENTER;
-  font-size: 0.8em;
-  display: inline;
-  margin: 1em 0;
+  margin-top: 2rem;
   padding: 1em 1em;
-  color: white;
-  background-color: #3C2C25;
   text-decoration: none;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+nav#nav-ham a {
+  text-align: left;
 }
 
 a {
   text-decoration: none;
 }
 
-.main-nav {
-  display: block;
-  text-align: CENTER;
-  /* box-sizing: border-box; */
-}
-
-@media (min-width: 841px) {
-  .main-nav {
-    /* HAMBURGER IT!! */
-  }
-}
-
-@media (min-width: 61.5rem) {
-  .main-nav {
-    text-align: CENTER;
-  }
-}
-
-@media (min-width: 74rem) {
-  .main-nav {
-    text-align: CENTER;
-  }
-}
-
-
 .img-logo {
-  width: 10rem;
-  display: block;
-  margin: auto;
+  width: 7rem;
+  display: inline-block;
+  margin-left: 1rem;
+  float: left;
 }
 
-
-
-/* @media (min-width: 32em) {
-  nav a{
-    display: inline-block;
-    margin-right: 0.5em;
-    width: 40%;
-  }
+/* Styling for home page elements -- the large photos */
+.build {
+  width: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
-@media (min-width: 50em) {
-  nav a{
-    display: inline-block;
-    margin-right: 0.5em;
-    width: 25%;
-  }
-} */
+.authors {
+  width: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
 
+.about {
+  width: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
 
 nav a:hover, nav a:focus {
   text-decoration: none;
-  background-color: #564540;
 }
 
-/* section code {
-  background-color: #EEE;
-  padding: 0.5em 0.75em;
-  display: block;
-} */
-
-/* STYLING FOR SKETCHES PAGE SPECIFICALLY */
-
-/* .sketch {
-  width: 100%;
-  margin: 2em 1em 0em 1em;
-}
-
-figcaption {
-  font-family: 'Merriweather', serif;
-  font-size: 0.8em;
-} */
-
-
-/*
-  INTERACTIVE ELEMENTS -------------------
-*/
-
-/* Styling for the navigation button */
+/* Styling for the navigation "buttons" */
 .button-nav {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.11rem;
-  text-align: CENTER;
-  display: block;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  display: inline-block;
   padding: 1em 1em;
-  margin: 1em 0em;
-  color: #3C2E28;
+  color: #EEE4D1;
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
@@ -220,8 +171,449 @@ figcaption {
   color: #CFA77D;
 }
 
+/* styling for animated search bar in the regular main nav*/
+
+#nav-reg .search-toggle {
+  display: inline-block;
+  /* z-index: ; */
+  margin-right: 1rem;
+  margin-left: -1rem;
+}
+
+#nav-reg .search-toggle input.search-checkbox {
+  display: block;
+  position: absolute;
+  right: 1.85rem;
+  margin-top: 0.25rem;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#nav-reg .search-input {
+  margin-left: -8rem;
+  margin-top: -1.25rem;
+  display: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  background-color: none;
+  border: none;
+}
+
+#nav-reg img.close {
+  width: 1.25rem;
+  position: absolute;
+  margin-left: -1.5rem;
+  margin-top: -1.25rem;
+  z-index: 1;
+  opacity: 0;
+}
+
+#nav-reg .icon-search {
+  z-index: 2;
+  margin-left: 1rem;
+
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.icon-search:active, .icon-search:hover, .icon-search:focus {
+  opacity: 0.4;
+}
+
+#nav-reg .search-toggle input.search-checkbox:checked ~ input.search-input {
+  display: inline-block;
+  margin-left: 0.15rem;
+}
+
+#nav-reg .search-toggle input.search-checkbox:checked ~ img.close {
+  opacity: 1;
+}
+
+/* styling for animated search bar in the hamburger main nav*/
+
+#nav-ham .search-toggle input.search-checkbox {
+  display: block;
+  position: absolute;
+  left: -83.5%;
+  margin-top: 0rem;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 3; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#nav-ham .search-input {
+  margin-left: 3rem;
+  margin-top: -0.5rem;
+  opacity: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  padding: 0rem 0rem 0rem 0.5rem;
+  border: none;
+  z-index: 2;
+  width: 15rem;
+}
+
+#nav-ham img.close {
+  width: 1.25rem;
+  position: absolute;
+  margin-left: -13.75rem;
+  margin-top: -1.5rem;
+  z-index: 1;
+  opacity: 0;
+}
+
+#nav-ham .search-toggle input.search-checkbox:checked ~ input.search-input {
+  opacity: 0.75;
+}
+
+#nav-ham .search-toggle input.search-checkbox:checked ~ a.icon-nav {
+  opacity: 0;
+}
+
+/* CSS only hamburger menu found at https://codepen.io/erikterwan/pen/EVzeRP
+because the js one we learned in class required refreshing the page & we were
+hoping to do one that does not require that */
+
+nav#nav-ham {
+  display: none;
+  margin-top: 2.5rem;
+}
+
+nav#nav-ham span {
+  margin-left: 90%;
+  background: #EEE4D1
+}
+
+nav#nav-ham input {
+  margin-left: 90%;
+}
+
+
+#menu-toggle {
+  display: block;
+  position: relative;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menu-toggle input {
+  display: block;
+  width: 2rem;
+  height:2rem;
+  position: absolute;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/* the three lines of the menu icon/symbol */
+#menu-toggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #3C2E28;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: rotate(45deg);
+
+  transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.22s ease;
+}
+
+
+#menu-toggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the lines of hamburger into an x */
+/* transform the top line */
+#menu-toggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(4px, 9px);
+  background: #232323;
+}
+
+/* hide the middle line */
+#menu-toggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* transform bottom line */
+#menu-toggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(1px, 4px);
+}
+
+/* Make this absolute positioned at the top left of the screen */
+#menu {
+  position: absolute;
+  width: 106%;
+  /* margin-top: 1.5rem; */
+  margin-left: -1rem;
+  padding: 1.25rem 1.25rem;
+  height: 0;
+  opacity: 0;
+  display: none;
+
+  background: #9F5D36;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  /* transition found at: https://css-tricks.com/using-css-transitions-auto-dimensions/ */
+  transition: height 0.2s ease-out;
+}
+
+/* when hamburger icon clicked, make menu visible */
+#menu-toggle input:checked ~ ul {
+  height: 16rem;
+  opacity: 0.95;
+  display: block;
+}
+
+/* styling for the menu when it's dropped down */
+#menu li {
+  padding: 0.25rem 0;
+  font-weight: 600;
+}
+
+#menu .icon-search {
+  float: left;
+  margin-left: 0.85rem;
+  opacity: 1;
+  z-index: 4;
+
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+/* styling for the home page specific elements */
+/* styling for the home images as buttons */
 .active {
   color: #CFA77D;
+}
+
+.img-home {
+  width: 100%;
+  position: relative;
+}
+
+h2.img-label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #FFF;
+  letter-spacing: 0.09em;
+  text-transform: lowercase;
+  display: inline-table;
+  line-height: 100%;
+  vertical-align: middle;
+  margin-top: 60%;
+}
+
+.img-label-text {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  line-height: 200%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.build .img-label-text:hover {
+  background-color: rgba(35, 10, 5, 0.75);
+}
+
+.authors .img-label-text:hover {
+  background-color: rgba(10, 35, 20, 0.75);
+}
+
+.about .img-label-text:hover {
+  background-color: rgba(30, 16, 10, 0.75);
+}
+
+/* styling for the quote/text on the home page */
+
+.col-2of3 {
+  width: 66.7%;
+}
+
+h1.quote {
+  font-family: Merriweather, serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #3C2E28;
+  margin-left: 10%;
+  margin-top: 25%;
+  margin-bottom: 6rem;
+  line-height: 3.25rem;
+  opacity: 0.85;
+}
+
+/* media queries for homepage specifically */
+
+@media (max-width: 56rem) {
+  .build {
+    width: 100%;
+    display: inline-block;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  .authors {
+    width: 100%;
+    display: inline-block;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  .about {
+    width: 100%;
+    display: inline-block;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  .nav-home-imgs img {
+    margin-top: -35%;
+  }
+
+  h2.img-label {
+    margin-top: 22.5%;
+  }
+}
+
+@media (max-width: 53rem) {
+  h2.img-label {
+    margin-top: 24%;
+  }
+}
+
+@media (max-width: 51rem) {
+  h2.img-label {
+    margin-top: 26%;
+  }
+}
+
+@media (max-width: 48rem) {
+  h2.img-label {
+    margin-top: 28%;
+  }
+
+  /* .header {
+    text-align: CENTER;
+  } */
+
+  .button-nav {
+    display: block;
+    width: 100%;
+  }
+
+  nav a {
+    margin: auto;
+    /* display: block; */
+  }
+
+  nav#nav-reg {
+    display: none;
+    /* margin: 4rem 0 0 0;
+    background-color: #9F5D36; */
+  }
+
+  nav#nav-ham {
+    display: block;
+  }
+}
+
+@media (max-width: 43rem) {
+  h2.img-label {
+    margin-top: 32%;
+  }
+
+  h1.quote {
+    margin-top: 30%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  h2.img-label {
+    margin-top: 36%;
+  }
+
+  h1.quote {
+    font-size: 2.25rem;
+    line-height: 3rem;
+    margin-top: 30%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 33rem) {
+  h2.img-label {
+    margin-top: 40%;
+  }
+
+  h1.quote {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    margin-top: 35%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 29rem) {
+  h2.img-label {
+    margin-top: 44%;
+  }
+
+  h1.quote {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin-top: 40%;
+    margin-bottom: 4rem;
+  }
+
+  nav#nav-ham span {
+    margin-left: 88%;
+  }
+
+  nav#nav-ham input {
+    margin-left: 88%;
+  }
 }
 
 /* Styling for the sub-navigation button */
@@ -237,10 +629,9 @@ figcaption {
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
-  /* font-size: 0.85rem; */
 }
 
-.button-sub-nav:hover, .button-sub-nav:focus {
+.button-sub-nav:hover, .button-sub-nav:focus, .button-sub-nav:active {
   color: #CFA77D;
 }
 
@@ -249,14 +640,7 @@ figcaption {
   right: 4.5rem;
 }
 
-#header {
-  background-color: #F7EFE4;
-  padding: 1.5rem 0.5rem 0rem 0.5rem;
-}
-
 .nav-icons {
-  /* position: absolute;
-  right: 1rem; */
   z-index: 10;
   display: inline-block;
   margin: 0.5rem;
@@ -273,20 +657,19 @@ figcaption {
   width: 2rem;
   margin-top: 1.25rem;
   margin-left: 0.75rem;
+
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .icon-nav {
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+  width: 1.5rem;
+  margin-bottom: -0.3rem;
 }
 
 a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   opacity: 0.4;
 }
-
-/* a.icon-nav-hover:hover, a.icon-nav-hover:focus, a.icon-nav-hover:active {
-  opacity: 1;
-} */
 
 /* Styling for the in-text link */
 
@@ -318,6 +701,10 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   text-decoration: none;
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
+}
+
+.display-block {
+  display: block;
 }
 
 .submit-button:hover, .submit-button:focus {
@@ -352,7 +739,16 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 
 .comments {
   margin-top: 1rem;
+  padding: 1rem;
   display: block;
+  background-color: #F7EFE4;
+}
+
+/* for some reason this media query is only working if i spell out each side of the padding */
+@media (min-width: 23.44rem) {
+  .comments {
+    padding: 3rem 3rem 3rem 3rem;
+  }
 }
 
 .comments .text-field {
@@ -361,26 +757,8 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 }
 
 .comments h3 {
-  margin-top: 2rem;
-  color: #9F5D36;
+  margin: 0;
 }
-
-
-
-/*
-  TEXT ELEMENTS -------------------
-*/
-
-/* Styling for headings */
-
-   /* font-family: 'Open Sans', sans-serif;
-   color: #3D3027;
-   font-weight: 800;
-   letter-spacing: 0.075em;
-   text-transform: lowercase;
-   display: inline;
-   margin-left: 0.25rem;
- } */
 
 h2 {
    font-family: 'Open Sans', sans-serif;
@@ -389,6 +767,7 @@ h2 {
    letter-spacing: 0.09em;
    text-transform: uppercase;
    display: block;
+   margin-bottom: 3rem;
  }
 
 h3 {
@@ -432,11 +811,6 @@ h3 {
    letter-spacing: 0.055em;
  }
 
-
-/*
-  COMBINED ELEMENTS -------------------
-*/
-
 /* Styling for the main navigation */
 
 @media (min-width: 475px) {
@@ -447,11 +821,28 @@ h3 {
 
 
 /* Styling for product listing */
-/* Note that I'm using 'genres', and that 'premises' and 'authors' both have different types of images and therefore look a bit different. Premises also have a little paragraph summary on larger devices.*/
+
+
+.premise-heading-icon {
+  width:5rem;
+  height:100%;
+  display: inline;
+  margin: 0 0.5rem 2rem 0;
+}
+
+.premise-title {
+  margin:1rem 0 1rem 0;
+}
 
 .product-listing {
-  margin: 1rem 4rem 1rem 0;
+  margin: 1rem 1rem 1rem 1rem;
   display: inline-block;
+}
+
+@media (min-width: 42.31rem) {
+  .product-listing {
+    margin: 1rem 4rem 1rem 0;
+  }
 }
 
 .listing-icon {
@@ -482,19 +873,6 @@ h3 {
   margin-left: 1em;
   text-decoration: none;
 }
-
-/* media queries for product listing grid (using the horizontal space to get more listings on screen wherever possible, without crowding) */
-/* @media (min-width: 36em) {
-  .product-listing {
-    width: 40%
-  }
-}
-
-@media (min-width: 65em) {
-  .product-listing {
-    width: 20%;
-  }
-} */
 
 /* Styling for colour palette */
 
@@ -551,33 +929,157 @@ h3 {
   background-color: #9B9B9B;
 }
 
-/* styling for author page */
+/* styling for author page -- big focus on responsiveness!!!*/
 
-.author-page-body {
-  margin: 2rem 6rem;
+
+.photo-and-blurb-listing {
+  display: block;
+}
+
+.select-author {
+  display: inline;
+}
+
+@media (min-width: 48.13rem) {
+  .author-listing {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
 }
 
 .author-photo {
-  width:20em;
-  height:100%;
+  width:100%;
+  /* height:100%; */
   display: inline;
-  margin-right: 4rem;
-  margin-bottom: 1rem;
+  /* margin:auto; */
+  margin-top:-20%;
 }
 
-.author-photo-thumbnail {
-  width:10em;
-  height:100%;
+.crop-vertically {
+  max-height: 25rem;
+  overflow: hidden;
+}
+
+/* slightly larger max height to account for circular shape-- doing this instead of all new css for the choose author page, since this is the only part that breaks slightly */
+.choose-author-crop {
+  max-height: 28rem;
+  overflow: hidden;
+}
+
+.photo-thumbnail {
+  width:100%;
   display: inline;
+}
+
+@media (min-width: 32rem) {
+  .photo-thumbnail {
+    width:7rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .photo-thumbnail {
+    width:10em;
+  }
+  .listing-title {
+    margin-left: 3rem;
+  }
+}
+
+/* needed separate styling for small-blurb vs author bio since it has different break-points */
+
+.small-blurb {
+  display: inline;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.about-blurb {
+  display: inline;
+  margin: 0;
+}
+
+/* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
+
+@media (min-width: 32rem) {
+  .small-blurb {
+    margin: 0 1rem 0 2rem;
+  }
+}
+@media (min-width: 37.19rem) {
+  .small-blurb {
+    margin: 0 3rem 0 2rem;
+  }
+}
+
+@media (min-width: 46.38rem) {
+  .small-blurb {
+    max-width: 465px;
+    margin-right: auto;
+  }
+  .about-blurb {
+    max-width: 465px;
+    margin-right: auto;
+  }
 }
 
 .author-bio {
   display: inline;
+  margin: 1.5rem 0 0 0;
+}
+
+@media(min-width: 37.5rem) {
+  .author-bio {
+    margin: 1.5rem 8rem 0 0;
+  }
+}
+
+.award {
+  margin: 2.5rem 4rem 1rem 0;
+}
+
+@media (min-width: 51rem) {
+  .author-bio {
+    margin: 0 3rem 0 2rem;
+  }
+  .author-photo {
+    width:20em;
+    margin-top:auto;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  }
+  .comments .text-field {
+    width: 66.666%;
+  }
+}
+
+/* keeps the line length to ~66 characters */
+@media (min-width: 62rem) {
+  .author-bio {
+    max-width: 500px;
+    margin-right: auto;
+  }
+  .comments {
+    width: 915px;
+  }
 }
 
 .author-bio h3 {
   margin-top: 0;
 }
+
+.selection {
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.review-heading {
+  margin: 1.5rem 0 0 0;
+}
+
+/* styling for blog section */
 
 .blog-post {
   border: 0.05em dotted #3D3027;
@@ -589,10 +1091,6 @@ h3.contact {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
-
-/* .blog-post:hover, .blog-post:focus {
-  background-color: #DDD;
-} */
 
 .full-post {
   border: 0.05em dotted #3D3027;
@@ -611,21 +1109,21 @@ h3.contact {
 }
 
 .icon-genre {
-    width: 15%;
-    margin: 0em 0.5em;
-    display: inline;
-    vertical-align: middle;
+  width: 15%;
+  margin: 0em 0.5em;
+  display: inline;
+  vertical-align: middle;
 }
 
 .figure-choices {
   display: inline-block;
   width: 22rem;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 .icon-steps {
   width: 18rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-top: 1rem;
 }
 
@@ -686,9 +1184,18 @@ h3.contact {
 }
 
 .text-preview {
-  font-style: italic;
+  /* margin: 1rem 0 1rem 0; */
   color: #9B9B9B;
-  width: 75%;
+  font-style: italic;
+}
+
+.listing-title {
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
+}
+
+.full-width {
+  width:100%;
 }
 
 .choose-option {
@@ -708,83 +1215,6 @@ section.choose-option {
   margin-top: 1.5rem;
 }
 
-.nav-button-home {
-  display: inline;
-}
-
-.nav-home-overlays {
-  display: block;
-  position: absolute;
-}
-
-.nav-home-imgs {
-  display: block;
-  position: absolute;
-}
-
-.img-home {
-  width: 33%;
-  position: relative;
-}
-
-.overlay {
-  width: 33%;
-  position: relative;
-  z-index: 5;
-  opacity: 0.8;
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-}
-
-
-
-@media (max-width: 760px) {
-
-  .img-home {
-    width: 32.9%;
-  }
-
-  .overlay {
-    width: 32.9%;
-  }
-
-}
-
-@media (max-width: 585px) {
-
-  .img-home {
-    width: 32.8%;
-  }
-
-  .overlay {
-    width: 32.8%;
-  }
-
-}
-
-@media (max-width: 473px) {
-
-  .img-home {
-    width: 100%;
-  }
-
-  .overlay {
-    width: 100%;
-  }
-
-}
-
-.overlay:hover, .overlay:focus {
-  opacity: 1;
-}
-
-/* .overlay-h1 {
-  position: absolute;
-  color: white;
-  z-index: 10;
-  margin-left: 6%;
-} */
-
 /*styling for review page*/
 
 .temporary-star-styling {
@@ -799,21 +1229,23 @@ section.choose-option {
   margin-top: 2rem;
 }
 
-/* company page styling */
-
-.ceo-photo {
-  width:8em;
-  height:100%;
+.contact-comments {
   display: inline;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
 }
 
-.ceo-bio {
-  display:inline;
-  margin-bottom: 1rem;
+.contact-comments .text-field {
+  width: 100%;
 }
 
-.ceo-section {
-  margin-top: 2rem;
+@media (min-width: 46.69rem) {
+  .contact-comments {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 50.75rem) {
+  .contact-comments {
+    max-width: 445px;
+    margin-right: 2rem;
+  }
 }

@@ -15,71 +15,102 @@
 
   <body>
 
-    <section id="header" class="box-item-nav">
-
-      <div class="centered">
+    <header class="box-item-nav header">
       <a href="home.html"><img src="img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
-      <section id="main-nav" class="main-nav">
-        <a href="choose-genre.html" class="button-nav">build your book</a>
-        <a href="authors-list.html" class="button-nav">authors</a>
-        <a href="company-page.html" class="button-nav">about</a>
 
-        <!-- <div class="nav-icons">
-          <a href="#" class="icon-nav-hover"><img src="img/icon-search-hover.svg" alt="a line drawing of a magnifying glass"></a>
-          <a href="#" class="icon-nav-hover"><img src="img/icon-cart-hover.svg" alt="a line drawing of a shopping cart"></a>
-        </div> -->
+      <nav id="nav-reg" role="regular-navigation">
+          <a href="choose-genre.html" class="button-nav">build your book</a>
+          <a href="listing-authors.html" class="button-nav">authors</a>
+          <a href="company-page.html" class="button-nav active">about</a>
 
-        <div class="nav-icons">
-          <a href="#" class="icon-nav"><img src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></a>
-          <!-- <a href="#" class="icon-nav"><img src="img/icon-cart.svg" alt="a line drawing of a shopping cart"></a> -->
+          <div class="search-toggle">
+            <input type="checkbox" class="search-checkbox" />
+            <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
+            <input type="text" name="search" class="search-input" placeholder="search">
+            <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+          </div>
         </div>
-      </section>
-    </section>
+      </nav>
+
+      <nav id="nav-ham" role="hamburger-navigation">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+            <a href="choose-genre.html" class="button-nav"><li>build your book</li></a>
+            <a href="listing-authors.html" class="button-nav"><li>authors</li></a>
+            <a href="company-page.html" class="button-nav active"><li>about</li></a>
+
+            <div class="search-toggle">
+              <input type="checkbox" class="search-checkbox" />
+              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" placeholder="search">
+              <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+            </div>
+            </ul>
+        </div>
+      </nav>
+    </header>
 
     <section id="page-content">
 
       <section id="sub-nav">
         <a href="company-page.html" class="button-sub-nav">our story</a>
         <a href="contact.html" class="button-sub-nav">contact</a>
-        <a href="blog.html" class="button-sub-nav">blog</a>
+        <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
       </section>
 
       <h2 class="second-heading">About Novelty</h2>
 
 
       <h3>our story</h2>
-          <!-- <section class="box">
-            <div class="box-item-text"> -->
-              <p class="para">One day in the late summer of 2017, an author, a business man, and a reality TV maven met in a coffee shop. The author wondered where budding, retired, or tired writers could exercise their skills for substantial income; the business man wondered how such a thing could stay afloat; the reality TV maven wondered how to make it fun. Together, they came up with the idea for Novelty-- a service for the commissioning of custom novels, which gives authors rights to the finished product, but allows customers to reap the satisfaction of receiving fiction catered specifically to their tastes.</p>
-            <!-- </div>
-          </section> -->
-
+        <section class="box">
+          <div class="about-blurb box-item-text">
+          <p class="para">One day in the late summer of 2017, an author, a business man, and a reality TV maven met in a coffee shop. The author wondered where budding, retired, or tired writers could exercise their skills for substantial income; the business man wondered how such a thing could stay afloat; the reality TV maven wondered how to make it fun. Together, they came up with the idea for Novelty-- a service for the commissioning of custom novels, which gives authors rights to the finished product, but allows customers to reap the satisfaction of receiving fiction catered specifically to their tastes.</p>
+          </div>
+        </section>
 
 
       <section class="ceo-section">
-        <section class="ceo-listing box">
-          <img src="img/ceo1.jpg" alt="an icon of an award ribbon" class="ceo-photo">
-          <div class="ceo-bio box-item-text">
-            <h3>CEO: joanne rowling</h3>
-            <p class="para">Joanne Rowling was born on 31st July 1965. She is a British novelist, screenwriter, and producer who is best known for writing the Harry Potter fantasy series. The books have won multiple awards, and sold more than 400 million copies. They have become the best-selling book series in history and been the basis for a series of films, over which Rowling had overall approval on the scripts and was a producer on the final films in the series.</p>
-          </div>
+        <section class="choose-option author-listing">
+          <section class="box choose-option">
+            <div class="crop-vertically">
+              <img src="img/ceo1.jpg" alt="an orange-tinted photo of author and CEO Joanne Rowling" class="photo-thumbnail">
+            </div>
+            <div class="small-blurb box-item-text">
+              <h3 class="listing-title">The Author: Joanne Rowling</h3>
+              <p class="para ceo-about">The young Jo grew up surrounded by books. She conceived the idea of Harry Potter in 1990 while sitting on a delayed train from Manchester to London King’s Cross. Novelty is Jo's new dream.</p>
+            </div>
+          </section>
         </section>
 
-        <section class="ceo-listing box">
-          <img src="img/ceo2.jpg" alt="an icon of an award ribbon" class="ceo-photo">
-          <div class="ceo-bio box-item-text">
-            <h3>partner: elon musk</h3>
-            <p class="para">Born June 28, 1971, Elon is a South African-born Canadian American business magnate, investor, engineer, and inventor. He is the founder, CEO, and lead designer of SpaceX; co-founder, CEO, and product architect of Tesla, Inc.; and chairman of SolarCity. In December 2016, he was ranked 21st on the Forbes list of The World's Most Powerful People. As of February 2018, he has a net worth of $20.8 billion and is listed by Forbes as the 53rd richest person in the world.</p>
-          </div>
+        <section class="choose-option author-listing">
+          <section class="box choose-option">
+            <div class="crop-vertically">
+              <img src="img/ceo2.jpg" alt="an orange-tinted photo of business man and ceo Elon Musk" class="photo-thumbnail">
+            </div>
+            <div class="small-blurb box-item-text">
+              <h3 class="listing-title">The Business Man: Elon Musk</h3>
+              <p class="para ceo-about">Elon Musk is the co-founder, CEO and Product Architect at Tesla-- it's a bit of a leap, taking over the business side of Novelty, but he's ready to shoot it into the star.</p>
+            </div>
+          </section>
         </section>
 
-        <section class="ceo-listing box">
-          <img src="img/ceo3.jpg" alt="an icon of an award ribbon" class="ceo-photo">
-          <div class="ceo-bio box-item-text">
-            <h3>partner: ellen degeneres</h3>
-            <p class="para">An American comedian, television host, actress, writer, producer, and LGBT activist. DeGeneres starred in the popular sitcom Ellen from 1994 to 1998 and has hosted her syndicated TV talk show, The Ellen DeGeneres Show, since 2003.</p>
-          </div>
+        <section class="choose-option author-listing">
+          <section class="box choose-option">
+            <div class="crop-vertically">
+              <img src="img/ceo3.jpg" alt="an orange-tinted photo of comedian and CEO Ellen DeGeneres" class="photo-thumbnail">
+            </div>
+            <div class="small-blurb box-item-text">
+              <h3 class="listing-title">The Social Media Maven: Ellen DeGeneres</h3>
+              <p class="para ceo-about">Ellen Lee DeGeneres is an American comedian, television host, actress, writer, producer, and LGBT activist. She loves making people happy, and wants to make Novelty a hit.</p>
+            </div>
+          </section>
         </section>
+
       </section>
     </div>
 

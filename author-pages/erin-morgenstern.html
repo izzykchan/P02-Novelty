@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>author bio & reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/flexbox.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i%7COpen+Sans:400,600,600i,700,800" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <header class="box-item-nav header">
+      <a href="../home.html"><img src="../img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
+
+      <nav id="nav-reg" role="regular-navigation">
+          <a href="../choose-genre.html" class="button-nav">build your book</a>
+          <a href="../listing-authors.html" class="button-nav active">authors</a>
+          <a href="../company-page.html" class="button-nav">about</a>
+
+          <div class="search-toggle">
+            <input type="checkbox" class="search-checkbox" />
+            <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
+            <input type="text" name="search" class="search-input" placeholder="search">
+            <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
+          </div>
+        </div>
+      </nav>
+
+      <nav id="nav-ham" role="hamburger-navigation">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+            <a href="../choose-genre.html" class="button-nav"><li>build your book</li></a>
+            <a href="../listing-authors.html" class="button-nav active"><li>authors</li></a>
+            <a href="../company-page.html" class="button-nav"><li>about</li></a>
+
+            <div class="search-toggle">
+              <input type="checkbox" class="search-checkbox" />
+              <li><img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" placeholder="search">
+              <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
+            </div>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="page-content">
+
+      <div class="box">
+        <div class="crop-vertically">
+          <img src="../img/erin-morgenstern.jpg" alt="an orange-tinted photo of author Erin Morgenstern; she's got messy short hair" class="author-photo">
+        </div>
+        <div class="author-bio box-item-text">
+          <h2>Erin Morgenstern</h2>
+          <p class="para">I grew up in Massachusetts and studied theatre and studio art at Smith College. I currently live with my husband in Manhattan where I am working on a new novel and trying to improve my cocktail mixing skills.</p>
+          <p class="para">I am a Cancer with a Leo moon and Taurus rising and yes I know what all of that means. I collect jewelry made from old keys. I knit things as long as they don’t involve too much math. I paint. I get obsessed with artisan perfume oils and I drink a lot of tea.</p>
+        </div>
+      </div>
+
+      <section class="product-listing award">
+        <img src="../img/award.svg" alt="an icon of an award ribbon" class="listing-icon">
+        <h3 class="listing-name">Locus Award</h3>
+      </section>
+      <section class="product-listing award">
+        <img src="../img/award.svg" alt="an icon of an award ribbon" class="listing-icon">
+        <h3 class="listing-name">Alex Award</h3>
+      </section>
+      <section class="product-listing award">
+        <img src="../img/award.svg" alt="an icon of an award ribbon" class="listing-icon">
+        <h3 class="listing-name">New York Times Bestseller</h3>
+      </section>
+
+
+      <section class="comments">
+        <h3 class="review-heading">rate your author:</h3>
+        <img src="../img/stars.svg" alt="an image showing four out of five stars" class="temporary-star-styling">
+        <h3>write a review:</h3>
+        <form method="post" action="#" class="text-field">
+          <textarea class="comment-field" placeholder="leave some nice words for your author!"></textarea>
+        </form>
+
+        <a href="#" class="submit-button">submit</a>
+      </section>
+
+  </section>
+
+  </body>
+
+</html>
