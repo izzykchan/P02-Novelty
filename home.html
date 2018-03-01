@@ -21,15 +21,23 @@
       <nav id="nav-reg" role="regular-navigation">
           <a href="choose-genre.html" class="button-nav">build your book</a>
           <a href="listing-authors.html" class="button-nav">authors</a>
-          <a href="company-page.html" class="button-nav">about</a>
+          <div class="sub-nav" role="dropdown-navigation">
+          <a href="company-page.html" class="button-nav button-about">about</a>
+
+          <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+            <a href="company-page.html" class="button-sub-nav">our story</a>
+            <a href="contact.html" class="button-sub-nav">contact</a>
+            <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
+          </nav>
+          </div>
 
           <div class="search-toggle">
             <input type="checkbox" class="search-checkbox" />
             <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" placeholder="search">
+            <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
             <img class="close" src="img/x.svg" alternate="an x to close the search bar">
           </div>
-        </div>
+
       </nav>
 
       <nav id="nav-ham" role="hamburger-navigation">
@@ -39,25 +47,34 @@
             <span></span>
             <span></span>
 
-            <ul id="menu">
+            <ul id="menu" aria-hidden="true" aria-controls="nav-items">
             <a href="choose-genre.html" class="button-nav"><li>build your book</li></a>
             <a href="listing-authors.html" class="button-nav"><li>authors</li></a>
+            <div class="sub-nav" role="dropdown-navigation">
+            <input type="checkbox" />
             <a href="company-page.html" class="button-nav"><li>about</li></a>
+            <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+              <a href="company-page.html" class="button-sub-nav">our story</a>
+              <a href="contact.html" class="button-sub-nav">contact</a>
+              <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
+            </nav>
 
             <div class="search-toggle">
               <input type="checkbox" class="search-checkbox" />
-              <a href="#>"<li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li></a>
-              <input type="text" name="search" class="search-input" placeholder="search">
+              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
               <img class="close" src="img/x.svg" alternate="an x to close the search bar">
             </div>
             </ul>
         </div>
       </nav>
+
     </header>
 
     <section class="home-quote">
       <div class="col-2of3">
-        <h1 class="quote">- this is a blurb or quote describing novelty or the values of the site or something poetic idk.</h1>
+        <h1 class="quote">"A book is a dream that you hold in your hands."</h1>
+        <h3 class="quote">- Neil Gaiman</h3>
       </div>
     </section>
 
@@ -89,7 +106,7 @@
     </section>
 
     <footer id="footer">
-      <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102</p>
+      <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="styleguide-and-citations/styleguide.html">Style Guide</a> | <a href="styleguide-and-citations/citations.html">Citations</a></p>
     </footer>
 
   </body>

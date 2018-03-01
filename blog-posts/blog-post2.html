@@ -21,15 +21,23 @@
       <nav id="nav-reg" role="regular-navigation">
           <a href="../choose-genre.html" class="button-nav">build your book</a>
           <a href="../listing-authors.html" class="button-nav">authors</a>
-          <a href="../company-page.html" class="button-nav active">about</a>
+          <div class="sub-nav" role="dropdown-navigation">
+          <a href="../company-page.html" class="button-nav button-about active">about</a>
+
+          <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+            <a href="../company-page.html" class="button-sub-nav">our story</a>
+            <a href="../contact.html" class="button-sub-nav">contact</a>
+            <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+          </nav>
+          </div>
 
           <div class="search-toggle">
             <input type="checkbox" class="search-checkbox" />
             <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" placeholder="search">
+            <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
             <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
           </div>
-        </div>
+
       </nav>
 
       <nav id="nav-ham" role="hamburger-navigation">
@@ -39,59 +47,61 @@
             <span></span>
             <span></span>
 
-            <ul id="menu">
+            <ul id="menu" aria-hidden="true" aria-controls="nav-items">
             <a href="../choose-genre.html" class="button-nav"><li>build your book</li></a>
             <a href="../listing-authors.html" class="button-nav"><li>authors</li></a>
+            <div class="sub-nav" role="dropdown-navigation">
+            <input type="checkbox" />
             <a href="../company-page.html" class="button-nav active"><li>about</li></a>
+            <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+              <a href="../company-page.html" class="button-sub-nav">our story</a>
+              <a href="../contact.html" class="button-sub-nav">contact</a>
+              <a href="../listings-blog-posts.html" class="button-sub-nav active">blog</a>
+            </nav>
 
             <div class="search-toggle">
               <input type="checkbox" class="search-checkbox" />
               <li><img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
-              <input type="text" name="search" class="search-input" placeholder="search">
+              <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
               <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
             </div>
             </ul>
         </div>
       </nav>
+
     </header>
 
     <section id="page-content">
 
-      <section id="sub-nav">
-        <a href="company-page.html" class="button-sub-nav">our story</a>
-        <a href="contact.html" class="button-sub-nav">contact</a>
-        <a href="blog.html" class="button-sub-nav active">blog</a>
-      </section>
-
       <h2>Blog</h2>
 
-      <div class="box full-post">
-        <img src="../img/strikes-gold.jpg" alt="an orange-tinted photo of author Patrick Rothfuss; he is wearing stripes." class="author-photo">
-        <div class="author-bio box-item-text">
-          <h3>One of our Authors Strikes Fictional Gold</h3>
-          <p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-
-          <p class="para">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-
-          <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+      <section class="box">
+        <div class="crop-vertically">
+          <img src="../img/strikes-gold-photo.jpg" alt="an orange-tinted photo of author Joanne Rowling accepting an award" class="large-photo box-item-image">
         </div>
-      </div>
+        <div class="large-blurb box-item-text">
+          <h3>One of our Authors Strikes Fictional Gold</h3>
+          <p class="para">Neil Gaiman, renouned for his works of speculative fiction and magic realism, has announced... lIn at consectetur nibh. Ut pellentesque id dolor vel aliquam. Nunc sit amet egestas erat. In vestibulum hendrerit turpis eu pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam facilisis convallis quam, quis mattis velit pulvinar ut. Vivamus ut placerat sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed efficitur ipsum vehicula sapien posuere vulputate.</p>
+          <p class="para"> Nulla venenatis purus lectus, sed fringilla nisl ultricies non. Nulla nec metus semper, tempus est et, fermentum sem. Maecenas vel nibh quam. Praesent sed tortor non eros sodales malesuada quis a risus. Vivamus dapibus orci sed efficitur porttitor. Quisque odio nunc, viverra quis elit eu, bibendum semper tellus. Morbi risus nibh, iaculis eu arcu vel, imperdiet porttitor nunc. Ut suscipit et massa quis consectetur. Etiam finibus ultrices accumsan. Nullam accumsan porta orci, at consequat nulla. </p>
+          <p class="para">Vivamus viverra rhoncus urna a iaculis. Duis venenatis orci ac nunc tincidunt, nec porta magna condimentum. Nam eu interdum eros. Aliquam suscipit iaculis orci commodo malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer tristique diam ante, nec ornare leo scelerisque sed. Nulla viverra non ipsum non feugiat. Aliquam erat volutpat. Sed semper turpis in libero dictum sagittis. Praesent ut scelerisque lacus. Pellentesque commodo nunc nisi, et feugiat libero lacinia sit amet. Nullam interdum eros interdum luctus ornare. Quisque feugiat nunc ipsum, quis luctus libero tempor nec. Praesent id rhoncus elit, at varius odio. Nullam sed nisl eu neque aliquam vestibulum.</p>
+        </div>
+      </section>
 
-          <section class="comments">
-            <h3>thoughts?</h3>
-              <form method="post" action="#" class="text-field">
-                <textarea class="comment-field" placeholder="leave us a comment!"></textarea>
-              </form>
+      <section class="comments">
+        <h3 class="review-heading">rate your author:</h3>
+        <img src="../img/stars.svg" alt="an image showing four out of five stars" class="temporary-star-styling">
+        <h3>write a review:</h3>
+        <form method="post" action="#" class="text-field">
+          <textarea class="comment-field" placeholder="leave some nice words for your author!"></textarea>
+        </form>
 
-            <a href="#" class="submit-button">submit</a>
-          </section>
+        <a href="#" class="submit-button">submit</a>
+      </section>
 
   </section>
 
   <footer id="footer">
-    <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102</p>
+    <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="../styleguide-and-citations/styleguide.html">Style Guide</a> | <a href="../styleguide-and-citations/citations.html">Citations</a></p>
   </footer>
 
   </body>

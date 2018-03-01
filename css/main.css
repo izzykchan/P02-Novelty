@@ -1,13 +1,11 @@
+/* general page structure styling */
+
 body {
   font-family: 'Merriweather', serif;
 }
 
 #page-content {
   margin: 2rem;
-}
-
-.centered {
-  text-align: center;
 }
 
 #footer {
@@ -34,8 +32,8 @@ body {
   height: 7rem;
 }
 
-.centered-premise-title {
-  margin: auto;
+header {
+  padding: 0;
 }
 
 h4 {
@@ -57,12 +55,27 @@ h5 {
   display: inline;
 }
 
-.checkout-form h5 {
-  margin-left: 1rem;
+.centered {
+  text-align: center;
+}
+
+.checkout-form {
+  background-color: #EEE4D1;
+  padding: 1.5rem 2rem;
+}
+
+.checkout-form h3 {
+  margin-top: 0rem;
 }
 
 .order-summary {
   margin-top: 2rem;
+  /* background-color: #EEE4D1; */
+  padding: 0rem 2rem;
+}
+
+.order-summary h3 {
+  margin-top: 0;
 }
 
 .order-summary p {
@@ -75,11 +88,15 @@ h5 {
 }
 
 .checkout-form {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
 .customer-address {
+  margin-top: 2rem;
+}
+
+.payment-info {
   margin-top: 2rem;
 }
 
@@ -92,8 +109,25 @@ h5 {
   margin-right: 1rem;
 }
 
-.exp-date {
-  width: 3rem;
+.order-confirm {
+  margin-bottom: 3rem;
+}
+
+.order-confirm img {
+  width: 10rem;
+  margin-top: 2rem;
+}
+
+.order-confirm h3 {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.order-confirm .submit-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  width: 18rem;
 }
 
 section p {
@@ -102,6 +136,7 @@ section p {
 }
 
 /* basic styling for the nav */
+
 nav#nav-reg a {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.15em;
@@ -129,6 +164,7 @@ a {
 }
 
 /* Styling for home page elements -- the large photos */
+
 .build {
   width: 33%;
   display: inline-block;
@@ -155,6 +191,7 @@ nav a:hover, nav a:focus {
 }
 
 /* Styling for the navigation "buttons" */
+
 .button-nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -169,6 +206,24 @@ nav a:hover, nav a:focus {
 
 .button-nav:hover, .button-nav:focus, .button-nav:active {
   color: #CFA77D;
+}
+
+#nav-reg .sub-nav:hover .sub-nav-content, #nav-reg .sub-nav:focus .sub-nav-content, #nav-reg .sub-nav:active .sub-nav-content {
+  display: block;
+  visibility: visible;
+}
+
+#nav-ham .sub-nav input:checked ~ .sub-nav-content {
+  display: block;
+  position: relative;
+  padding-left: 5rem;
+  visibility: visible;
+}
+
+nav#nav-ham .sub-nav input {
+  margin-left: 0;
+  margin-top: 1rem;
+  width: 5rem;
 }
 
 /* styling for animated search bar in the regular main nav*/
@@ -194,6 +249,8 @@ nav a:hover, nav a:focus {
   -webkit-touch-callout: none;
 }
 
+/* styling for the search bar */
+
 #nav-reg .search-input {
   margin-left: -8rem;
   margin-top: -1.25rem;
@@ -205,6 +262,7 @@ nav a:hover, nav a:focus {
   padding: 0.25rem 0.25rem 0.25rem 0.5rem;
   background-color: none;
   border: none;
+  visibility: hidden;
 }
 
 #nav-reg img.close {
@@ -232,10 +290,12 @@ nav a:hover, nav a:focus {
 #nav-reg .search-toggle input.search-checkbox:checked ~ input.search-input {
   display: inline-block;
   margin-left: 0.15rem;
+  visibility: visible;
 }
 
 #nav-reg .search-toggle input.search-checkbox:checked ~ img.close {
   opacity: 1;
+  visibility: visible;
 }
 
 /* styling for animated search bar in the hamburger main nav*/
@@ -243,8 +303,9 @@ nav a:hover, nav a:focus {
 #nav-ham .search-toggle input.search-checkbox {
   display: block;
   position: absolute;
-  left: -83.5%;
+  left: 0.5rem;
   margin-top: 0rem;
+  width: 2rem;
 
   cursor: pointer;
 
@@ -254,7 +315,7 @@ nav a:hover, nav a:focus {
   -webkit-touch-callout: none;
 }
 
-#nav-ham .search-input {
+#nav-ham .sub-nav input.search-input {
   margin-left: 3rem;
   margin-top: -0.5rem;
   opacity: 0;
@@ -265,7 +326,7 @@ nav a:hover, nav a:focus {
   padding: 0rem 0rem 0rem 0.5rem;
   border: none;
   z-index: 2;
-  width: 15rem;
+  width: 12rem;
 }
 
 #nav-ham img.close {
@@ -279,6 +340,7 @@ nav a:hover, nav a:focus {
 
 #nav-ham .search-toggle input.search-checkbox:checked ~ input.search-input {
   opacity: 0.75;
+  visibility: visible;
 }
 
 #nav-ham .search-toggle input.search-checkbox:checked ~ a.icon-nav {
@@ -328,7 +390,8 @@ nav#nav-ham input {
   -webkit-touch-callout: none;
 }
 
-/* the three lines of the menu icon/symbol */
+/* the three lines of the menu icon/symbol-- not sure if 'span' is semantic but this is how the tutorial does it and i think we need this in order to animate properly */
+
 #menu-toggle span {
   display: block;
   width: 33px;
@@ -380,12 +443,12 @@ nav#nav-ham input {
 #menu {
   position: absolute;
   width: 106%;
-  /* margin-top: 1.5rem; */
   margin-left: -1rem;
   padding: 1.25rem 1.25rem;
   height: 0;
   opacity: 0;
   display: none;
+  visibility: hidden;
 
   background: #9F5D36;
   list-style-type: none;
@@ -400,6 +463,12 @@ nav#nav-ham input {
   height: 16rem;
   opacity: 0.95;
   display: block;
+  visibility: visible;
+}
+
+#nav-ham #menu-toggle .sub-nav input:checked ~ .search-toggle {
+  display: none;
+  visibility: hidden;
 }
 
 /* styling for the menu when it's dropped down */
@@ -479,9 +548,14 @@ h1.quote {
   color: #3C2E28;
   margin-left: 10%;
   margin-top: 25%;
-  margin-bottom: 6rem;
+  margin-bottom: -2.5rem;
   line-height: 3.25rem;
   opacity: 0.85;
+}
+
+h3.quote {
+  margin-bottom: 6rem;
+  margin-left: 6rem;
 }
 
 /* media queries for homepage specifically */
@@ -515,11 +589,19 @@ h1.quote {
   h2.img-label {
     margin-top: 22.5%;
   }
+
+  h3.quote {
+    margin-left: 5rem;
+  }
 }
 
 @media (max-width: 53rem) {
   h2.img-label {
     margin-top: 24%;
+  }
+
+  h3.quote {
+    margin-left: 4rem;
   }
 }
 
@@ -534,10 +616,6 @@ h1.quote {
     margin-top: 28%;
   }
 
-  /* .header {
-    text-align: CENTER;
-  } */
-
   .button-nav {
     display: block;
     width: 100%;
@@ -550,12 +628,15 @@ h1.quote {
 
   nav#nav-reg {
     display: none;
-    /* margin: 4rem 0 0 0;
-    background-color: #9F5D36; */
+
   }
 
   nav#nav-ham {
     display: block;
+  }
+
+  h3.quote {
+    margin-left: 3rem;
   }
 }
 
@@ -566,7 +647,7 @@ h1.quote {
 
   h1.quote {
     margin-top: 30%;
-    margin-bottom: 4rem;
+    margin-bottom: -2rem;
   }
 }
 
@@ -579,7 +660,13 @@ h1.quote {
     font-size: 2.25rem;
     line-height: 3rem;
     margin-top: 30%;
-    margin-bottom: 4rem;
+    margin-bottom: -2rem;
+  }
+}
+
+@media (max-width: 33.7rem) {
+  .plot-length .customizations div:not([class]) {
+    margin-top: 1.5rem;
   }
 }
 
@@ -592,7 +679,11 @@ h1.quote {
     font-size: 2rem;
     line-height: 2.75rem;
     margin-top: 35%;
-    margin-bottom: 4rem;
+    margin-bottom: -2rem;
+  }
+
+  h3.quote {
+    margin-left: 2rem;
   }
 }
 
@@ -605,7 +696,7 @@ h1.quote {
     font-size: 1.75rem;
     line-height: 2.5rem;
     margin-top: 40%;
-    margin-bottom: 4rem;
+    margin-bottom: -2rem;
   }
 
   nav#nav-ham span {
@@ -615,18 +706,26 @@ h1.quote {
   nav#nav-ham input {
     margin-left: 88%;
   }
+
+  .customizations {
+    width: 90%;
+  }
+
+  section.frequency .figure-customize {
+    margin-top: 0rem;
+  }
 }
 
 /* Styling for the sub-navigation button */
+
 .button-sub-nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 0.11rem;
   text-align: CENTER;
-  display: inline;
-  padding: 0em 0em;
-  margin-right: 1rem;
-  color: #9F5D36;
+  display: block;
+  color: #EEE4D1;
+  width: 14.5rem;
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
@@ -636,9 +735,36 @@ h1.quote {
   color: #CFA77D;
 }
 
-#sub-nav {
+.sub-nav {
+  position: relative;
+  display: inline-block;
+}
+
+.sub-nav-content {
   position: absolute;
-  right: 4.5rem;
+  right: -3.25rem;
+  display: none;
+  padding-bottom: 1.5rem;
+  margin-top: -0.5rem;
+  background-color: #9F5D36;
+  opacity: 0.95;
+  visibility: hidden;
+}
+
+#menu .sub-nav {
+  position: absolute;
+  display: block;
+}
+
+#nav-ham .sub-nav-content {
+  position: relative;
+  margin-left: -4rem;
+  width: 80rem;
+}
+
+#nav-ham .button-sub-nav {
+  margin-left: -5rem;
+  padding: 0.5rem 3rem;
 }
 
 .nav-icons {
@@ -745,7 +871,7 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   background-color: #F7EFE4;
 }
 
-/* for some reason this media query is only working if i spell out each side of the padding */
+/* for some reason this media query is only working if I spell out each side of the padding... is this normal?*/
 @media (min-width: 23.44rem) {
   .comments {
     padding: 3rem 3rem 3rem 3rem;
@@ -792,37 +918,7 @@ h3 {
    display: block;
  }
 
-  /* Styling for bullet lists */
-
- .bullet-lists {
-   font-family: 'Merriweather', serif;
-   font-size: 0.8rem;
-   line-height: 1.3rem;
-   color: #3D3027;
-   letter-spacing: 0.055em;
- }
-
- /* Styling for numbered lists-- exactly the same as prior two... */
-
- .numbered-lists {
-   font-family: 'Merriweather', serif;
-   font-size: 0.8rem;
-   line-height: 1.3rem;
-   color: #3D3027;
-   letter-spacing: 0.055em;
- }
-
-/* Styling for the main navigation */
-
-@media (min-width: 475px) {
-  .button-nav {
-    display: inline-block;
-  }
-}
-
-
-/* Styling for product listing */
-
+/* Styling for product listings (genres, icons, authors, awards...) */
 
 .premise-heading-icon {
   width:5rem;
@@ -837,6 +933,10 @@ h3 {
 
 .product-listing {
   margin: 1rem 1rem 1rem 1rem;
+  display: inline-block;
+}
+
+.photo-and-blurb-listing {
   display: inline-block;
 }
 
@@ -859,43 +959,22 @@ h3 {
   vertical-align: middle;
 }
 
-/* .listing-name:hover, .listing-name:focus, .arrow:hover, .arrow:focus {
-  color: #CFA77D;
-} */
 
-.arrow {
-  display: inline;
-  padding: 1em 0;
-  vertical-align: middle;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  color: #3D3027;
-  letter-spacing: 0.1em;
-  margin-left: 1em;
-  text-decoration: none;
+/* styling for author pages -- big focus on responsiveness!!!*/
+
+a.red:active, a.red:hover, a.red:focus {
+  background-color: #962A18;;
 }
 
-/* Styling for colour palette */
-
-.palette {
-  border: 0.2em solid #3C2E28;
-  /* padding: 1em 1em; */
+a.brown:active, a.brown:hover, a.brown:focus {
+  background-color: #664D43;
 }
 
-.swatch {
-  font-family: 'Merriweather', serif;
-  color: white;
-  margin: 1em;
-  padding: 2em 1.65em;
+/* styling for author page -- big focus on responsiveness!!!*/
+
+.author-listing {
+
   display: block;
-}
-
-@media (min-width: 40em) {
-  .swatch {
-    margin-left:1em;
-    margin-right: 0;
-    display: inline-block;
-  }
 }
 
 .brown {
@@ -905,38 +984,6 @@ h3 {
 .red {
   background-color: #6C200F;
 }
-
-.orange {
-  background-color: #9F5D36;
-}
-
-.light-orange {
-  background-color: #CFA77D;
-}
-
-.cream {
-  background-color: #EEE4D1;
-}
-
-.light-green {
-  background-color: #536D55;
-}
-
-.dark-green {
-  background-color: #1E3322;
-}
-
-.grey {
-  background-color: #9B9B9B;
-}
-
-/* styling for author page -- big focus on responsiveness!!!*/
-
-
-.photo-and-blurb-listing {
-  display: block;
-}
-
 .select-author {
   display: inline;
 }
@@ -948,7 +995,7 @@ h3 {
   }
 }
 
-.author-photo {
+.large-photo {
   width:100%;
   /* height:100%; */
   display: inline;
@@ -962,6 +1009,7 @@ h3 {
 }
 
 /* slightly larger max height to account for circular shape-- doing this instead of all new css for the choose author page, since this is the only part that breaks slightly */
+
 .choose-author-crop {
   max-height: 28rem;
   overflow: hidden;
@@ -987,7 +1035,7 @@ h3 {
   }
 }
 
-/* needed separate styling for small-blurb vs author bio since it has different break-points */
+/* needed separate styling for small-blurb vs large-blurb since it has different break-points */
 
 .small-blurb {
   display: inline;
@@ -996,10 +1044,18 @@ h3 {
 
 .about-blurb {
   display: inline;
-  margin: 0;
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  max-width: 500px;
 }
 
-/* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
+@media (min-width: 51rem) {
+  .about-blurb {
+    margin-top: 0;
+    margin-right: auto;
+  }
+}
 
 @media (min-width: 32rem) {
   .small-blurb {
@@ -1017,19 +1073,15 @@ h3 {
     max-width: 465px;
     margin-right: auto;
   }
-  .about-blurb {
-    max-width: 465px;
-    margin-right: auto;
-  }
 }
 
-.author-bio {
+.large-blurb {
   display: inline;
   margin: 1.5rem 0 0 0;
 }
 
 @media(min-width: 37.5rem) {
-  .author-bio {
+  .large-blurb {
     margin: 1.5rem 8rem 0 0;
   }
 }
@@ -1039,10 +1091,10 @@ h3 {
 }
 
 @media (min-width: 51rem) {
-  .author-bio {
+  .large-blurb {
     margin: 0 3rem 0 2rem;
   }
-  .author-photo {
+  .large-photo {
     width:20em;
     margin-top:auto;
     margin-right: 4rem;
@@ -1055,7 +1107,7 @@ h3 {
 
 /* keeps the line length to ~66 characters */
 @media (min-width: 62rem) {
-  .author-bio {
+  .large-blurb {
     max-width: 500px;
     margin-right: auto;
   }
@@ -1064,7 +1116,7 @@ h3 {
   }
 }
 
-.author-bio h3 {
+.large-blurb h3 {
   margin-top: 0;
 }
 
@@ -1082,15 +1134,10 @@ h3 {
 
 /* styling for blog section */
 
-.blog-post {
-  border: 0.05em dotted #3D3027;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
-}
-
-h3.contact {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+.blog-photo {
+  width:100%;
+  display: inline;
+  margin-top:-20%;
 }
 
 .full-post {
@@ -1108,6 +1155,13 @@ h3.contact {
   margin-right: 1rem;
   margin-bottom: 2rem;
 }
+
+h3.contact {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* customization user-flow styling */
 
 .icon-genre {
   width: 15%;
@@ -1129,36 +1183,86 @@ h3.contact {
 }
 
 .customizations {
-  padding: 1em 1em;
-  border: 0.05em dotted #3D3027;
   display: inline-block;
-  margin: 0.15rem 0;
+  margin-right: 5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+
+.customizations div {
+  display: inline-block;
 }
 
 .customizations h3 {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  padding: 0;
+}
+
+.customizations div h3 {
+  margin: 0rem;
+  margin-bottom: 1.25rem;
+}
+
+.customizations h5 {
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+.customizations p {
+  color: #777;
+  display: inline;
+  margin: 0;
+}
+
+div.sliders {
+  display: block;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.frequency .figure-customize {
+  margin-top: 0;
 }
 
 .customize-options {
   margin-left: 0.25rem;
-  margin-right: 1rem;
 }
 
 .figure-customize {
   margin-top: 0.5rem;
-  display: inline-block;
+  display: block;
 }
 
+.customizations img {
+  width: 6rem;
+  display: inline-block;
+  vertical-align: top;
+}
 
 .customize-slider {
-  margin-left: 0.5rem;
-  margin-right: 2rem;
   vertical-align: middle;
 }
 
 .page-input {
   display: inline;
 }
+
+.small-input {
+  width: 3rem;
+  margin-right: 0.25rem;
+}
+
+.plot-length {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.plot-length .length {
+  vertical-align: top;
+}
+
 
 /* submit button stand alone (so it's not inline-block) */
 .continue {
@@ -1250,3 +1354,117 @@ section.choose-option {
     margin-right: 2rem;
   }
 }
+
+/* styleguide styling */
+
+.styleguide-section {
+  margin: 1em 0;
+  padding: 1em 1em;
+  border: 0.05em dotted #3D3027;
+}
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+/* Styling for colour palette */
+
+.palette {
+  border: 0.2em solid #3C2E28;
+  /* padding: 1em 1em; */
+}
+
+.swatch {
+  font-family: 'Merriweather', serif;
+  color: white;
+  margin: 1em;
+  padding: 2em 1.65em;
+  margin-left:1em;
+  margin-right: 0;
+  display: inline-block;
+}
+
+
+.brown {
+  background-color: #3C2E28;
+}
+
+.red {
+  background-color: #6C200F;
+}
+
+.orange {
+  background-color: #9F5D36;
+}
+
+.light-orange {
+  background-color: #CFA77D;
+}
+
+.cream {
+  background-color: #EEE4D1;
+}
+
+.light-green {
+  background-color: #536D55;
+}
+
+.dark-green {
+  background-color: #1E3322;
+}
+
+.grey {
+  background-color: #9B9B9B;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.styleguide-h3 {
+  margin: 1rem 0 1rem 0;
+}
+
+/* Styling for bullet lists */
+
+ .bullet-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+ /* Styling for numbered lists-- exactly the same as prior two... */
+
+ .numbered-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+ footer a {
+   color: #9F5D36;
+   text-decoration: none;
+   -webkit-transition: color 0.2s ease-out;
+   transition: color 0.2s ease-out;
+ }
+
+ footer a:hover, footer a:focus, footer a:active {
+   opacity: 0.4;
+ }
+
+.list-link {
+   color: #9F5D36;
+   text-decoration: none;
+   -webkit-transition: color 0.2s ease-out;
+   transition: color 0.2s ease-out;
+ }
+
+.list-link:hover, .list-link:focus, .list-link:active {
+   opacity: 0.4;
+ }

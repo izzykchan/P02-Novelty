@@ -21,15 +21,23 @@
       <nav id="nav-reg" role="regular-navigation">
           <a href="../choose-genre.html" class="button-nav">build your book</a>
           <a href="../listing-authors.html" class="button-nav active">authors</a>
-          <a href="../company-page.html" class="button-nav">about</a>
+          <div class="sub-nav" role="dropdown-navigation">
+          <a href="../company-page.html" class="button-nav button-about">about</a>
+
+          <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+            <a href="../company-page.html" class="button-sub-nav">our story</a>
+            <a href="../contact.html" class="button-sub-nav">contact</a>
+            <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+          </nav>
+          </div>
 
           <div class="search-toggle">
             <input type="checkbox" class="search-checkbox" />
             <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" placeholder="search">
+            <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
             <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
           </div>
-        </div>
+
       </nav>
 
       <nav id="nav-ham" role="hamburger-navigation">
@@ -39,29 +47,37 @@
             <span></span>
             <span></span>
 
-            <ul id="menu">
+            <ul id="menu" aria-hidden="true" aria-controls="nav-items">
             <a href="../choose-genre.html" class="button-nav"><li>build your book</li></a>
             <a href="../listing-authors.html" class="button-nav active"><li>authors</li></a>
+            <div class="sub-nav" role="dropdown-navigation">
+            <input type="checkbox" />
             <a href="../company-page.html" class="button-nav"><li>about</li></a>
+            <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+              <a href="../company-page.html" class="button-sub-nav">our story</a>
+              <a href="../contact.html" class="button-sub-nav">contact</a>
+              <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+            </nav>
 
             <div class="search-toggle">
               <input type="checkbox" class="search-checkbox" />
               <li><img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
-              <input type="text" name="search" class="search-input" placeholder="search">
+              <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
               <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
             </div>
             </ul>
         </div>
       </nav>
+
     </header>
 
     <section id="page-content">
 
       <div class="box">
         <div class="crop-vertically">
-          <img src="../img/jodi-picoult.jpg" alt="an orange-tinted photo of author Jodi Picoult; her hair is curly and blonde." class="author-photo">
+          <img src="../img/jodi-picoult.jpg" alt="an orange-tinted photo of author Jodi Picoult; her hair is curly and blonde." class="large-photo">
         </div>
-        <div class="author-bio box-item-text">
+        <div class="large-blurb box-item-text">
           <h2>Jodi Picoult</h2>
           <p class="para">Picoult studied creative writing with Mary Morris at Princeton, and had two short stories published in Seventeen magazine while still a student. Realism - and a profound desire to be able to pay the rent - led Picoult to a series of different jobs following her graduation: as a technical writer for a Wall Street brokerage firm, as a copywriter at an ad agency, as an editor at a textbook publisher, and as an 8th grade English teacher - before entering Harvard to pursue a master’s in education. She married Tim Van Leer, whom she had known at Princeton, and it was while she was pregnant with her first child that she wrote her first novel, Songs of the Humpback Whale.</p>
         </div>
@@ -94,7 +110,7 @@
   </section>
 
   <footer id="footer">
-    <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102</p>
+    <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="../styleguide-and-citations/styleguide.html">Style Guide</a> | <a href="../styleguide-and-citations/citations.html">Citations</a></p>
   </footer>
 
   </body>

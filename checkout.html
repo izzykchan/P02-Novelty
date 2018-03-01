@@ -21,15 +21,23 @@
       <nav id="nav-reg" role="regular-navigation">
           <a href="choose-genre.html" class="button-nav active">build your book</a>
           <a href="listing-authors.html" class="button-nav">authors</a>
-          <a href="company-page.html" class="button-nav">about</a>
+          <div class="sub-nav" role="dropdown-navigation">
+          <a href="company-page.html" class="button-nav button-about">about</a>
+
+          <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+            <a href="company-page.html" class="button-sub-nav">our story</a>
+            <a href="contact.html" class="button-sub-nav">contact</a>
+            <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
+          </nav>
+          </div>
 
           <div class="search-toggle">
             <input type="checkbox" class="search-checkbox" />
             <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" placeholder="search">
+            <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
             <img class="close" src="img/x.svg" alternate="an x to close the search bar">
           </div>
-        </div>
+
       </nav>
 
       <nav id="nav-ham" role="hamburger-navigation">
@@ -39,32 +47,40 @@
             <span></span>
             <span></span>
 
-            <ul id="menu">
+            <ul id="menu" aria-hidden="true" aria-controls="nav-items">
             <a href="choose-genre.html" class="button-nav active"><li>build your book</li></a>
             <a href="listing-authors.html" class="button-nav"><li>authors</li></a>
+            <div class="sub-nav" role="dropdown-navigation">
+            <input type="checkbox" />
             <a href="company-page.html" class="button-nav"><li>about</li></a>
+            <nav class="sub-nav-content aria-hidden="true" aria-controls="nav-items"">
+              <a href="company-page.html" class="button-sub-nav">our story</a>
+              <a href="contact.html" class="button-sub-nav">contact</a>
+              <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
+            </nav>
 
             <div class="search-toggle">
               <input type="checkbox" class="search-checkbox" />
               <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
-              <input type="text" name="search" class="search-input" placeholder="search">
+              <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
               <img class="close" src="img/x.svg" alternate="an x to close the search bar">
             </div>
             </ul>
         </div>
       </nav>
+
     </header>
 
   <section id="page-content">
-
-    <section class="centered">
 
       <img src="img/build-your-book-steps5.png" class="icon-steps">
       <h2>5. checkout</h2>
 
       <section class="order-summary">
 
-        <h4>your order:</h4>
+        <img src="img/shopping-basket.svg" alt="an icon of a shopping basket with a book in it" class="icon-genre">
+
+        <h3>your order</h3>
         <div class="order-summary-info">
           <h5>genre: <h5>
           <p>action</p>
@@ -102,9 +118,9 @@
 
       <section class="checkout-form">
 
-        <h4>your info:</h4>
-
         <section class="customer-name">
+          <h3>your info</h3>
+
           <div class="checkout-input">
             <h5>first name</h5>
             <form class="page-input">
@@ -134,13 +150,14 @@
           <div class="checkout-input">
             <h5>postal code</h5>
             <form class="page-input">
-              <input type="text" name="postal-code">
+              <input class="small-input" type="text" name="postal-code">
+              <input class="small-input" type="text" name="postal-code">
           </div>
         </section>
 
-        <h4>payment info</h4>
-
         <section class="payment-info">
+          <h3>payment info</h3>
+
           <div class="checkout-input">
             <h5>card number</h5>
             <form class="page-input">
@@ -150,16 +167,16 @@
           <div class="checkout-input">
             <h5>cvc</h5>
             <form class="page-input">
-              <input type="text" name="cvc-num">
+              <input class="small-input" type="text" name="cvc-num">
           </div>
 
           <div class="checkout-input">
             <h5>expiry date</h5>
               <form class="page-input">
-                <input type="text" class="exp-date" name="exp-month">
+                <input type="text" class="small-input" name="exp-month">
               <h5 class="slash">/</h5>
               <form class="page-input">
-                <input type="text" class="exp-date" name="exp-year">
+                <input type="text" class="small-input" name="exp-year">
           </div>
         </section>
 
@@ -170,12 +187,10 @@
         <a href="order-confirmation.html" class="submit-button checkout">finish</a>
       </section>
 
-    </section>
-
   </section>
 
   <footer id="footer">
-    <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102</p>
+    <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="styleguide-and-citations/styleguide.html">Style Guide</a> | <a href="styleguide-and-citations/citations.html">Citations</a></p>
   </footer>
 
   </body>

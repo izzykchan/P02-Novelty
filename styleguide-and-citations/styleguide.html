@@ -7,95 +7,160 @@
     <title>novelty - style guide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/flexbox.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i%7COpen+Sans:400,600,600i,700,800" rel="stylesheet">
 
   </head>
 
   <body>
 
-    <h1>novelty - style guide</h1>
+    <header class="box-item-nav header">
+      <a href="../home.html"><img src="../img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
 
-      <section id="page-content">
+      <nav id="nav-reg" role="regular-navigation">
+          <a href="../choose-genre.html" class="button-nav">build your book</a>
+          <a href="../listing-authors.html" class="button-nav">authors</a>
+          <a href="../company-page.html" class="button-nav active">about</a>
 
-    <nav>
+          <div class="search-toggle">
+            <input type="checkbox" class="search-checkbox" />
+            <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
+            <input type="text" name="search" class="search-input" placeholder="search">
+            <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+          </div>
+        </div>
+      </nav>
 
-      <p>on this page:</p>
-        <a href="#interactive_elements">Interactive Elements</a>
-        <a href="#text_elements">Text Elements</a>
-        <a href="#combined_elements">Combined Elements</a>
+      <nav id="nav-ham" role="hamburger-navigation">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
 
-      <p>also see:</p>
-        <a href="styleguide-and-citations/citations.html">Citations</a>
-        <a href="styleguide-and-citations/sitemap.html">Sitemap</a>
+            <ul id="menu">
+            <a href="../choose-genre.html" class="button-nav"><li>build your book</li></a>
+            <a href="../listing-authors.html" class="button-nav"><li>authors</li></a>
+            <a href="../company-page.html" class="button-nav active"><li>about</li></a>
 
-    </nav>
+            <div class="search-toggle">
+              <input type="checkbox" class="search-checkbox" />
+              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
+              <input type="text" name="search" class="search-input" placeholder="search">
+              <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+            </div>
+            </ul>
+        </div>
+      </nav>
+    </header>
 
+    <section id="page-content">
 
+    <h2>style guide</h2>
+
+    <section class="inline-block">
+      <a href="#interactive_elements" class="button-sub-nav">interactive elements</a>
+    </section>
+    <section class="inline-block">
+      <a href="#text_elements" class="button-sub-nav">text elements</a>
+    </section>
+    <section class="inline-block">
+      <a href="#combined_elements" class="button-sub-nav">combined elements</a>
+    </section>
 
     <!-- INTERACTIVE ELEMENTS SECTION // -->
     <section id="interactive_elements">
 
       <!-- Default Button styling section -->
-      <section>
+      <section class="styleguide-section">
 
-        <h2>Navigation Button</h2>
+        <h3 class="styleguide-h3">Navigation Button</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.button-nav</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.button-nav</li>
+        </ul>
 
-        <h3>Sample code:</h3>
-        <code>&lt;a href=&quot;#&quot; class=&quot;button-nav&quot;&gt;nav button&lt;/a&gt;</code>
+        <h4>Sample code:</h4>
+        <code>&lt;nav id=&quot;nav-reg&quot; role=&quot;regular-navigation&quot;&gt; <br> &lt;a href=&quot;choose-genre.html&quot; class=&quot;button-nav&quot;&gt;build your book&lt;/a&gt; <br> &lt;/nav&gt;</code>
 
-        <h3>Rendered element:</h3>
-        <a href="#" class="button-nav">nav button</a>
+        <h4>Rendered element:</h4>
 
-      </section>
-
-      <section>
-
-        <h2>In-Text Links</h2>
-
-        <h3>CSS selector:</h3>
-        <p>.in-text-link</p>
-
-        <h3>Sample code:</h3>
-        <code>&lt;a href=&quot;#&quot; class=&quot;in-text-link&quot;&gt;linky mclinkerton&lt;/a&gt;</code>
-
-        <h3>Rendered element:</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#" class="in-text-link">linky mclinkerton</a> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <nav id="nav-reg" role="regular-navigation">
+          <a href="choose-genre.html" class="button-nav">nav button</a>
+        </nav>
 
       </section>
 
-      <section>
+      <section class="styleguide-section">
 
-        <h2>Reset/Submit Buttons</h2>
+        <!-- instead of in-text links since we don't actually have those; also always next to an image, so the interaction is clearer when the opacity dims on a larger surface area (we realize the hover is pretty subtle without the image) -->
 
-        <h3>CSS selector:</h3>
-        <p>.reset-button</p>
-        <p>.submit-button</p>
+        <h3 class="styleguide-h3">Links to Full Text</h3>
 
-        <h3>Sample code:</h3>
+        <h4>CSS selectors:</h4>
+        <ul class="bullet-lists">
+          <li>.choose-option</li>
+          <li>.photo-and-blurb-listing</li>
+          <li>.small-blurb</li>
+        </ul>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href=&quot;#&quot; class=&quot;choose-option photo-and-blurb-listing&quot;&gt; <br> &lt;section class=&quot;box choose-option&quot;&gt; <br> &lt;div class=&quot;small-blurb box-item-text&quot;&gt; <br> &lt;p class=&quot;para text-preview&quot;&gt;Baggott began publishing short stories when she was twenty-two and sold her first novel while still in her twenties...&lt;/p&gt; <br> &lt;p class=&quot;para text-preview&quot;&gt;click to read more &gt;&gt;&lt;/p&gt; <br> &lt;/div&gt; <br> &lt;/section&gt; <br>&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a href="#" class="choose-option photo-and-blurb-listing">
+          <section class="box choose-option">
+            <div class="small-blurb box-item-text">
+              <p class="para text-preview">Baggott began publishing short stories when she was twenty-two and sold her first novel while still in her twenties...</p>
+              <p class="para text-preview">click to read more >></p>
+            </div>
+          </section>
+        </a>
+
+      </section>
+
+      <section class="styleguide-section">
+
+        <h3 class="styleguide-h3">Reset/Submit Buttons</h3>
+
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.reset-button</li>
+          <li>.submit-button</li>
+        </ul>
+
+        <h4>Sample code:</h4>
         <code>&lt;a href=&quot;#&quot; class=&quot;reset-button&quot;&gt;reset&lt;/a&gt;</code>
         <code>&lt;a href=&quot;#&quot; class=&quot;submit-button&quot;&gt;reset&lt;/a&gt;</code>
 
-        <h3>Rendered element:</h3>
+        <h4>Rendered element:</h4>
         <a href="#" class="reset-button">reset</a>
         <a href="#" class="submit-button">submit</a>
 
       </section>
 
-      <section>
-        <h2>Text Input Field</h2>
-        <h3>Sample code:</h3>
-        <!-- I could not figure out how to indent the middle line of code. I hope it's ok the way it is. Also, the <br> is semantic because it's breaks in lines of code. -->
-        <code>&lt;form method=&quot;post&quot; action=&quot;#&quot;&gt; <br> &lt;textarea id=&quot;form-comment&quot; placeholder=&quot;Leave some kind words for your author!&quot;&gt;&lt;/textarea&gt; <br> &lt;/form&gt;</code>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">Text Input Field</h3>
 
-        <h3>Rendered element:</h3>
-        <!-- section based on 339 week 1's tutorial code; it says just 'text input field', so I'm not including lable and button -->
-        <form method="post" action="#">
-          <textarea class="comment-field" placeholder="Leave some kind words for your author!"></textarea>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.text-field</li>
+          <li>.comment-field</li>
+        </ul>
+
+        <h4>Sample code:</h4>
+        <code>&lt;h3&gt;write a review:&lt;/h3&gt; <br> &lt;form method=&quot;post&quot; action=&quot;#&quot; class=&quot;text-field&quot;&gt; <br> &lt;textarea class=&quot;comment-field&quot; placeholder=&quot;leave some nice words for your author!&quot;&gt;&lt;/textarea&gt; <br> &lt;/form&gt;</code>
+
+        <h4>Rendered element:</h4>
+
+        <h3>write a review:</h3>
+        <form method="post" action="#" class="text-field">
+          <textarea class="comment-field" placeholder="leave some nice words for your author!"></textarea>
         </form>
+
       </section>
 
     </section>
@@ -106,47 +171,51 @@
     <!-- TEXT ELEMENTS SECTION // -->
     <section id="text_elements">
 
-      <section>
-        <h2>Headings</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">Headings</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.top-heading</p>
-        <p>.second-heading</p>
-        <p>.lowest-heading</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>(none- used h1, h2, and h3)</li>
+        </ul>
 
-        <h3>Sample code:</h3>
+        <h4>Sample code:</h4>
         <code>&lt;h1 class=&quot;top-heading&quot;&gt;top-level heading&lt;/h1&gt; <br> &lt;h2 class=&quot;second-heading&quot;&gt;second-level heading&lt;/h2&gt; <br> &lt;h3 class=&quot;lowest-heading&quot;&gt;lowest-level heading&lt;/h3&gt;</code>
 
-        <h3>Rendered element:</h3>
-        <h1 class="top-heading">top-level heading</h1>
-        <h2 class="second-heading">second-level heading</h2>
-        <h3 class="lowest-heading">lowest-level heading</h3>
+        <h4>Rendered element:</h4>
+        <h1>top-level heading</h1>
+        <h2>second-level heading</h2>
+        <h3>lowest-level heading</h3>
 
       </section>
 
-      <section>
-        <h2>Paragraphs</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">Paragraphs</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.para</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.para</li>
+        </ul>
 
-        <h3>Sample code:</h3>
+        <h4>Sample code:</h4>
         <code>&lt;p class=&quot;para&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</code>
 
-        <h3>Rendered element:</h3>
+        <h4>Rendered element:</h4>
         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
 
-      <section>
-        <h2>Bullet Lists</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">Bullet Lists</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.bullet-lists</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.bullet-lists</li>
+        </ul>
 
-        <h3>Sample code:</h3>
+        <h4>Sample code:</h4>
         <code>&lt;ul class=&quot;bullet-lists&quot;&gt;<br> &lt;li&gt;Thing one&lt;/li&gt; <br> &lt;li&gt;Thing two&lt;/li&gt; <br>&lt;li&gt;Cat in the hat&lt;/li&gt; <br> &lt;/ul&gt;</code>
 
-        <h3>Rendered element:</h3>
+        <h4>Rendered element:</h4>
         <ul class="bullet-lists">
           <li>Thing one</li>
           <li>Thing two</li>
@@ -154,16 +223,18 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Numbered Lists</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">Numbered Lists</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.numbered-lists</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.numbered-lists</li>
+        </ul>
 
-        <h3>Sample code:</h3>
+        <h4>Sample code:</h4>
         <code>&lt;ol class=&quot;bullet-lists&quot;&gt;<br> &lt;li&gt;Thing one&lt;/li&gt; <br> &lt;li&gt;Thing two&lt;/li&gt; <br>&lt;li&gt;Cat in the hat&lt;/li&gt; <br> &lt;/ol&gt;</code>
 
-        <h3>Rendered element:</h3>
+        <h4>Rendered element:</h4>
         <ol class="numbered-lists">
           <li>Thing one</li>
           <li>Thing two</li>
@@ -179,87 +250,90 @@
     <!-- COMBINED ELEMENTS SECTION // -->
     <section id="combined_elements">
 
-      <section>
-        <h2>Main Navigation</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-section">Main Navigation</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.main-nav</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.main-nav</li>
+        </ul>
+        <p>please see the top of the page for the full header</p>
 
-        <h3>Sample code:</h3>
+        <h4>Sample code:</h4>
         <code>&lt;section id=&quot;main_nav&quot; class=&quot;main-nav&quot;&gt; <br> &lt;a href=&quot;#&quot; class=&quot;button-nav&quot;&gt;genres&lt;/a&gt; <br> &lt;a href=&quot;#&quot; class=&quot;button-nav&quot;&gt;authors&lt;/a&gt; <br> &lt;a href=&quot;#&quot; class=&quot;button-nav&quot;&gt;about&lt;/a&gt; <br> &lt;/section&gt; </code>
 
-        <h3>Rendered element:</h3>
+        <h4>Rendered element:</h4>
         <section id="main_nav" class="main-nav">
-          <a href="#" class="button-nav">genres</a>
+          <a href="#" class="button-nav">build your book</a>
           <a href="#" class="button-nav">authors</a>
           <a href="#" class="button-nav">about</a>
         </section>
 
       </section>
 
-      <section>
-        <h2>PRODUCT LISTING & WEBSITE GRID STRUCTURE</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">PRODUCT LISTING & WEBSITE GRID STRUCTURE</h3>
 
-        <h3>CSS selector:</h3>
-        <p>.product-listing</p>
-        <p>AT THE ATOMIC LEVEL:</p>
-        <p>.listing-icon</p>
-        <p>.listing-heading</p>
-        <p>arrow</p>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.choose-option</li>
+          <li>.figure-choices</li>
+          <li>.icon-genre</li>
+          <li>listing-name</li>
+        </ul>
 
-        <h3>Sample code:</h3>
-        <code>&lt;section id=&quot;product_listing&quot; class=&quot;product-listing&quot;&gt; <br> &lt;img src=&quot;../img/action.svg&quot; alt=&quot;an icon of a sword and shield&quot; class=&quot;listing-icon&quot;&gt; <br> &lt;h3 class=&quot;listing-heading lowest-heading&quot;&gt;action&lt;/h3&gt; <br> &lt;a href=&quot;#&quot; class=&quot;arrow&quot;&gt;&amp;gt;&amp;gt;&lt;/a&gt; <br> &lt;/section&gt;</code>
+        <h4>Sample code:</h4>
+        <code>&lt;a href=&quot;premise-pages/action-premises.html&quot; class=&quot;choose-option&quot;&gt; <br> &lt;section class=&quot;figure-choices box choose-option&quot;&gt; <br> &lt;img src=&quot;../img/action.svg&quot; alt=&quot;an icon of a sword and shield&quot; class=&quot;icon-genre&quot;&gt; <br> &lt;h3 class=&quot;listing-name&quot;&gt;action&lt;/h3&gt; <br> &lt;/section&gt; <br> &lt;/a&gt;</code>
 
-        <h3>Rendered element:</h3>
-        <section id="product_listing1" class="product-listing">
-          <img src="../img/action.svg" alt="an icon of a sword and shield" class="listing-icon">
-          <h3 class="listing-heading lowest-heading">action</h3>
-          <a href="#" class="arrow">&gt;&gt;</a>
-        </section>
-        <section id="product_listing2" class="product-listing">
-          <img src="../img/historical.svg" alt="an icon of a castle" class="listing-icon">
-          <h3 class="listing-heading lowest-heading">historical</h3>
-          <a href="#" class="arrow">&gt;&gt;</a>
-        </section>
-        <section id="product_listing3" class="product-listing">
-          <img src="../img/romance.svg" alt="an icon of a heart" class="listing-icon">
-          <h3 class="listing-heading lowest-heading">romance</h3>
-          <a href="#" class="arrow">&gt;&gt;</a>
-        </section>
-        <section id="product_listing4" class="product-listing">
-          <img src="../img/fantasy.svg" alt="an icon of a dragon in an egg" class="listing-icon">
-          <h3 class="listing-heading lowest-heading">fantasy</h3>
-          <a href="#" class="arrow">&gt;&gt;</a>
-        </section>
+        <h4>Rendered element:</h4>
+
+        <a href="#" class="choose-option">
+          <section class="figure-choices box choose-option">
+            <img src="../img/action.svg" alt="an icon of a sword and shield" class="icon-genre">
+            <h3 class="listing-name">action</h3>
+          </section>
+        </a>
+
+        <a href="#" class="choose-option">
+          <section class="figure-choices box">
+            <img src="../img/comedy.svg" alt="an icon of a pair of masks" class="icon-genre">
+            <h3 class="listing-name">comedy</h3>
+          </section>
+        </a>
+
+        <a href="#" class="choose-option">
+          <section class="figure-choices box choose-option">
+            <img src="../img/drama.svg" alt="an icon of a pair of curtains" class="icon-genre">
+            <h3 class="listing-name">drama</h3>
+          </section>
+        </a>
+
+        <a href="#" class="choose-option">
+          <section class="figure-choices box choose-option">
+            <img src="../img/fantasy.svg" alt="an icon of a dragon in an egg" class="icon-genre">
+            <h3 class="listing-name">fantasy</h3>
+          </section>
+        </a>
       </section>
 
-      <!-- <section>
-        <h2>WEBSITE GRID STRUCTURE</h2>
+      <section class="styleguide-section">
+        <h3 class="styleguide-h3">WEBSITE COLOUR SWATCHES</h3>
 
-        <h3>CSS selector:</h3>
+        <h4>CSS selector:</h4>
+        <ul class="bullet-lists">
+          <li>.palette</li>
+          <li>AT THE ATOMIC LEVEL:</li>
+          <li>.swatch</li>
+          <li>.brown</li>
+          <li>.red</li>
+          <li>.orange</li>
+          <li>...</li>
+        </ul>
 
-        <h3>Sample code:</h3>
-        <code></code>
-
-        <h3>Rendered element:</h3>
-      </section> -->
-
-      <section>
-        <h2>WEBSITE COLOUR SWATCHES</h2>
-
-        <h3>CSS selectosr:</h3>
-        <p>.palette</p>
-        <p>AT THE ATOMIC LEVEL:</p>
-        <p>.swatch</p>
-        <p>.brown</p>
-        <p>.red</p>
-        <p>.orange</p>
-        <p>...</p>
-
-        <h3>Sample code:</h3>
+        <h4>Sample code:</h4>
         <code>&lt;section id=&quot;colours&quot; class=&quot;palette&quot; &gt; <br> &lt;p class=&quot;swatch brown&quot;&gt;#3C2E28&lt;/p&gt; <br> &lt;p class=&quot;swatch red&quot;&gt;#6C200F&lt;/p&gt; <br> &lt;p class=&quot;swatch orange&quot;&gt;#9F5D36&lt;/p&gt; <br> &lt;p class=&quot;swatch light-orange&quot;&gt;#CFA77D&lt;/p&gt; <br> &lt;p class=&quot;swatch cream&quot;&gt;#EEE4D1&lt;/p&gt; <br> &lt;p class=&quot;swatch grey&quot;&gt;#9B9B9B&lt;/p&gt; <br> &lt;p class=&quot;swatch light-green&quot;&gt;#536D55&lt;/p&gt; <br> &lt;p class=&quot;swatch dark-green&quot;&gt;#1E3322&lt;/p&gt; <br> &lt;/section&gt;</code>
 
-        <h3>Rendered element:</h3>
+        <h4>Rendered element:</h4>
         <section id="colours" class="palette">
           <p class="swatch brown">#3C2E28</p>
           <p class="swatch red">#6C200F</p>
@@ -273,7 +347,11 @@
       </section>
 
     </section>
-    <!-- // COMBINED ELEMENTS SECTION -->
+  </section>
+
+    <footer id="footer">
+      <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="styleguide.html">Style Guide</a> | <a href="citations.html">Citations</a></p>
+    </footer>
 
   </body>
 </html>
