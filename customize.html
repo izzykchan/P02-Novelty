@@ -60,10 +60,12 @@
     <img src="img/build-your-book-steps3.png" class="icon-steps">
     <h2>3. customize your book</h2>
 
-    <h3>characters</h3>
-
     <section class="customizations">
-      <h4>main:</h4>
+      <h3>characters</h3>
+      <img src="img/char-main.png" alt="an icon of superman" class="icon-genre">
+
+      <div>
+      <h3 class="listing-name">main</h3>
 
       <section class="figure-customize">
       <h5>gender</h5>
@@ -82,10 +84,14 @@
           <option>timid</option>
         </select>
       </section>
+      </div>
     </section>
 
     <section class="customizations">
-      <h4>side-kick:</h4>
+      <img src="img/char-main.png" alt="an icon of superman" class="icon-genre">
+
+      <div>
+      <h3 class="listing-name">side-kick</h3>
 
       <section class="figure-customize">
       <h5>gender</h5>
@@ -104,10 +110,14 @@
           <option>timid</option>
         </select>
       </section>
+      </div>
     </section>
 
     <section class="customizations">
-      <h4>love interest:</h4>
+      <img src="img/char-main.png" alt="an icon of superman" class="icon-genre">
+
+      <div>
+      <h3 class="listing-name">love interest:</h3>
 
       <section class="figure-customize">
       <h5>gender</h5>
@@ -126,10 +136,14 @@
           <option>timid</option>
         </select>
       </section>
+      </div>
     </section>
 
     <section class="customizations">
-      <h4>villain:</h4>
+      <img src="img/char-main.png" alt="an icon of superman" class="icon-genre">
+
+      <div>
+      <h3 class="listing-name">villain:</h3>
 
       <section class="figure-customize">
       <h5>gender</h5>
@@ -148,34 +162,53 @@
           <option>timid</option>
         </select>
       </section>
+      </div>
     </section>
 
-    <h3>plot twists</h3>
-    <section class="customizations">
+    <div class="plot-length">
+    <section class="customizations frequency">
+      <h3>plot twists</h3>
+      <img src="img/char-main.png" alt="an icon of superman" class="icon-genre">
+
+      <div>
       <section class="figure-customize">
       <h5>frequency</h5>
+      <div class="sliders">
+        <p class="para">rarely</p>
         <input type="range" min="1" max="100" value="50" class="customize-slider" id="frequency-range">
+        <p class="para">often</p>
+      </div>
       </section>
       <section class="figure-customize">
       <h5>intensity</h5>
+      <div class="sliders">
+        <p class="para">subtle</p>
         <input type="range" min="1" max="100" value="50" class="customize-slider" id="intensity-range">
+        <p class="para">mind-blowing</p>
+      </div>
       </section>
       <!-- html sliders found at: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+      </div>
     </section>
 
-    <h3>length</h3>
-    <section class="customizations">
+    <section class="customizations length">
+      <h3>length</h3>
+      <img src="img/char-main.png" alt="an icon of superman" class="icon-genre">
+
+      <div>
       <section class="figure-customize">
       <h5>between</h5>
       <form class="page-input">
-        <input type="text" name="start-page">
+        <input class="small-input" type="text" name="start-page">
       <h5>to</h5>
-        <input type="text" name="end-page">
+        <input class="small-input" type="text" name="end-page">
       <h5>pages</h5>
       </form>
       </section>
       <!-- text input forms found at: https://www.w3schools.com/html/html_forms.asp -->
+      </div>
     </section>
+    </div>
 
     <section>
       <a href="premise-pages/action-premises.html" class="reset-button back">back</a>

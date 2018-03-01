@@ -55,14 +55,23 @@ h5 {
   display: inline;
 }
 
-/* checkout page styling */
+.checkout-form {
+  background-color: #EEE4D1;
+  padding: 1.5rem 2rem;
+}
 
-.checkout-form h5 {
-  margin-left: 1rem;
+.checkout-form h3 {
+  margin-top: 0rem;
 }
 
 .order-summary {
   margin-top: 2rem;
+  /* background-color: #EEE4D1; */
+  padding: 0rem 2rem;
+}
+
+.order-summary h3 {
+  margin-top: 0;
 }
 
 .order-summary p {
@@ -75,11 +84,15 @@ h5 {
 }
 
 .checkout-form {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
 .customer-address {
+  margin-top: 2rem;
+}
+
+.payment-info {
   margin-top: 2rem;
 }
 
@@ -92,8 +105,25 @@ h5 {
   margin-right: 1rem;
 }
 
-.exp-date {
-  width: 3rem;
+.order-confirm {
+  margin-bottom: 3rem;
+}
+
+.order-confirm img {
+  width: 10rem;
+  margin-top: 2rem;
+}
+
+.order-confirm h3 {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.order-confirm .submit-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  width: 18rem;
 }
 
 section p {
@@ -585,6 +615,12 @@ h1.quote {
   }
 }
 
+@media (max-width: 33.7rem) {
+  .plot-length .customizations div:not([class]) {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (max-width: 33rem) {
   h2.img-label {
     margin-top: 40%;
@@ -616,6 +652,14 @@ h1.quote {
 
   nav#nav-ham input {
     margin-left: 88%;
+  }
+
+  .customizations {
+    width: 90%;
+  }
+
+  section.frequency .figure-customize {
+    margin-top: 0rem;
   }
 }
 
@@ -839,6 +883,28 @@ h3 {
 
 /* styling for author pages -- big focus on responsiveness!!!*/
 
+a.red:active, a.red:hover, a.red:focus {
+  background-color: #962A18;;
+}
+
+a.brown:active, a.brown:hover, a.brown:focus {
+  background-color: #664D43;
+}
+
+/* styling for author page -- big focus on responsiveness!!!*/
+
+.author-listing {
+
+  display: block;
+}
+
+.brown {
+  background-color: #3C2E28;
+}
+
+.red {
+  background-color: #6C200F;
+}
 .select-author {
   display: inline;
 }
@@ -1038,36 +1104,86 @@ h3.contact {
 }
 
 .customizations {
-  padding: 1em 1em;
-  border: 0.05em dotted #3D3027;
   display: inline-block;
-  margin: 0.15rem 0;
+  margin-right: 5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+
+.customizations div {
+  display: inline-block;
 }
 
 .customizations h3 {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  padding: 0;
+}
+
+.customizations div h3 {
+  margin: 0rem;
+  margin-bottom: 1.25rem;
+}
+
+.customizations h5 {
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+.customizations p {
+  color: #777;
+  display: inline;
+  margin: 0;
+}
+
+div.sliders {
+  display: block;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.frequency .figure-customize {
+  margin-top: 0;
 }
 
 .customize-options {
   margin-left: 0.25rem;
-  margin-right: 1rem;
 }
 
 .figure-customize {
   margin-top: 0.5rem;
-  display: inline-block;
+  display: block;
 }
 
+.customizations img {
+  width: 6rem;
+  display: inline-block;
+  vertical-align: top;
+}
 
 .customize-slider {
-  margin-left: 0.5rem;
-  margin-right: 2rem;
   vertical-align: middle;
 }
 
 .page-input {
   display: inline;
 }
+
+.small-input {
+  width: 3rem;
+  margin-right: 0.25rem;
+}
+
+.plot-length {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.plot-length .length {
+  vertical-align: top;
+}
+
 
 /* submit button stand alone (so it's not inline-block) */
 .continue {
