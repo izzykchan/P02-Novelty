@@ -32,6 +32,10 @@ body {
   height: 7rem;
 }
 
+header {
+  padding: 0;
+}
+
 h4 {
   margin-bottom: 0.5em;
   margin-top: 2rem;
@@ -1155,3 +1159,95 @@ section.choose-option {
     margin-right: 2rem;
   }
 }
+
+/* styleguide styling */
+
+.styleguide-section {
+  margin: 1em 0;
+  padding: 1em 1em;
+  border: 0.05em dotted #3D3027;
+}
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+/* Styling for colour palette */
+
+.palette {
+  border: 0.2em solid #3C2E28;
+  /* padding: 1em 1em; */
+}
+
+.swatch {
+  font-family: 'Merriweather', serif;
+  color: white;
+  margin: 1em;
+  padding: 2em 1.65em;
+  margin-left:1em;
+  margin-right: 0;
+  display: inline-block;
+}
+
+
+.brown {
+  background-color: #3C2E28;
+}
+
+.red {
+  background-color: #6C200F;
+}
+
+.orange {
+  background-color: #9F5D36;
+}
+
+.light-orange {
+  background-color: #CFA77D;
+}
+
+.cream {
+  background-color: #EEE4D1;
+}
+
+.light-green {
+  background-color: #536D55;
+}
+
+.dark-green {
+  background-color: #1E3322;
+}
+
+.grey {
+  background-color: #9B9B9B;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.styleguide-h3 {
+  margin: 1rem 0 1rem 0;
+}
+
+/* Styling for bullet lists */
+
+ .bullet-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+ /* Styling for numbered lists-- exactly the same as prior two... */
+
+ .numbered-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
