@@ -537,8 +537,24 @@ h2.img-label {
 
 /* styling for the quote/text on the home page */
 
-.col-2of3 {
-  width: 66.7%;
+.home-quote {
+  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 29.875rem) {
+  .home-quote {
+    width: 66.7%;
+  }
+}
+
+@media (min-width: 35.875) {
+  .home-quote {
+    max-width: 941px;
+    margin-left: 1rem;
+    margin-right: auto;
+  }
 }
 
 h1.quote {
@@ -1267,7 +1283,6 @@ div.sliders {
 /* submit button stand alone (so it's not inline-block) */
 .continue {
   display: inline-block;
-  width: 9.35rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
@@ -1275,17 +1290,11 @@ div.sliders {
 
 .back {
   display: inline-block;
-  width: 9.35rem;
   padding: 1rem 3.25rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
   background-color: #6C200F;
-}
-
-.checkout {
-  display: inline-block;
-  width: 9.35rem;
 }
 
 .text-preview {
