@@ -1251,3 +1251,25 @@ section code {
    color: #3D3027;
    letter-spacing: 0.055em;
  }
+
+ footer a {
+   color: #9F5D36;
+   text-decoration: none;
+   -webkit-transition: color 0.2s ease-out;
+   transition: color 0.2s ease-out;
+ }
+
+ footer a:hover, footer a:focus, footer a:active {
+   opacity: 0.4;
+ }
+
+li a {
+   color: #9F5D36;
+   text-decoration: none;
+   -webkit-transition: color 0.2s ease-out;
+   transition: color 0.2s ease-out;
+ }
+
+li a:hover, li a:focus, li a:active {
+   opacity: 0.4;
+ }
