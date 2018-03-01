@@ -21,15 +21,23 @@
       <nav id="nav-reg" role="regular-navigation">
           <a href="../choose-genre.html" class="button-nav active">build your book</a>
           <a href="../listing-authors.html" class="button-nav">authors</a>
-          <a href="../company-page.html" class="button-nav">about</a>
+          <div class="sub-nav" role="dropdown-navigation">
+          <a href="../company-page.html" class="button-nav button-about active">about</a>
+
+          <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+            <a href="../company-page.html" class="button-sub-nav">our story</a>
+            <a href="../contact.html" class="button-sub-nav">contact</a>
+            <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+          </nav>
+          </div>
 
           <div class="search-toggle">
             <input type="checkbox" class="search-checkbox" />
             <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" placeholder="search">
+            <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
             <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
           </div>
-        </div>
+
       </nav>
 
       <nav id="nav-ham" role="hamburger-navigation">
@@ -39,20 +47,28 @@
             <span></span>
             <span></span>
 
-            <ul id="menu">
+            <ul id="menu" aria-hidden="true" aria-controls="nav-items">
             <a href="../choose-genre.html" class="button-nav active"><li>build your book</li></a>
             <a href="../listing-authors.html" class="button-nav"><li>authors</li></a>
-            <a href="../company-page.html" class="button-nav"><li>about</li></a>
+            <div class="sub-nav" role="dropdown-navigation">
+            <input type="checkbox" />
+            <a href="../company-page.html" class="button-nav active"><li>about</li></a>
+            <nav class="sub-nav-content" aria-hidden="true" aria-controls="nav-items">
+              <a href="../company-page.html" class="button-sub-nav">our story</a>
+              <a href="../contact.html" class="button-sub-nav">contact</a>
+              <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+            </nav>
 
             <div class="search-toggle">
               <input type="checkbox" class="search-checkbox" />
               <li><img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
-              <input type="text" name="search" class="search-input" placeholder="search">
+              <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
               <img class="close" src="../img/x.svg" alternate="an x to close the search bar">
             </div>
             </ul>
         </div>
       </nav>
+
     </header>
 
   <section id="page-content">
