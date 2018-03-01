@@ -996,7 +996,17 @@ h3 {
 
 .about-blurb {
   display: inline;
-  margin: 0;
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+@media (min-width: 51rem) {
+  .about-blurb {
+    margin-top: 0;
+    margin-right: auto;
+  }
 }
 
 /* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
@@ -1014,10 +1024,6 @@ h3 {
 
 @media (min-width: 46.38rem) {
   .small-blurb {
-    max-width: 465px;
-    margin-right: auto;
-  }
-  .about-blurb {
     max-width: 465px;
     margin-right: auto;
   }
@@ -1082,10 +1088,10 @@ h3 {
 
 /* styling for blog section */
 
-.blog-post {
-  border: 0.05em dotted #3D3027;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
+.blog-photo {
+  width:100%;
+  display: inline;
+  margin-top:-20%;
 }
 
 h3.contact {
