@@ -1,13 +1,11 @@
+/* general page structure styling */
+
 body {
   font-family: 'Merriweather', serif;
 }
 
 #page-content {
   margin: 2rem;
-}
-
-.centered {
-  text-align: center;
 }
 
 #footer {
@@ -34,10 +32,6 @@ body {
   height: 7rem;
 }
 
-.centered-premise-title {
-  margin: auto;
-}
-
 h4 {
   margin-bottom: 0.5em;
   margin-top: 2rem;
@@ -56,6 +50,8 @@ h5 {
   text-transform: lowercase;
   display: inline;
 }
+
+/* checkout page styling */
 
 .checkout-form h5 {
   margin-left: 1rem;
@@ -102,6 +98,7 @@ section p {
 }
 
 /* basic styling for the nav */
+
 nav#nav-reg a {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.15em;
@@ -129,6 +126,7 @@ a {
 }
 
 /* Styling for home page elements -- the large photos */
+
 .build {
   width: 33%;
   display: inline-block;
@@ -155,6 +153,7 @@ nav a:hover, nav a:focus {
 }
 
 /* Styling for the navigation "buttons" */
+
 .button-nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -193,6 +192,8 @@ nav a:hover, nav a:focus {
 
   -webkit-touch-callout: none;
 }
+
+/* styling for the search bar */
 
 #nav-reg .search-input {
   margin-left: -8rem;
@@ -328,7 +329,8 @@ nav#nav-ham input {
   -webkit-touch-callout: none;
 }
 
-/* the three lines of the menu icon/symbol */
+/* the three lines of the menu icon/symbol-- not sure if 'span' is semantic but this is how the tutorial does it and i think we need this in order to animate properly */
+
 #menu-toggle span {
   display: block;
   width: 33px;
@@ -534,10 +536,6 @@ h1.quote {
     margin-top: 28%;
   }
 
-  /* .header {
-    text-align: CENTER;
-  } */
-
   .button-nav {
     display: block;
     width: 100%;
@@ -618,6 +616,7 @@ h1.quote {
 }
 
 /* Styling for the sub-navigation button */
+
 .button-sub-nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -745,7 +744,7 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   background-color: #F7EFE4;
 }
 
-/* for some reason this media query is only working if i spell out each side of the padding */
+/* for some reason this media query is only working if I spell out each side of the padding... is this normal?*/
 @media (min-width: 23.44rem) {
   .comments {
     padding: 3rem 3rem 3rem 3rem;
@@ -792,37 +791,7 @@ h3 {
    display: block;
  }
 
-  /* Styling for bullet lists */
-
- .bullet-lists {
-   font-family: 'Merriweather', serif;
-   font-size: 0.8rem;
-   line-height: 1.3rem;
-   color: #3D3027;
-   letter-spacing: 0.055em;
- }
-
- /* Styling for numbered lists-- exactly the same as prior two... */
-
- .numbered-lists {
-   font-family: 'Merriweather', serif;
-   font-size: 0.8rem;
-   line-height: 1.3rem;
-   color: #3D3027;
-   letter-spacing: 0.055em;
- }
-
-/* Styling for the main navigation */
-
-@media (min-width: 475px) {
-  .button-nav {
-    display: inline-block;
-  }
-}
-
-
-/* Styling for product listing */
-
+/* Styling for product listings (genres, icons, authors, awards...) */
 
 .premise-heading-icon {
   width:5rem;
@@ -837,6 +806,10 @@ h3 {
 
 .product-listing {
   margin: 1rem 1rem 1rem 1rem;
+  display: inline-block;
+}
+
+.photo-and-blurb-listing {
   display: inline-block;
 }
 
@@ -859,83 +832,8 @@ h3 {
   vertical-align: middle;
 }
 
-/* .listing-name:hover, .listing-name:focus, .arrow:hover, .arrow:focus {
-  color: #CFA77D;
-} */
 
-.arrow {
-  display: inline;
-  padding: 1em 0;
-  vertical-align: middle;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  color: #3D3027;
-  letter-spacing: 0.1em;
-  margin-left: 1em;
-  text-decoration: none;
-}
-
-/* Styling for colour palette */
-
-.palette {
-  border: 0.2em solid #3C2E28;
-  /* padding: 1em 1em; */
-}
-
-.swatch {
-  font-family: 'Merriweather', serif;
-  color: white;
-  margin: 1em;
-  padding: 2em 1.65em;
-  display: block;
-}
-
-@media (min-width: 40em) {
-  .swatch {
-    margin-left:1em;
-    margin-right: 0;
-    display: inline-block;
-  }
-}
-
-.brown {
-  background-color: #3C2E28;
-}
-
-.red {
-  background-color: #6C200F;
-}
-
-.orange {
-  background-color: #9F5D36;
-}
-
-.light-orange {
-  background-color: #CFA77D;
-}
-
-.cream {
-  background-color: #EEE4D1;
-}
-
-.light-green {
-  background-color: #536D55;
-}
-
-.dark-green {
-  background-color: #1E3322;
-}
-
-.grey {
-  background-color: #9B9B9B;
-}
-
-/* styling for author page -- big focus on responsiveness!!!*/
-
-
-.photo-and-blurb-listing {
-  display: block;
-}
+/* styling for author pages -- big focus on responsiveness!!!*/
 
 .select-author {
   display: inline;
@@ -948,7 +846,7 @@ h3 {
   }
 }
 
-.author-photo {
+.large-photo {
   width:100%;
   /* height:100%; */
   display: inline;
@@ -962,6 +860,7 @@ h3 {
 }
 
 /* slightly larger max height to account for circular shape-- doing this instead of all new css for the choose author page, since this is the only part that breaks slightly */
+
 .choose-author-crop {
   max-height: 28rem;
   overflow: hidden;
@@ -987,7 +886,7 @@ h3 {
   }
 }
 
-/* needed separate styling for small-blurb vs author bio since it has different break-points */
+/* needed separate styling for small-blurb vs large-blurb since it has different break-points */
 
 .small-blurb {
   display: inline;
@@ -1009,8 +908,6 @@ h3 {
   }
 }
 
-/* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
-
 @media (min-width: 32rem) {
   .small-blurb {
     margin: 0 1rem 0 2rem;
@@ -1029,13 +926,13 @@ h3 {
   }
 }
 
-.author-bio {
+.large-blurb {
   display: inline;
   margin: 1.5rem 0 0 0;
 }
 
 @media(min-width: 37.5rem) {
-  .author-bio {
+  .large-blurb {
     margin: 1.5rem 8rem 0 0;
   }
 }
@@ -1045,10 +942,10 @@ h3 {
 }
 
 @media (min-width: 51rem) {
-  .author-bio {
+  .large-blurb {
     margin: 0 3rem 0 2rem;
   }
-  .author-photo {
+  .large-photo {
     width:20em;
     margin-top:auto;
     margin-right: 4rem;
@@ -1061,7 +958,7 @@ h3 {
 
 /* keeps the line length to ~66 characters */
 @media (min-width: 62rem) {
-  .author-bio {
+  .large-blurb {
     max-width: 500px;
     margin-right: auto;
   }
@@ -1070,7 +967,7 @@ h3 {
   }
 }
 
-.author-bio h3 {
+.large-blurb h3 {
   margin-top: 0;
 }
 
@@ -1094,11 +991,6 @@ h3 {
   margin-top:-20%;
 }
 
-h3.contact {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
 .full-post {
   border: 0.05em dotted #3D3027;
 }
@@ -1114,6 +1006,13 @@ h3.contact {
   margin-right: 1rem;
   margin-bottom: 2rem;
 }
+
+h3.contact {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* customization user-flow styling */
 
 .icon-genre {
   width: 15%;
