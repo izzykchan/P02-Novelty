@@ -1263,13 +1263,13 @@ section code {
    opacity: 0.4;
  }
 
-li a {
+.list-link {
    color: #9F5D36;
    text-decoration: none;
    -webkit-transition: color 0.2s ease-out;
    transition: color 0.2s ease-out;
  }
 
-li a:hover, li a:focus, li a:active {
+.list-link:hover, .list-link:focus, .list-link:active {
    opacity: 0.4;
  }
