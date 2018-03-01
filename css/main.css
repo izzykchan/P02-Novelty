@@ -1,13 +1,11 @@
+/* general page structure styling */
+
 body {
   font-family: 'Merriweather', serif;
 }
 
 #page-content {
   margin: 2rem;
-}
-
-.centered {
-  text-align: center;
 }
 
 #footer {
@@ -34,8 +32,8 @@ body {
   height: 7rem;
 }
 
-.centered-premise-title {
-  margin: auto;
+header {
+  padding: 0;
 }
 
 h4 {
@@ -55,6 +53,10 @@ h5 {
   font-weight: 600;
   text-transform: lowercase;
   display: inline;
+}
+
+.centered {
+  text-align: center;
 }
 
 .checkout-form {
@@ -134,6 +136,7 @@ section p {
 }
 
 /* basic styling for the nav */
+
 nav#nav-reg a {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.15em;
@@ -161,6 +164,7 @@ a {
 }
 
 /* Styling for home page elements -- the large photos */
+
 .build {
   width: 33%;
   display: inline-block;
@@ -187,6 +191,7 @@ nav a:hover, nav a:focus {
 }
 
 /* Styling for the navigation "buttons" */
+
 .button-nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -225,6 +230,8 @@ nav a:hover, nav a:focus {
 
   -webkit-touch-callout: none;
 }
+
+/* styling for the search bar */
 
 #nav-reg .search-input {
   margin-left: -8rem;
@@ -360,7 +367,8 @@ nav#nav-ham input {
   -webkit-touch-callout: none;
 }
 
-/* the three lines of the menu icon/symbol */
+/* the three lines of the menu icon/symbol-- not sure if 'span' is semantic but this is how the tutorial does it and i think we need this in order to animate properly */
+
 #menu-toggle span {
   display: block;
   width: 33px;
@@ -660,6 +668,7 @@ h1.quote {
 }
 
 /* Styling for the sub-navigation button */
+
 .button-sub-nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -787,7 +796,7 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
   background-color: #F7EFE4;
 }
 
-/* for some reason this media query is only working if i spell out each side of the padding */
+/* for some reason this media query is only working if I spell out each side of the padding... is this normal?*/
 @media (min-width: 23.44rem) {
   .comments {
     padding: 3rem 3rem 3rem 3rem;
@@ -834,37 +843,7 @@ h3 {
    display: block;
  }
 
-  /* Styling for bullet lists */
-
- .bullet-lists {
-   font-family: 'Merriweather', serif;
-   font-size: 0.8rem;
-   line-height: 1.3rem;
-   color: #3D3027;
-   letter-spacing: 0.055em;
- }
-
- /* Styling for numbered lists-- exactly the same as prior two... */
-
- .numbered-lists {
-   font-family: 'Merriweather', serif;
-   font-size: 0.8rem;
-   line-height: 1.3rem;
-   color: #3D3027;
-   letter-spacing: 0.055em;
- }
-
-/* Styling for the main navigation */
-
-@media (min-width: 475px) {
-  .button-nav {
-    display: inline-block;
-  }
-}
-
-
-/* Styling for product listing */
-
+/* Styling for product listings (genres, icons, authors, awards...) */
 
 .premise-heading-icon {
   width:5rem;
@@ -879,6 +858,10 @@ h3 {
 
 .product-listing {
   margin: 1rem 1rem 1rem 1rem;
+  display: inline-block;
+}
+
+.photo-and-blurb-listing {
   display: inline-block;
 }
 
@@ -901,76 +884,8 @@ h3 {
   vertical-align: middle;
 }
 
-/* .listing-name:hover, .listing-name:focus, .arrow:hover, .arrow:focus {
-  color: #CFA77D;
-} */
 
-.arrow {
-  display: inline;
-  padding: 1em 0;
-  vertical-align: middle;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  color: #3D3027;
-  letter-spacing: 0.1em;
-  margin-left: 1em;
-  text-decoration: none;
-}
-
-/* Styling for colour palette */
-
-.palette {
-  border: 0.2em solid #3C2E28;
-  /* padding: 1em 1em; */
-}
-
-.swatch {
-  font-family: 'Merriweather', serif;
-  color: white;
-  margin: 1em;
-  padding: 2em 1.65em;
-  display: block;
-}
-
-@media (min-width: 40em) {
-  .swatch {
-    margin-left:1em;
-    margin-right: 0;
-    display: inline-block;
-  }
-}
-
-.brown {
-  background-color: #3C2E28;
-}
-
-.red {
-  background-color: #6C200F;
-}
-
-.orange {
-  background-color: #9F5D36;
-}
-
-.light-orange {
-  background-color: #CFA77D;
-}
-
-.cream {
-  background-color: #EEE4D1;
-}
-
-.light-green {
-  background-color: #536D55;
-}
-
-.dark-green {
-  background-color: #1E3322;
-}
-
-.grey {
-  background-color: #9B9B9B;
-}
+/* styling for author pages -- big focus on responsiveness!!!*/
 
 a.red:active, a.red:hover, a.red:focus {
   background-color: #962A18;;
@@ -982,11 +897,18 @@ a.brown:active, a.brown:hover, a.brown:focus {
 
 /* styling for author page -- big focus on responsiveness!!!*/
 
-
 .author-listing {
+
   display: block;
 }
 
+.brown {
+  background-color: #3C2E28;
+}
+
+.red {
+  background-color: #6C200F;
+}
 .select-author {
   display: inline;
 }
@@ -998,7 +920,7 @@ a.brown:active, a.brown:hover, a.brown:focus {
   }
 }
 
-.author-photo {
+.large-photo {
   width:100%;
   /* height:100%; */
   display: inline;
@@ -1012,6 +934,7 @@ a.brown:active, a.brown:hover, a.brown:focus {
 }
 
 /* slightly larger max height to account for circular shape-- doing this instead of all new css for the choose author page, since this is the only part that breaks slightly */
+
 .choose-author-crop {
   max-height: 28rem;
   overflow: hidden;
@@ -1037,7 +960,7 @@ a.brown:active, a.brown:hover, a.brown:focus {
   }
 }
 
-/* needed separate styling for small-blurb vs author bio since it has different break-points */
+/* needed separate styling for small-blurb vs large-blurb since it has different break-points */
 
 .small-blurb {
   display: inline;
@@ -1046,10 +969,18 @@ a.brown:active, a.brown:hover, a.brown:focus {
 
 .about-blurb {
   display: inline;
-  margin: 0;
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  max-width: 500px;
 }
 
-/* this was not working when placed in the identical media query above-- it broke the margins inexplicably and is a small enough scope issue that we had to move on */
+@media (min-width: 51rem) {
+  .about-blurb {
+    margin-top: 0;
+    margin-right: auto;
+  }
+}
 
 @media (min-width: 32rem) {
   .small-blurb {
@@ -1067,19 +998,15 @@ a.brown:active, a.brown:hover, a.brown:focus {
     max-width: 465px;
     margin-right: auto;
   }
-  .about-blurb {
-    max-width: 465px;
-    margin-right: auto;
-  }
 }
 
-.author-bio {
+.large-blurb {
   display: inline;
   margin: 1.5rem 0 0 0;
 }
 
 @media(min-width: 37.5rem) {
-  .author-bio {
+  .large-blurb {
     margin: 1.5rem 8rem 0 0;
   }
 }
@@ -1089,10 +1016,10 @@ a.brown:active, a.brown:hover, a.brown:focus {
 }
 
 @media (min-width: 51rem) {
-  .author-bio {
+  .large-blurb {
     margin: 0 3rem 0 2rem;
   }
-  .author-photo {
+  .large-photo {
     width:20em;
     margin-top:auto;
     margin-right: 4rem;
@@ -1105,7 +1032,7 @@ a.brown:active, a.brown:hover, a.brown:focus {
 
 /* keeps the line length to ~66 characters */
 @media (min-width: 62rem) {
-  .author-bio {
+  .large-blurb {
     max-width: 500px;
     margin-right: auto;
   }
@@ -1114,7 +1041,7 @@ a.brown:active, a.brown:hover, a.brown:focus {
   }
 }
 
-.author-bio h3 {
+.large-blurb h3 {
   margin-top: 0;
 }
 
@@ -1132,15 +1059,10 @@ a.brown:active, a.brown:hover, a.brown:focus {
 
 /* styling for blog section */
 
-.blog-post {
-  border: 0.05em dotted #3D3027;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
-}
-
-h3.contact {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+.blog-photo {
+  width:100%;
+  display: inline;
+  margin-top:-20%;
 }
 
 .full-post {
@@ -1158,6 +1080,13 @@ h3.contact {
   margin-right: 1rem;
   margin-bottom: 2rem;
 }
+
+h3.contact {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* customization user-flow styling */
 
 .icon-genre {
   width: 15%;
@@ -1350,3 +1279,117 @@ section.choose-option {
     margin-right: 2rem;
   }
 }
+
+/* styleguide styling */
+
+.styleguide-section {
+  margin: 1em 0;
+  padding: 1em 1em;
+  border: 0.05em dotted #3D3027;
+}
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+/* Styling for colour palette */
+
+.palette {
+  border: 0.2em solid #3C2E28;
+  /* padding: 1em 1em; */
+}
+
+.swatch {
+  font-family: 'Merriweather', serif;
+  color: white;
+  margin: 1em;
+  padding: 2em 1.65em;
+  margin-left:1em;
+  margin-right: 0;
+  display: inline-block;
+}
+
+
+.brown {
+  background-color: #3C2E28;
+}
+
+.red {
+  background-color: #6C200F;
+}
+
+.orange {
+  background-color: #9F5D36;
+}
+
+.light-orange {
+  background-color: #CFA77D;
+}
+
+.cream {
+  background-color: #EEE4D1;
+}
+
+.light-green {
+  background-color: #536D55;
+}
+
+.dark-green {
+  background-color: #1E3322;
+}
+
+.grey {
+  background-color: #9B9B9B;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.styleguide-h3 {
+  margin: 1rem 0 1rem 0;
+}
+
+/* Styling for bullet lists */
+
+ .bullet-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+ /* Styling for numbered lists-- exactly the same as prior two... */
+
+ .numbered-lists {
+   font-family: 'Merriweather', serif;
+   font-size: 0.8rem;
+   line-height: 1.3rem;
+   color: #3D3027;
+   letter-spacing: 0.055em;
+ }
+
+ footer a {
+   color: #9F5D36;
+   text-decoration: none;
+   -webkit-transition: color 0.2s ease-out;
+   transition: color 0.2s ease-out;
+ }
+
+ footer a:hover, footer a:focus, footer a:active {
+   opacity: 0.4;
+ }
+
+.list-link {
+   color: #9F5D36;
+   text-decoration: none;
+   -webkit-transition: color 0.2s ease-out;
+   transition: color 0.2s ease-out;
+ }
+
+.list-link:hover, .list-link:focus, .list-link:active {
+   opacity: 0.4;
+ }
