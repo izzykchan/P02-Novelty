@@ -105,10 +105,6 @@ h5 {
   margin-top: 0.5rem;
 }
 
-.slash {
-  margin-right: 1rem;
-}
-
 .order-confirm {
   margin-bottom: 3rem;
 }
@@ -409,7 +405,7 @@ nav#nav-ham input {
 
   z-index: 1;
 
-  transform-origin: rotate(45deg);
+  transform-origin: rotate(45deg) translate(0, 0);
 
   transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -543,7 +539,7 @@ h2.img-label {
 /* styling for the quote/text on the home page */
 
 .home-quote {
-  width: 100%;
+  width: 90%;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -554,7 +550,7 @@ h2.img-label {
   }
 }
 
-@media (min-width: 35.875) {
+@media (min-width: 35.875rem) {
   .home-quote {
     max-width: 941px;
     margin-left: 1rem;
