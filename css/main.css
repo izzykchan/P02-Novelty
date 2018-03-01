@@ -55,6 +55,10 @@ h5 {
   display: inline;
 }
 
+.centered {
+  text-align: center;
+}
+
 .checkout-form {
   background-color: #EEE4D1;
   padding: 1.5rem 2rem;
