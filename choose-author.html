@@ -15,16 +15,17 @@
 
   <body>
 
+    <!-- please note that since we didn't use a javascript page for our menu, aria is a bit different, so we had to try and implement it based on scraps of information found on the internet. we had aria-controls in place, but it was showing up as an error so we had to take it out. -->
     <header class="box-item-nav header">
       <a href="home.html"><img src="img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
 
-      <nav id="nav-reg" role="regular-navigation">
+      <nav id="nav-reg">
           <a href="choose-genre.html" class="button-nav active">build your book</a>
           <a href="listing-authors.html" class="button-nav">authors</a>
-          <div class="sub-nav" role="dropdown-navigation">
+          <div class="sub-nav">
           <a href="company-page.html" class="button-nav button-about">about</a>
 
-          <nav class="sub-nav-content aria-hidden="true" aria-controls="nav-items"">
+          <nav class="sub-nav-content" aria-hidden="true">
             <a href="company-page.html" class="button-sub-nav">our story</a>
             <a href="contact.html" class="button-sub-nav">contact</a>
             <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
@@ -32,40 +33,44 @@
           </div>
 
           <div class="search-toggle">
-            <input type="checkbox" class="search-checkbox" />
+            <input type="checkbox" class="search-checkbox"/>
             <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
-            <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+            <input type="text" name="search" class="search-input" aria-hidden="true" placeholder="search">
+            <img class="close" src="img/x.svg" alt="an x to close the search bar">
           </div>
 
       </nav>
 
-      <nav id="nav-ham" role="hamburger-navigation">
+      <nav id="nav-ham">
         <div id="menu-toggle">
             <input type="checkbox" />
             <span></span>
             <span></span>
             <span></span>
 
-            <ul id="menu aria-hidden="true" aria-controls="nav-items"">
-            <a href="choose-genre.html" class="button-nav active"><li>build your book</li></a>
-            <a href="listing-authors.html" class="button-nav"><li>authors</li></a>
-            <div class="sub-nav" role="dropdown-navigation">
-            <input type="checkbox" />
-            <a href="company-page.html" class="button-nav"><li>about</li></a>
-            <nav class="sub-nav-content aria-hidden="true" aria-controls="nav-items"">
-              <a href="company-page.html" class="button-sub-nav">our story</a>
-              <a href="contact.html" class="button-sub-nav">contact</a>
-              <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
-            </nav>
+            <div id="menu" aria-hidden="true">
+              <a href="choose-genre.html" class="button-nav active">build your book</a>
+              <a href="listing-authors.html" class="button-nav">authors</a>
 
-            <div class="search-toggle">
-              <input type="checkbox" class="search-checkbox" />
-              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
-              <input type="text" name="search" class="search-input" aria-hidden="true" aria-controls="search-bar" placeholder="search">
-              <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+              <div class="sub-nav">
+                <input type="checkbox"/>
+                <a href="company-page.html" class="button-nav">about</a>
+                <nav class="sub-nav-content" aria-hidden="true">
+                  <a href="company-page.html" class="button-sub-nav">our story</a>
+                  <a href="contact.html" class="button-sub-nav">contact</a>
+                  <a href="listings-blog-posts.html" class="button-sub-nav">blog</a>
+                </nav>
+              </div>
+
+              <div class="search-toggle">
+                <input type="checkbox" class="search-checkbox" />
+                <img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass">
+                <input type="text" name="search" class="search-input" aria-hidden="true" placeholder="search">
+                <img class="close" src="img/x.svg" alt="an x to close the search bar">
+              </div>
             </div>
-            </ul>
+          </div>
+
         </div>
       </nav>
 
@@ -74,13 +79,13 @@
   <section id="page-content">
 
 
-    <img src="img/build-your-book-steps4.png" class="icon-steps">
-    <h2>4. choose your author</h2>
+    <img src="img/build-your-book-steps4.png" class="icon-steps" alt="a progress bar which shows that we are on step four of this process">
+    <h2>choose your author</h2>
 
 
     <section class="author-page-body">
 
-      <a href="author-pages/julianna-baggott.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-julianna-baggott.jpg" alt="an orange-tinted photo of author Julianna Baggott; she has a kind smile." class="photo-thumbnail">
@@ -90,13 +95,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Baggott began publishing short stories when she was twenty-two and sold her first novel while still in her twenties...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Baggott began publishing short stories when she was twenty-two and sold her first novel while still in her twenties...</p>
+            <a href="author-pages/julianna-baggott.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/kristin-cashore.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-kristin-cashore.jpg" alt="an orange-tinted photo of author Kristin Cashore; she's in a power stance" class="photo-thumbnail">
@@ -106,13 +113,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">So, here's the short tale of me: I grew up in the countryside of northeastern Pennsylvania in a village with cows...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">So, here's the short tale of me: I grew up in the countryside of northeastern Pennsylvania in a village with cows...</p>
+            <a href="author-pages/kristin-cashore.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/ernest-cline.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-ernest-cline.jpg" alt="an orange-tinted photo of author Ernest Cline; he looks a little nuts" class="photo-thumbnail">
@@ -122,13 +131,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Ernest Cline is a novelist, screenwriter, husband, father, and full-time geek. His first novel, Ready Player One...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Ernest Cline is a novelist, screenwriter, husband, father, and full-time geek. His first novel, Ready Player One...</p>
+            <a href="author-pages/ernest-cline.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/neil-gaiman.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-neil-gaiman.jpg" alt="an orange-tinted photo of author Neil Gaiman; he looks tired and very English." class="photo-thumbnail">
@@ -138,13 +149,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Neil Gaiman was born in Hampshire, UK, and now lives in the United States near Minneapolis. As a child he...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Neil Gaiman was born in Hampshire, UK, and now lives in the United States near Minneapolis. As a child he...</p>
+            <a href="author-pages/neil-gaiman.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/erika-johansen.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-erika-johansen.jpg" alt="an orange-tinted photo of author Erika Johansen; she has a lovely smile." class="photo-thumbnail">
@@ -154,13 +167,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Erika Johansen grew up and lives in the San Francisco Bay Area. She went to Swarthmore College, earned an MFA...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Erika Johansen grew up and lives in the San Francisco Bay Area. She went to Swarthmore College, earned an MFA...</p>
+            <a href="author-pages/erika-johansen.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/stephen-king.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-stephen-king.jpg" alt="an orange-tinted photo of author Stephen King; he looks contemplative" class="photo-thumbnail">
@@ -170,13 +185,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Stephen Edwin King was born in Portland, Maine in 1947, the second son of Donald and Nellie Ruth Pillsbury...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Stephen Edwin King was born in Portland, Maine in 1947, the second son of Donald and Nellie Ruth Pillsbury...</p>
+            <a href="author-pages/stephen-king.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/ken-liu.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-ken-liu.jpg" alt="an orange-tinted photo of author Ken Liu; he is staring the camera down" class="photo-thumbnail">
@@ -186,13 +203,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Ken Liu is an author of speculative fiction, as well as a translator, lawyer, and programmer. A winner...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Ken Liu is an author of speculative fiction, as well as a translator, lawyer, and programmer. A winner...</p>
+            <a href="author-pages/ken-liu.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/erin-morgenstern.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-erin-morgenstern.jpg" alt="an orange-tinted photo of author Erin Morgenstern; she's got messy short hair" class="photo-thumbnail">
@@ -202,13 +221,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">I grew up in Massachusetts and studied theatre and studio art at Smith College. I currently live with my husband...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">I grew up in Massachusetts and studied theatre and studio art at Smith College. I currently live with my husband...</p>
+            <a href="author-pages/erin-morgenstern.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/patrick-ness.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-patrick-ness.jpg" alt="an orange-tinted photo of author Patrick Ness; he is wearing stripes." class="photo-thumbnail">
@@ -219,12 +240,14 @@
               <input type="radio" name="select">
             </div>
             <p class="para text-preview">I’m Patrick Ness. I claim three states in America as my home (as Americans are wont to do): I was born in Virginia...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <a href="author-pages/patrick-ness.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/jodi-picoult.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-jodi-picoult.jpg" alt="an orange-tinted photo of author Jodi Picoult; her hair is curly and blonde" class="photo-thumbnail">
@@ -234,13 +257,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Picoult studied creative writing with Mary Morris at Princeton, and had two short stories published in Seventeen...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Picoult studied creative writing with Mary Morris at Princeton, and had two short stories published in Seventeen...</p>
+            <a href="author-pages/jodi-picoult.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/joanne-rowling.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-joanne-rowling.jpg" alt="an orange-tinted photo of author J K Rowling; she's got some side-eye going" class="photo-thumbnail">
@@ -250,13 +275,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Joanne Rowling was born on 31st July 1965 at Yate General Hospital just outside Bristol, and grew up...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Joanne Rowling was born on 31st July 1965 at Yate General Hospital just outside Bristol, and grew up...</p>
+            <a href="author-pages/joanne-rowling.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/john-scalzi.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-john-scalzi.jpg" alt="an orange-tinted photo of author John Scalzi; he grinning through glasses" class="photo-thumbnail">
@@ -266,13 +293,15 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">John Michael Scalzi II (born May 10, 1969) is an American science fiction author and former president of the...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">John Michael Scalzi II (born May 10, 1969) is an American science fiction author and former president of the...</p>
+            <a href="author-pages/john-scalzi.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
-      <a href="author-pages/patrick-rothfuss.html" target="_blank" class="choose-option photo-and-blurb-listing">
+      <section class="photo-and-blurb-listing choose option">
         <section class="box choose-option">
           <div class="choose-author-crop">
             <img src="img/select-patrick-rothfuss.jpg" alt="an orange-tinted photo of author Patrick Rothfuss; he is bearded and smug" class="photo-thumbnail">
@@ -282,11 +311,13 @@
             <div class="select-author">
               <input type="radio" name="select">
             </div>
-            <p class="para text-preview">Patrick Rothfuss was born in Madison, Wisconsin to awesome parents who encouraged him to read and create...</p>
-            <p class="para text-preview">click to view author's bio in a new tab >></p>
+            <p class="para">Patrick Rothfuss was born in Madison, Wisconsin to awesome parents who encouraged him to read and create...</p>
+            <a href="author-pages/patrick-rothfuss.html" target="_blank" class="choose-option photo-and-blurb-listing">
+              <p class="para text-preview">click to view author's bio in a new tab >></p>
+            </a>
           </div>
         </section>
-      </a>
+      </section>
 
 
     </section>

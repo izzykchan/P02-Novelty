@@ -260,7 +260,7 @@ nav#nav-ham .sub-nav input {
   font-size: 0.85rem;
   letter-spacing: 0.05rem;
   padding: 0.25rem 0.25rem 0.25rem 0.5rem;
-  background-color: none;
+  /* background-color: none; */
   border: none;
   visibility: hidden;
 }
@@ -317,7 +317,7 @@ nav#nav-ham .sub-nav input {
 
 #nav-ham .sub-nav input.search-input {
   margin-left: 3rem;
-  margin-top: -0.5rem;
+  margin-top: 0rem;
   opacity: 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -327,6 +327,11 @@ nav#nav-ham .sub-nav input {
   border: none;
   z-index: 2;
   width: 12rem;
+}
+
+#nav-ham img {
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 #nav-ham img.close {
@@ -459,8 +464,8 @@ nav#nav-ham input {
 }
 
 /* when hamburger icon clicked, make menu visible */
-#menu-toggle input:checked ~ ul {
-  height: 16rem;
+#menu-toggle input:checked ~ div#menu {
+  height: 18rem;
   opacity: 0.95;
   display: block;
   visibility: visible;
@@ -472,8 +477,8 @@ nav#nav-ham input {
 }
 
 /* styling for the menu when it's dropped down */
-#menu li {
-  padding: 0.25rem 0;
+#menu a {
+  padding: 1.5rem 1rem;
   font-weight: 600;
 }
 
@@ -888,7 +893,7 @@ a.icon-nav:hover, a.icon-nav:focus, a.icon-nav:active {
 }
 
 /* for some reason this media query is only working if I spell out each side of the padding... is this normal?*/
-@media (min-width: 23.44rem) {
+@media (min-width: 30rem) {
   .comments {
     padding: 3rem 3rem 3rem 3rem;
   }
@@ -1285,7 +1290,8 @@ div.sliders {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .back {
@@ -1294,7 +1300,14 @@ div.sliders {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
+  margin-bottom: 0;
   background-color: #6C200F;
+}
+
+@media (min-width: 29.5rem) {
+  .continue {
+    margin-top: 2rem;
+  }
 }
 
 .text-preview {
@@ -1319,6 +1332,10 @@ div.sliders {
 
 a.choose-option {
   text-decoration: none;
+}
+
+a.choose-option:hover, a.choose-option:focus {
+  opacity: 0.75;
 }
 
 a.choose-option:hover .box, a.choose-option:focus .box {
