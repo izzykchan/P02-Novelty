@@ -16,44 +16,65 @@
 
   <body>
 
+    <!-- please note that since we didn't use a javascript page for our menu, aria is a bit different, so we had to try and implement it based on scraps of information found on the internet. we had aria-controls in place, but it was showing up as an error so we had to take it out. -->
     <header class="box-item-nav header">
       <a href="../home.html"><img src="../img/novelty-logo2.svg" alt="a flat graphic of stacked books" class="img-logo"></a>
 
-      <nav id="nav-reg" role="regular-navigation">
-          <a href="../choose-genre.html" class="button-nav">build your book</a>
+      <nav id="nav-reg">
+          <a href="../choose-genre.html" class="button-nav active">build your book</a>
           <a href="../listing-authors.html" class="button-nav">authors</a>
-          <a href="../company-page.html" class="button-nav active">about</a>
+          <div class="sub-nav">
+          <a href="../company-page.html" class="button-nav button-about">about</a>
+
+          <nav class="sub-nav-content" aria-hidden="true">
+            <a href="../company-page.html" class="button-sub-nav">our story</a>
+            <a href="../contact.html" class="button-sub-nav">contact</a>
+            <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+          </nav>
+          </div>
 
           <div class="search-toggle">
             <input type="checkbox" class="search-checkbox" />
             <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
-            <input type="text" name="search" class="search-input" placeholder="search">
-            <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+            <input type="text" name="search" class="search-input" aria-hidden="true" placeholder="search">
+            <img class="close" src="../img/x.svg" alt="an x to close the search bar">
           </div>
-        </div>
+
       </nav>
 
-      <nav id="nav-ham" role="hamburger-navigation">
+      <nav id="nav-ham">
         <div id="menu-toggle">
             <input type="checkbox" />
             <span></span>
             <span></span>
             <span></span>
 
-            <ul id="menu">
-            <a href="../choose-genre.html" class="button-nav"><li>build your book</li></a>
-            <a href="../listing-authors.html" class="button-nav"><li>authors</li></a>
-            <a href="../company-page.html" class="button-nav active"><li>about</li></a>
+            <div id="menu" aria-hidden="true">
+              <a href="../choose-genre.html" class="button-nav active">build your book</a>
+              <a href="../listing-authors.html" class="button-nav">authors</a>
 
-            <div class="search-toggle">
-              <input type="checkbox" class="search-checkbox" />
-              <li><img class="icon-nav icon-search" src="img/icon-search.svg" alt="a line drawing of a magnifying glass"></li>
-              <input type="text" name="search" class="search-input" placeholder="search">
-              <img class="close" src="img/x.svg" alternate="an x to close the search bar">
+              <div class="sub-nav">
+                <input type="checkbox"/>
+                <a href="../company-page.html" class="button-nav">about</a>
+                <nav class="sub-nav-content" aria-hidden="true">
+                  <a href="../company-page.html" class="button-sub-nav">our story</a>
+                  <a href="../contact.html" class="button-sub-nav">contact</a>
+                  <a href="../listings-blog-posts.html" class="button-sub-nav">blog</a>
+                </nav>
+
+
+              <div class="search-toggle">
+                <input type="checkbox" class="search-checkbox" />
+                <img class="icon-nav icon-search" src="../img/icon-search.svg" alt="a line drawing of a magnifying glass">
+                <input type="text" name="search" class="search-input" aria-hidden="true" placeholder="search">
+                <img class="close" src="../img/x.svg" alt="an x to close the search bar">
+              </div>
             </div>
-            </ul>
+          </div>
+
         </div>
       </nav>
+
     </header>
 
     <section id="page-content">
@@ -88,7 +109,7 @@
 
         <h4>Rendered element:</h4>
 
-        <nav id="nav-reg" role="regular-navigation">
+        <nav class="nav-reg">
           <a href="choose-genre.html" class="button-nav">nav button</a>
         </nav>
 
@@ -350,7 +371,8 @@
   </section>
 
     <footer id="footer">
-      <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="styleguide.html">Style Guide</a> | <a href="citations.html">Citations</a></p>
+      <p class="footer-text">IAT 339 P02 | Izzy Chan | Juliana Loughin | D102 | <a href="styleguide.html">Style Guide</a> | <a href="citations.html">Citations</a>
+       | <a href="https://github.com/izzykchan/P02-Novelty.git">GitRepo</a></p>
     </footer>
 
   </body>

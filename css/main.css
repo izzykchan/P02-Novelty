@@ -144,6 +144,18 @@ nav#nav-reg a {
   transition: color 0.2s ease-out;
 }
 
+/* we have the class version just for the purposes of the styleguide */
+nav.nav-reg a {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.15em;
+  text-align: CENTER;
+  margin-top: 2rem;
+  padding: 1em 1em;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
 nav#nav-ham a {
   text-align: left;
 }
