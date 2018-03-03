@@ -105,6 +105,10 @@ h5 {
   margin-top: 0.5rem;
 }
 
+.slash {
+  margin-right: 1rem;
+}
+
 .order-confirm {
   margin-bottom: 3rem;
 }
@@ -134,18 +138,6 @@ section p {
 /* basic styling for the nav */
 
 nav#nav-reg a {
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.15em;
-  text-align: CENTER;
-  margin-top: 2rem;
-  padding: 1em 1em;
-  text-decoration: none;
-  -webkit-transition: color 0.2s ease-out;
-  transition: color 0.2s ease-out;
-}
-
-/* we have the class version just for the purposes of the styleguide */
-nav.nav-reg a {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.15em;
   text-align: CENTER;
@@ -268,7 +260,6 @@ nav#nav-ham .sub-nav input {
   font-size: 0.85rem;
   letter-spacing: 0.05rem;
   padding: 0.25rem 0.25rem 0.25rem 0.5rem;
-  /* background-color: none; */
   border: none;
   visibility: hidden;
 }
@@ -417,6 +408,8 @@ nav#nav-ham input {
 
   z-index: 1;
 
+  transform-origin: rotate(45deg);
+
   transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.22s ease;
@@ -549,7 +542,7 @@ h2.img-label {
 /* styling for the quote/text on the home page */
 
 .home-quote {
-  width: 90%;
+  width: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -560,7 +553,7 @@ h2.img-label {
   }
 }
 
-@media (min-width: 35.875rem) {
+@media (min-width: 35.875) {
   .home-quote {
     max-width: 941px;
     margin-left: 1rem;
@@ -1189,6 +1182,12 @@ h3.contact {
 }
 
 /* customization user-flow styling */
+
+.explanation {
+  margin: auto;
+  margin-bottom:2rem;
+  max-width: 500px;
+}
 
 .icon-genre {
   width: 15%;
