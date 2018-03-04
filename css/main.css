@@ -1,7 +1,17 @@
 /* general page structure styling */
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   font-family: 'Merriweather', serif;
+  margin-bottom: 8rem;
+  padding-bottom: 2rem;
+}
+
+#body-home {
+  padding-bottom: 0;
 }
 
 #page-content {
@@ -13,6 +23,9 @@ body {
   padding: 1rem 2rem;
   text-align: center;
   height: 8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
